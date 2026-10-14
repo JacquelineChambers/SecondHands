@@ -1,0 +1,17 @@
+# macOS metadata
+.DS_Store
+._*
+
+# Local environment files
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Local editor settings and temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.log
