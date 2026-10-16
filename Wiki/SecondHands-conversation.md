@@ -59,31 +59,9 @@ Your actual acceptance email confirms\:
 
 ExecuTorch Hackathon · October 17–18, 2026
 
-[View your acceptance email](https://mail.google.com/mail/u/0/#inbox/1a13bde995fbe518)
-
-That means **you're approved for the Compute Track, not the IoT Track**\.
-
 The published hackathon description says selected teams receive hardware associated with their track. For Compute, that is a **Snapdragon X Elite Copilot+ PC**\.
-
-The distinction is that this confirms your track assignment, but your acceptance email does not explicitly say whether you get to keep the computer, or provide the pickup and allocation details.
-
-For SecondHands, this is important because Snapdragon X Elite has a better-documented ExecuTorch Qualcomm backend than the VENTUNO Q. It makes exploring Clef-Flash alongside a fast gesture model more attractive—though it still doesn't guarantee Clef-Flash NPU compatibility.
-
+ 
 The official rules are even more specific: **each selected team receives a device from its chosen track to use during the event**\. That means your team should receive access to a Snapdragon X Elite Copilot+ PC, though the organizer should confirm the precise allocation and logistics. The rules do not say you get to keep it afterward. :chatgpt-content-reference{index="1"}
-
-### I've also found the correct email recipient
-
-Your acceptance email has\:
-
-- **From\:** HackerSquad via Luma
-- **Actual Reply-To\:** `achan99@gmail.com`
-- **Alternative general contact\:** `inquiry@hackersquad.io` :chatgpt-content-reference{index="2"}
-
-I've prepared a reply to the acceptance email, addressed to `achan99@gmail.com`, asking about Kate, Boris and Camila, the Compute PC allocation, and permission to bring the Astra 2 and Arduino.
-
-[Open the prepared Gmail draft](https://mail.google.com/mail/u/0/#drafts/r-6699794348052653416)
-
-The draft is saved but **not yet sent**\. Please confirm: should I send it to `achan99@gmail.com`, the Reply-To address explicitly specified by the organizers in your acceptance email?
 
 ---
 
@@ -92,52 +70,17 @@ The draft is saved but **not yet sent**\. Please confirm: should I send it to `a
 Turn ID: `65a27727-2aca-49f6-ba72-9aba0819ea08`
 
 ### User
-
-<!-- Message ID: 65a27727-2aca-49f6-ba72-9aba0819ea08 -->
-
-ok, so the actual names are:
-me: David Moshal
-Kate Gofman
-Boris Polania
-Camilo Buscaron
-
-### Assistant
-
-<!-- Message ID: b3e1c8c1-b02e-4889-80af-789099a499d2 -->
-
-**Email successfully sent\!**
-
-I corrected the team member's name to **Camilo Buscaron** and sent the email to the organizer's verified Reply-To address, `achan99@gmail.com`\.
-
-The email identifies your complete team\:
+ 
 
 1. **David Moshal** — Team lead
 2. **Kate Gofman**
-3. **Boris Polania**
-4. **Camilo Buscaron**
-
-It also asks the organizer to confirm your Snapdragon X Elite Compute Track hardware allocation, explain how to register your teammates, and approve bringing your Orbbec Astra 2 and external Arduino hardware.
-
-[View the sent email in Gmail](https://mail.google.com/mail/u/0/#inbox/1a13bde995fbe518)
-
-Your Compute Track registration is already approved. We're now awaiting clarification about the other three registrations and equipment arrangements.
+3. **Camilo Buscaron**
 
 ---
 
 ## Exchange 3 — Hackathon repository
 
-Turn ID: `e0eb1f7c-3263-4b64-8d1f-6dcc900638da`
-
-### User
-
-<!-- Message ID: e0eb1f7c-3263-4b64-8d1f-6dcc900638da -->
-
-ok, now we need to switch gears, the hackathon repo is here:
 [https://github.com/aaishikasb/qc-executorch-guide](https://github.com/aaishikasb/qc-executorch-guide)
-
-### Assistant
-
-<!-- Message ID: 65082c07-3111-4572-a59e-f54eb4397c34 -->
 
 # This repository changes our hackathon strategy
 
