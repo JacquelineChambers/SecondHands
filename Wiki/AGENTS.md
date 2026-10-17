@@ -10,7 +10,7 @@ The user-selected [plan.md](plan.md) owns live tasks, status, blockers, and veri
 
 Keep approved behavior, observed implementation, proposals, disputed claims, superseded claims, and unknowns distinct. Keep source links beside the claims they support. Record an approval's exact scope and provenance in the owning topic; an assistant recommendation is not an approval.
 
-The [conversation archive](SecondHands-conversation.md) is retained under Wiki because the user requested that location. Its captured message bodies are historical evidence, outside the maintained knowledge corpus. Do not rewrite them to match later decisions. Keep its capture and incorporation status in [Source records](index.md#source-records). New topic explanations must not present its unverified claims as established facts.
+The [conversation archive](SecondHands-conversation.md) is retained under Wiki because the user requested that location. Its captured message bodies are historical evidence, outside the maintained knowledge corpus. Do not rewrite them to match later decisions. Apply [the public repository rules](../AGENTS.md#public-repository-content) to privacy redactions. Keep its capture and incorporation status in [Source records](index.md#source-records). New topic explanations must not present its unverified claims as established facts.
 
 ## Questions
 

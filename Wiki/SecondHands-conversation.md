@@ -1,20 +1,18 @@
 # SecondHands — conversation archive
 
-Source: [SecondHands](https://chatgpt.com/c/6acfa731-2d64-8332-b752-7d7164a01ac7)
+Source: private SecondHands conversation; the source link and private identifiers are omitted from this public copy.
 
 Imported: 2026-10-14
 
-Conversation ID: `6acfa731-2d64-8332-b752-7d7164a01ac7`
-
 ## Import scope
 
-This file preserves the text of the five exchanges (ten messages) returned by
-the conversation reader, in chronological order. The reader returned no older
+This public copy retains the technical content of the five exchanges (ten messages) returned by
+the conversation reader, in chronological order, with privacy redactions noted below. The reader returned no older
 page cursor. The browser showed a “Loading older messages…” indicator but did
 not provide earlier messages during this import. This is a partial archive,
 not a verified export of the entire conversation.
 
-Message bodies below are unchanged from the reader output. Internal
+Privacy redactions approved on 2026-10-16 replace team names with role labels and omit the private source link, conversation ID, turn IDs, and message IDs. Technical content is not rewritten to match later decisions. Internal
 `chatgpt-content-reference` markers and image placeholders are retained.
 Some code blocks were represented only by these markers in the reader output.
 Their contents and citation targets are not reconstructed here. No attachments
@@ -37,17 +35,11 @@ in the conversation are not evidence of user approval.
 
 ## Exchange 1 — Compute Track allocation
 
-Turn ID: `9e6539ee-5fda-4ffc-adb3-25f4e5b37126`
-
 ### User
-
-<!-- Message ID: 9e6539ee-5fda-4ffc-adb3-25f4e5b37126 -->
 
 does this mean I get a compute platform?? this is much better news either way
 
 ### Assistant
-
-<!-- Message ID: bb50c3d1-8805-4212-946f-b0277b0faebf -->
 
 **Yes\! This is significantly better news for SecondHands.**
 
@@ -67,14 +59,12 @@ The official rules are even more specific: **each selected team receives a devic
 
 ## Exchange 2 — Team names
 
-Turn ID: `65a27727-2aca-49f6-ba72-9aba0819ea08`
-
 ### User
  
 
-1. **David Moshal** — Team lead
-2. **Kate Gofman**
-3. **Camilo Buscaron**
+1. **Team lead**
+2. **Team member 1**
+3. **Team member 2**
 
 ---
 
@@ -208,11 +198,7 @@ That would let us demonstrate the distinctive SecondHands feature—two people u
 
 ## Exchange 4 — Camera hardware and model options
 
-Turn ID: `b9f5c3e4-86e2-45a3-9b66-4c83dd7f1456`
-
 ### User
-
-<!-- Message ID: b9f5c3e4-86e2-45a3-9b66-4c83dd7f1456 -->
 
 ok, so let's leave out the astra orbec for now, as we can just use the device's camera.
 questions:
@@ -221,8 +207,6 @@ b) presumably windows only, correct? no linux?
 c) presumably the first step is to get the framework working, with supplied models, and then we can try better models. There is a link to the qualcomm ai hub (I forget the next name), so presumably they will be ok with pulling other models, so we need to see what other models they have.
 
 ### Assistant
-
-<!-- Message ID: ce865fca-9fec-4a69-8729-7997068a4d1a -->
 
 # SecondHands — Compute Track hardware and model options
 
@@ -444,11 +428,7 @@ Our main engineering challenge becomes **turning recognized movements into calib
 
 ## Exchange 5 — Decision-model ranking
 
-Turn ID: `03fce42a-01bb-485a-b3f0-4abc4237739d`
-
 ### User
-
-<!-- Message ID: 03fce42a-01bb-485a-b3f0-4abc4237739d -->
 
 ok, so I really do want to push the decision model frontier. Let's review your prior model suggestion when we thought we had the Ventuino, questions:
 
@@ -475,8 +455,6 @@ Rank	Model	Dynamic choices?	Practicality for hackathon
 ```
 
 ### Assistant
-
-<!-- Message ID: 2318d3cc-0698-48ab-a2c4-9106c019f7d6 -->
 
 # Decision models for SecondHands — revised Compute Track ranking
 

@@ -1,6 +1,6 @@
 # MediaPipe Face Landmarker
 
-**Status:** Starting candidate for facial controls in the [recommended order](index.md#recommended-starting-order), recorded at the user's request on 2026-10-16. Not installed or evaluated in SecondHands. This is a recognition model bundle, not a configurable decision model.
+**Status:** Implemented in the first Python baseline on 2026-10-16. Real-model image execution is smoke-tested on the Mac; camera use, personalized accuracy, and Windows execution remain untested. See [the observations](../../experiments-before-saturday.md#mediapipe-baseline-observations) and [runbook](../../runbooks/mac-and-snapdragon-development.md#run-mediapipe-face-and-hand-recognition). This is a recognition model bundle, not a configurable decision model.
 
 ## Capability and role
 
@@ -12,4 +12,4 @@ For SecondHands, test which facial signals each volunteer can produce comfortabl
 
 Compare deliberate movements with neutral and ambiguous examples. Measure useful signal separation, false activations, and end-to-end latency using the [shared experiment measurements](../../experiments-before-saturday.md#measurements). Keep calibration and command confirmation separate from the model's raw output.
 
-Mac behavior, Windows ARM64 behavior, and Snapdragon performance remain untested. A MediaPipe execution path is not an ExecuTorch deployment; the [framework integration decision](../../project.md#sh-q-001--model-and-runtime-selection) remains open. The archive's [MediaPipe Face Detection candidate](index.md#mediapipe-face-detection) is a separate package lead and does not establish this bundle's outputs.
+The Mac smoke checks do not establish calibrated facial controls, live-camera performance, Windows ARM64 behavior, or Snapdragon performance. A MediaPipe execution path is not an ExecuTorch deployment; the [framework integration decision](../../project.md#sh-q-001--model-and-runtime-selection) remains open. The archive's [MediaPipe Face Detection candidate](index.md#mediapipe-face-detection) is a separate package lead and does not establish this bundle's outputs.

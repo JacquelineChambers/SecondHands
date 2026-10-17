@@ -1,4 +1,4 @@
-> **Status:** Current proposal, supplied by the user on 2026-10-14. The text below is preserved as supplied. It describes intended capabilities, not verified implementation. Technical and market-size claims have not been independently checked in this documentation update. See [Project direction](project.md) for the relation to earlier decisions and remaining evidence gaps.
+> **Status:** Current proposal, supplied by the user on 2026-10-14. Its camera selection was updated to Orbbec Femto Bolt at the user's request on 2026-10-17. It describes intended capabilities, not verified implementation. Technical and market-size claims have not been independently checked in this documentation update. See [Project direction](project.md) for the relation to earlier decisions and remaining evidence gaps.
 
 # SecondHands
 **Making the Physical World Accessible Through AI**
@@ -19,7 +19,7 @@ For someone living with paralysis, ALS, or another mobility-limiting condition, 
 
 SecondHands combines depth sensing, local AI decision-making, and modular physical controls.
 
-1. **Sense:** An Orbbec Astra 2 camera detects small intentional movements using RGB and depth data.
+1. **Sense:** An [Orbbec Femto Bolt camera](hardware/femto-bolt.md) supplies RGB and depth data for movement recognition. Validate capture on the x86 Windows laptop before the Dell Snapdragon PC.
 2. **Personalize:** The system guides each user through a short calibration process, identifying movements they can perform comfortably and consistently.
 3. **Decide:** Lightweight PyTorch models running through ExecuTorch recognize movements in real time. Clef-Flash, an open-weight multimodal decision model, provides a potential higher-level decision layer for interpreting user-specific actions and configurable choices.
 4. **Act:** A connected Arduino or other microcontroller operates a physical mechanism, translating the recognized intention into a real-world action.
@@ -45,7 +45,7 @@ SecondHands brings together:
 - **Meta ExecuTorch:** Efficient on-device PyTorch inference for continuous sensing and gesture recognition.
 - **Qualcomm Snapdragon X Elite:** Local AI processing on the Copilot+ PC, with supported hardware acceleration where available.
 - **Clef-Flash:** Experimental schema-driven multimodal decisions, enabling flexible interpretation of different users' movements and contextual choices.
-- **Orbbec Astra 2:** Three-dimensional sensing of small physical movements.
+- **[Orbbec Femto Bolt](hardware/femto-bolt.md):** Color and depth input; hardware capture and gesture recognition require separate validation.
 - **Arduino and modular actuators:** Physical interaction with ordinary objects.
 
 The architecture separates fast, continuous movement recognition from higher-level decision-making, allowing the system to remain responsive while supporting personalized controls.

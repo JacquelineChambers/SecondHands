@@ -64,7 +64,7 @@ The reviewed public pages do not establish:
 - Whether a mixed-runtime design qualifies, or whether all inference must use ExecuTorch.
 - The scoring rubric, final submission format and cutoff, presentation length, or restrictions on work prepared before the event.
 - Source-code publication, intellectual-property, or model-license conditions for submission.
-- Permission and support for our external Astra 2, Arduino, and actuator hardware.
+- Permission and support for our external [Femto Bolt](hardware/femto-bolt.md), Arduino, and actuator hardware.
 - The exact allocated PC configuration and bundle location.
 
 These are evidence gaps, not additional rules. Resolve them through the organizers' published updates or a direct clarification when authorized. The [Luma page](https://luma.com/executorch-hackathon) provides the host contact and event Discord route. No organizer was contacted during this review.

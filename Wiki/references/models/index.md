@@ -2,7 +2,7 @@
 
 This index owns the SecondHands model candidates, their suggested roles, and the current recommended order. The user requested this reference on 2026-10-16, supplying the five-candidate recommendation below. Recording that recommendation does not establish a final model/runtime selection or a tested deployment. [SH-Q-001](../../project.md#sh-q-001--model-and-runtime-selection) owns that decision; the [task plan](../../plan.md) owns execution status.
 
-The first inputs are the computer's built-in camera, as recorded in [Project direction](../../project.md#established-user-direction). No recognition or decision model has been run in SecondHands. The Python setup's CPU tensor check is not a model evaluation.
+The first inputs are the computer's built-in camera, as recorded in [Project direction](../../project.md#established-user-direction). All five starting candidates now run on public sample images on the Mac. [The image observations](../../experiments-before-saturday.md#decision-model-image-observations) separate execution checks from accuracy evaluation and record false face classifications from Laya and SmolVLM. Camera operation, participant accuracy, and Windows execution remain open. The earlier Python CPU tensor check is not a model evaluation.
 
 ## Recommended starting order
 
@@ -14,7 +14,7 @@ The first inputs are the computer's built-in camera, as recorded in [Project dir
 
 The recommended starting combination is Face Landmarker, Gesture Recognizer, and Laya Vision. The first two measure visible movements; Laya tests questions and choices that can be configured. These are complementary roles, not five interchangeable classifiers. Clef-Flash remains [deferred](#clef-flash-9b).
 
-Live-stream input does not by itself establish recognition of a sequence such as nodding, or show that a movement was an intentional command. Test observations over time, personalized calibration, uncertain inputs, and repeated activations separately. The [experiment topic](../../experiments-before-saturday.md#measurements) owns the proposed measurements; it has no results yet.
+Live-stream input does not by itself establish recognition of a sequence such as nodding, or show that a movement was an intentional command. Test observations over time, personalized calibration, uncertain inputs, and repeated activations separately. The [experiment topic](../../experiments-before-saturday.md#measurements) owns measurements and observed smoke results; the comparative evaluation remains unrun. The [system design](../../design/index.md) explains proposed triggering and runtime roles.
 
 ## Supplied framework baseline
 
@@ -84,6 +84,6 @@ The candidates below are retained research leads, without a new ranking. Their r
 
 ## Review scope and exclusions
 
-The review read the full 826-line [captured conversation](../../SecondHands-conversation.md#import-scope), the maintained proposal and project context, the Compute summary, the experiment proposal, and the task plan. The archive is partial: missing earlier messages, attachments, and citation targets were not reconstructed. This index incorporates model identities, suggested roles, and relevant limits; it does not incorporate all historical rankings, benchmark numbers, or hardware claims as current facts.
+The review read the full available [captured conversation](../../SecondHands-conversation.md#import-scope), the maintained proposal and project context, the Compute summary, the experiment proposal, and the task plan. The public archive now contains marked privacy redactions. It remains partial: missing earlier messages, attachments, and citation targets were not reconstructed. This index incorporates model identities, suggested roles, and relevant limits; it does not incorporate all historical rankings, benchmark numbers, or hardware claims as current facts.
 
 No explicit user exclusion of a model was found in the captured exchanges. The older hardware-specific assessment that Clef-Flash was too large for VENTUNO Q was later reconsidered for Compute. Deferred models, lower-priority models, and unverified catalog entries therefore remain visible here. The Qualcomm AI Hub hand-gesture package is recorded on the [Gesture Recognizer page](mediapipe-gesture-recognizer.md#qualcomm-package-lead), rather than counted as a new top-five model. Backbone names such as Qwen3.5 are context for their derived candidates, not separate recommendations in the captured source.
