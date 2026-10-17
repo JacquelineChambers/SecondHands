@@ -8,6 +8,8 @@ The [Luma event page](https://luma.com/executorch-hackathon) describes an ExecuT
 
 Registration is an application requiring acceptance. The published proposal deadline was October 4, with selection announcements scheduled for October 7. These are past application dates, not final-demo deadlines. The page advertises prizes for each track's winning team and GitHub Copilot access; it does not provide a scoring rubric.
 
+**Update, 2026-10-17:** The user supplied a photograph of the attendee guide's judging slide. [Judging criteria](hackathon/judging-criteria.md) now records the five criteria and their 100-point allocation. This resolves the earlier rubric gap; the photograph's partially hidden descriptions remain unavailable.
+
 The [Open Source AI Week event page](https://opensourceaiweek.com/the-hackathon/) gives October 17–18, 2026 at Founder's Inc., 2 Marina Blvd B300, San Francisco, with the closing demo on Sunday. Its stated theme is open models and local, on-device inference.
 
 **Interpretation for SecondHands:** ExecuTorch is a central event expectation. The reviewed pages do not say every model must run through it. They also do not explicitly approve an application combining ExecuTorch with a separate local decision-model runtime. Keep that acceptance question open; do not treat silence as approval.
@@ -62,7 +64,7 @@ An incomplete installation should be repaired by the track team. The promised pr
 The reviewed public pages do not establish:
 
 - Whether a mixed-runtime design qualifies, or whether all inference must use ExecuTorch.
-- The scoring rubric, final submission format and cutoff, presentation length, or restrictions on work prepared before the event.
+- Final submission format and cutoff, presentation length, or restrictions on work prepared before the event. The [scoring criteria and weights](hackathon/judging-criteria.md#scoring) are now recorded from the supplied photograph.
 - Source-code publication, intellectual-property, or model-license conditions for submission.
 - Permission and support for our external [Femto Bolt](hardware/femto-bolt.md), Arduino, and actuator hardware.
 - The exact allocated PC configuration and bundle location.

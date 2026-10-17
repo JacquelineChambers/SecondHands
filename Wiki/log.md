@@ -1,5 +1,17 @@
 # Wiki change log
 
+## 2026-10-17 — Event backers recorded
+
+Added GitHub, Meta, and Qualcomm to [the judging page](hackathon/judging-criteria.md#event-backers), following the user's identification and the logos visible in the supplied photograph. No specific sponsorship roles or commitments are inferred.
+
+## 2026-10-17 — Judging criteria recorded
+
+Added [judging criteria](hackathon/judging-criteria.md) from the user-supplied attendee-guide photograph: five criteria totaling 100 points. Preserved the visible wording and weights without reconstructing hidden descriptions. Linked the page from the index and presentation task, recorded source SH-S-016, and resolved the earlier rubric gap in [the Compute summary](hackathon-compute.md). The source page could not be retrieved through the web tool; the photograph was not added to Git.
+
+## 2026-10-17 — Tailscale setup assigned
+
+Created [issue #9](https://github.com/davidmoshal/SecondHands/issues/9) for Tailscale and Mac-to-Windows command access on the Dell Snapdragon laptop, assigned to Vishwa's collaborator account `theja2289`. Updated existing SH-T-036 in [the plan](plan.md#snapdragon-deployment), [project direction and account mappings](project.md), and source SH-S-015. Installation and connection testing remain open.
+
 ## 2026-10-17 — Clinical application ownership confirmed
 
 Recorded Kate's clinical application role in [Project direction](project.md#established-user-direction), created [issue #7](https://github.com/davidmoshal/SecondHands/issues/7), and linked the work from [the plan](plan.md#team-coordination). Updated source record SH-S-014 and the owner-account context. Presentation ownership remains unconfirmed; no clinical requirements or findings were established by this assignment.

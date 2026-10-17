@@ -17,6 +17,7 @@ The user requested these GitHub work items on 2026-10-17. Use the issues for nam
 | Presentation | [Confirm the lead and prepare the presentation](https://github.com/davidmoshal/SecondHands/issues/5) |
 | 3D room simulation | [Build the browser room with optional Quest 2 WebXR viewing](https://github.com/davidmoshal/SecondHands/issues/6) |
 | Clinical application | [Define the clinical application — Kate](https://github.com/davidmoshal/SecondHands/issues/7) |
+| Laptop remote access | [Set up Tailscale — Vishwa](https://github.com/davidmoshal/SecondHands/issues/9) |
 
 - [ ] **SH-T-041 — Resolve the Dell camera path.** Record the tested outcome for [SH-Q-002](hardware/femto-bolt.md#sh-q-002--which-capture-path-works-on-the-dell), including a precise blocker or fallback if required.
 - [ ] **SH-T-042 — Confirm GitHub owner accounts.** Resolve [SH-Q-003](project.md#sh-q-003--github-accounts-for-the-named-owners) before assigning unverified accounts or changing repository access.
@@ -90,7 +91,7 @@ The user requested these GitHub work items on 2026-10-17. Use the issues for nam
 **Phase 7: verify the actual hackathon PC.** [The Compute summary](hackathon-compute.md) owns the supplied stack and unresolved event details. Mac success does not establish Windows ARM64 or NPU compatibility.
 
 - [ ] **SH-T-001 — Confirm device configuration and event details.** The guide review is complete and the [deployment laptop's reported X1E80100 processor](hardware/snapdragon-x-elite.md) is recorded. Actual RAM, Windows build, installed runtimes, bundle location, mixed-runtime acceptance, and other organizer details remain open.
-- [ ] **SH-T-036 — Verify Mac-to-PC development access.** Establish the selected T3/remote-command connection and confirm commands use the PC checkout and environment. Git synchronization is documented but not device-tested.
+- [ ] **SH-T-036 — Verify Mac-to-PC development access.** Vishwa (@theja2289) owns [Tailscale setup on the Dell Snapdragon laptop](https://github.com/davidmoshal/SecondHands/issues/9). Verify Mac connectivity, ordinary SSH to Windows, and reconnection after restart; confirm commands use the PC checkout and environment. Record the tested procedure in [the runbook](runbooks/mac-and-snapdragon-development.md). Setup and device execution remain unverified.
 - [ ] **SH-T-009 — Run the supplied DeepLabV3 ExecuTorch demonstration.** Inspect real inputs and rendered outputs; retain profiling evidence before claiming Qualcomm NPU execution.
 - [ ] **SH-T-010 — Run SecondHands on the PC.** Verify dependencies, camera, selected models, dashboard, output quality, latency, and memory. Record blockers and revise the provisional model choice if necessary.
 
@@ -102,7 +103,7 @@ The user requested these GitHub work items on 2026-10-17. Use the issues for nam
 - [ ] **SH-T-008 — Test physical control manually.** Verify the selected microcontroller/actuator independently of recognition.
 - [ ] **SH-T-012 — Connect recognition to the physical action.** Exercise deliberate, neutral, ambiguous, and failed-input cases against the agreed behavior.
 - [ ] **SH-T-014 — Rehearse the two-participant demonstration.** Verify personalized mappings, physical response, target-PC operation, and local processing.
-- [ ] **SH-T-015 — Prepare presentation and evidence.** Separate demonstrated behavior, measured results, the actual ExecuTorch contribution, and future proposals.
+- [ ] **SH-T-015 — Prepare presentation and evidence.** Address the [five judging criteria](hackathon/judging-criteria.md#scoring). Separate demonstrated behavior, measured results, the actual ExecuTorch contribution, and future proposals.
 
 ## Optional experiments
 
