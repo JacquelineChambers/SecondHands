@@ -2,7 +2,7 @@
 
 Updated 2026-10-17 at the user's request. This is the single task tracker, organized by topic and phase. Checked tasks have implementation or verification evidence; their stated limits still apply. Unchecked tasks are remaining work or explicitly marked proposals, not blanket approval to implement every option.
 
-Current position: all five starting candidates execute on the Mac. The two MediaPipe bundles feed the local exploration dashboard; Laya Vision, Mapika, and SmolVLM run as separate image experiments. Public-image inference and automated checks pass, but the image experiments expose false face classifications from Laya and SmolVLM. Physical-camera use, comparative accuracy, and Snapdragon execution remain unverified. Detailed behavior stays in [the design](design/index.md), commands in [the runbook](runbooks/mac-and-snapdragon-development.md), and results in [experiments](experiments-before-saturday.md).
+Current position: all five starting candidates execute on the Mac. The two MediaPipe bundles feed the local exploration dashboard; Laya Vision, Mapika, and SmolVLM run as separate image experiments. Public-image inference and automated checks pass, but the image experiments expose false face classifications from Laya and SmolVLM. Physical-camera use through SecondHands, comparative accuracy, and Snapdragon execution of SecondHands remain unverified. A separate [local depth bridge and person application](setup/ms-09-femto-bolt-bridge.md) passed initial Snapdragon tests, with a later capture timeout still unresolved. Detailed application behavior stays in [the design](design/index.md), commands in [the runbook](runbooks/mac-and-snapdragon-development.md), and model results in [experiments](experiments-before-saturday.md).
 
 ## Team coordination
 
@@ -19,7 +19,7 @@ The user requested these GitHub work items on 2026-10-17. Use the issues for nam
 | Clinical application | [Define the clinical application — Kate](https://github.com/davidmoshal/SecondHands/issues/7) |
 | Laptop remote access | [Set up Tailscale — Vishwa](https://github.com/davidmoshal/SecondHands/issues/9) |
 
-- [ ] **SH-T-041 — Resolve the Dell camera path.** Record the tested outcome for [SH-Q-002](hardware/femto-bolt.md#sh-q-002--which-capture-path-works-on-the-dell), including a precise blocker or fallback if required.
+- [ ] **SH-T-041 — Resolve the Dell camera path.** [SH-Q-002](hardware/femto-bolt.md#sh-q-002--which-capture-path-works-on-the-dell) is partially resolved by the local bridge. Record sustained capture, timeout diagnosis, reconnect/reboot recovery, measured distance accuracy, and application integration evidence before closing the remaining scope.
 - [ ] **SH-T-042 — Confirm GitHub owner accounts.** Resolve [SH-Q-003](project.md#sh-q-003--github-accounts-for-the-named-owners) before assigning unverified accounts or changing repository access.
 - [ ] **SH-T-043 — Confirm the presentation lead.** Resolve [SH-Q-004](project.md#sh-q-004--presentation-lead); Kate remains proposed.
 - [ ] **SH-T-046 — Define the clinical application.** Kate owns [issue #7](https://github.com/davidmoshal/SecondHands/issues/7). Record the intended application and agreed requirements, then connect them to model evaluation, UI, and demonstration work. [Project direction](project.md#established-user-direction) records the confirmed role; presentation ownership remains separate.
@@ -91,7 +91,7 @@ The user requested these GitHub work items on 2026-10-17. Use the issues for nam
 
 **Phase 7: verify the actual hackathon PC.** [The Compute summary](hackathon-compute.md) owns the supplied stack and unresolved event details. Mac success does not establish Windows ARM64 or NPU compatibility.
 
-- [ ] **SH-T-001 — Confirm device configuration and event details.** The guide review is complete and the [deployment laptop's reported X1E80100 processor](hardware/snapdragon-x-elite.md) is recorded. Actual RAM, Windows build, installed runtimes, bundle location, mixed-runtime acceptance, and other organizer details remain open.
+- [ ] **SH-T-001 — Confirm device configuration and event details.** The guide review is complete; the [deployment laptop's reported X1E80100 processor and observed Windows version](hardware/snapdragon-x-elite.md) are recorded. Actual RAM, exact laptop model, installed deployment runtimes, bundle location, mixed-runtime acceptance, and other organizer details remain open.
 - [ ] **SH-T-036 — Verify Mac-to-PC development access.** Vishwa (@theja2289) owns [Tailscale setup on the Dell Snapdragon laptop](https://github.com/davidmoshal/SecondHands/issues/9). Verify Mac connectivity, ordinary SSH to Windows, and reconnection after restart; confirm commands use the PC checkout and environment. Record the tested procedure in [the runbook](runbooks/mac-and-snapdragon-development.md). Setup and device execution remain unverified.
 - [ ] **SH-T-009 — Run the supplied DeepLabV3 ExecuTorch demonstration.** Inspect real inputs and rendered outputs; retain profiling evidence before claiming Qualcomm NPU execution.
 - [ ] **SH-T-010 — Run SecondHands on the PC.** Verify dependencies, camera, selected models, dashboard, output quality, latency, and memory. Record blockers and revise the provisional model choice if necessary.
@@ -112,6 +112,7 @@ These remain outside the initial completion requirement; record results in [expe
 
 - [ ] **SH-T-017 — Investigate SmolVLM's Qualcomm ExecuTorch path.** Verify the recipe/version/Windows route before porting. The cited Android recipe is not a ready-made Compute PC package.
 - [ ] **SH-T-016 — Evaluate Clef-Flash as a higher-level decision layer.** Subject to memory and runtime feasibility; it remains deferred, not excluded.
-- [ ] **SH-T-037 — Connect Orbbec Femto Bolt.** Follow [the hardware procedure](hardware/femto-bolt.md): establish color and depth capture on the x86 Windows laptop first, then test the Dell Snapdragon. Record driver, Viewer, Python, and application results separately. This replaces the Astra 2 hardware task.
+- [x] **SH-T-047 — Record the local Snapdragon depth bridge setup.** The [setup summary](setup/ms-09-femto-bolt-bridge.md) records the failed SDK route, successful depth/person verification, launch instructions, and later timeout from saved evidence. Applications and private captures remain outside this repository; no fresh camera test or SecondHands integration is claimed.
+- [ ] **SH-T-037 — Connect Orbbec Femto Bolt.** The [hardware procedure](hardware/femto-bolt.md) now links successful standalone Snapdragon bridge tests. The originally requested x86 reference test, sustained reliability, measured accuracy, and SecondHands integration remain open. Record driver, Viewer, Python, and application results separately. This replaces the Astra 2 hardware task.
 - [ ] **SH-T-038 — Try a phone camera over Wi-Fi.** Verify input compatibility, latency, and disconnect behavior.
 - [ ] **SH-T-039 — Explore audio recognition.** Select a useful audio interaction and candidate model if time permits; none is implemented yet.

@@ -1,5 +1,9 @@
 # Wiki change log
 
+## 2026-10-17 — Local depth bridge setup documented
+
+Created [the MS-09 / Femto Bolt setup summary](setup/ms-09-femto-bolt-bridge.md) in the user-requested `setup` folder. Reviewed the earlier local session and saved installation/test evidence to explain the SDK failure, direct capture bridge, depth decoding, person-position application, and launch procedure. Preserved the initial successful checks and a later capture timeout as separate observations. Updated navigation, source SH-S-018, [hardware findings](hardware/femto-bolt.md), [deployment hardware](hardware/snapdragon-x-elite.md), [project evidence limits](project.md#implementation-and-evidence-limits), and [task status](plan.md). No camera tests were rerun, no application integration was performed, and no private recordings or calibration files were copied into Git.
+
 ## 2026-10-17 — React and Bun dashboard migration
 
 Recorded the user-approved replacement of Vue with React and pnpm with Bun in [Project direction](project.md#development-setup), [runtime stack](design/runtime-stack.md), and [recognition design](design/recognition-and-triggers.md). Updated [runbook commands](runbooks/mac-and-snapdragon-development.md), SH-T-047 in [the plan](plan.md#ui), source SH-S-017, and [migration evidence](experiments-before-saturday.md#react-and-bun-migration-observations). Historical Vue checks remain labeled as earlier results. Issue #11 tracks the requested migration; Windows and physical-camera checks remain open.
