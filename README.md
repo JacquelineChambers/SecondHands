@@ -1,4 +1,6 @@
-> **Status:** Current proposal, supplied by the user on 2026-10-14. The text below is preserved as supplied. It describes intended capabilities, not verified implementation. Technical and market-size claims have not been independently checked in this documentation update. See [Project direction](project.md) for the relation to earlier decisions and remaining evidence gaps.
+> **Status:** Current proposal, supplied by the user on 2026-10-14. The text below is preserved as supplied. It describes intended capabilities, not verified implementation. Technical and market-size claims have not been independently checked in this documentation update. See [Project direction](Wiki/project.md) for the relation to earlier decisions and remaining evidence gaps.
+
+Development: see [Python and UI setup](Wiki/project.md#development-setup) for installation, commands, and package responsibilities.
 
 # SecondHands
 **Making the Physical World Accessible Through AI**

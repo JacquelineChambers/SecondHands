@@ -10,6 +10,8 @@ Compare candidate decision models on SecondHands movements before access to the 
 
 ## Models and observations
 
+This is the earlier three-model comparison proposal. The [model reference index](references/models/index.md#recommended-starting-order) owns the newer five-candidate starting recommendation and the retained research leads. Recording that recommendation does not by itself revise this proposed benchmark or claim completed experiments.
+
 Compare these three models from the supplied review:
 
 - [Laya Vision 201M](https://huggingface.co/thaitea/laya-vision-201m).

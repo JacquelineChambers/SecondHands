@@ -1,5 +1,13 @@
 # Wiki change log
 
+## 2026-10-16 — Model references added
+
+Added [the model reference index](references/models/index.md) and detail pages for the five recommended starting candidates supplied by the user. Reviewed the full captured conversation for other model mentions, including HSEmotion in the older quoted ranking; retained additional leads and distinguished deferrals from exclusions. Updated the [source records](index.md#source-records), [model-selection Question](project.md#sh-q-001--model-and-runtime-selection), experiment context, and SH-T-019 in [the task plan](plan.md#reference-review). The archive is unchanged. Historical technical claims remain unverified except where a primary-source check is explicitly stated; no models were installed or evaluated.
+
+## 2026-10-16 — Python and UI project configured
+
+Updated [Project direction](project.md#development-setup) with Python and Vue package responsibilities, setup commands, implementation limits, and observed Mac verification. Recorded the user's built-in-camera-first decision, with Astra 2 and a phone camera as optional inputs. Updated SH-T-003 and recorded completed setup as SH-T-018 in [the task plan](plan.md). Linked development instructions from the repository README and [Wiki index](index.md). No camera, recognition model, browser interaction, or Windows execution was tested.
+
 ## 2026-10-14 — Compute Track guide reviewed
 
 Added [the Compute Track summary](hackathon-compute.md) from the current hackathon repository and public event pages, with pinned repository references and explicit evidence limits. Placed the hackathon link at the top of [the Wiki index](index.md). Updated [Project direction](project.md) and SH-T-001 in [the task plan](plan.md) to distinguish verified source statements from unresolved organizer and hardware questions. No runtime tests, organizer contact, or full docaudit were performed.

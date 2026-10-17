@@ -15,3 +15,23 @@
 *.swo
 *~
 *.log
+
+# Python environments, caches, and build output
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# UI dependencies and generated files
+node_modules/
+*.tsbuildinfo
+
+# Local recordings, datasets, and model artifacts
+/data/
+/artifacts/
