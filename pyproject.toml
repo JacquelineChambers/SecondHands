@@ -10,6 +10,16 @@ pytorch = [
     "torch>=2.14.1",
     "torchvision>=0.29.1",
 ]
+vision = [
+    "mediapipe>=0.10.35,<0.11",
+    "numpy>=2,<3",
+    "opencv-contrib-python>=4.13,<5",
+]
+dashboard = [
+    "fastapi>=0.115,<1",
+    "uvicorn>=0.34,<1",
+    "websockets>=14,<17",
+]
 
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
@@ -28,6 +38,7 @@ addopts = "--import-mode=importlib"
 
 [dependency-groups]
 dev = [
+    "httpx2>=2,<3",
     "pytest>=9.1.1",
     "ruff>=0.17.1",
 ]

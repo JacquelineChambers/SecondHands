@@ -1,6 +1,6 @@
 # MediaPipe Gesture Recognizer
 
-**Status:** Starting candidate for hand controls in the [recommended order](index.md#recommended-starting-order), recorded at the user's request on 2026-10-16. Not installed or evaluated in SecondHands. This is a recognition model bundle, not a configurable decision model.
+**Status:** Implemented in the first Python baseline on 2026-10-16. Real-model image execution is smoke-tested on the Mac; camera use, personalized accuracy, and Windows execution remain untested. See [the observations](../../experiments-before-saturday.md#mediapipe-baseline-observations) and [runbook](../../runbooks/mac-and-snapdragon-development.md#run-mediapipe-face-and-hand-recognition). This is a recognition model bundle, not a configurable decision model.
 
 ## Capability and role
 
@@ -12,7 +12,7 @@ Use the predefined gestures as a baseline before testing personalized gestures. 
 
 Test the chosen hand poses, neutral hands, ambiguous poses, and frames with no hand. Use the [shared measurements](../../experiments-before-saturday.md#measurements). Live-stream tracking is not proof that a temporal gesture such as a wave is recognized as a sequence.
 
-Mac and Windows ARM64 execution, useful gesture coverage, and target-device performance remain untested. This MediaPipe path does not itself demonstrate ExecuTorch.
+The Mac image smoke checks do not establish useful personalized gesture coverage, live-camera performance, Windows ARM64 execution, or target-device performance. This MediaPipe path does not itself demonstrate ExecuTorch.
 
 ## Qualcomm package lead
 

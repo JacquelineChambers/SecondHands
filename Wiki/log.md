@@ -1,5 +1,57 @@
 # Wiki change log
 
+## 2026-10-17 — Clinical application ownership confirmed
+
+Recorded Kate's clinical application role in [Project direction](project.md#established-user-direction), created [issue #7](https://github.com/davidmoshal/SecondHands/issues/7), and linked the work from [the plan](plan.md#team-coordination). Updated source record SH-S-014 and the owner-account context. Presentation ownership remains unconfirmed; no clinical requirements or findings were established by this assignment.
+
+## 2026-10-17 — Browser-based 3D room demonstration added
+
+Recorded the user's [3D room direction](project.md#established-user-direction) and created [issue #6](https://github.com/davidmoshal/SecondHands/issues/6) for David and Vishwa. Added linked work in [the plan](plan.md#ui) for a gesture/facial-command light response and optional Quest 2 viewing through WebXR, without an Android SDK. Recorded source SH-S-013. Existing physical-control work remains separate; no 3D implementation or headset compatibility is claimed.
+
+## 2026-10-17 — Deployment laptop processor recorded
+
+Added the [Dell Snapdragon hardware page](hardware/snapdragon-x-elite.md) with the user's exact X1E80100/Oryon processor description and reported 3.42 GHz speed. Separated those supplied details from unknown RAM, OS build, runtime versions, and untested deployment behavior. Linked the page from the index, device-configuration task, and Femto Bolt procedure. No hardware inspection or performance test was performed.
+
+## 2026-10-17 — Femto Bolt selection and team work items
+
+Replaced the current Astra 2 hardware choice with [Orbbec Femto Bolt](hardware/femto-bolt.md), following the user's revised direction. Added the Windows laptop-first, Dell Snapdragon-second procedure with current SDK evidence and explicit architecture limits. Updated the proposal, README, project direction, Compute hardware reference, navigation, source records, and [plan](plan.md#team-coordination). Created five GitHub coordination issues for stack, hardware, models, UI, and presentation. Recorded unconfirmed account mappings and Kate's proposed presentation ownership as linked Questions. No Astra-specific capture code existed to move, and no hardware connection was tested.
+
+## 2026-10-17 — Additional local model experiments
+
+Added isolated, locked image experiments and root just commands for Laya Vision, Mapika Decider Vision, and SmolVLM. Updated [model references](references/models/index.md), [observed results](experiments-before-saturday.md#decision-model-image-observations), [runbook commands](runbooks/mac-and-snapdragon-development.md#run-the-other-three-image-models), [runtime boundaries](design/runtime-stack.md), Project direction, source record SH-S-010, and [the task plan](plan.md#models). The records distinguish successful execution, model mistakes, dependency failures, and unresolved work. Added the user-requested `wait-what-dm` and `caveman` pointers to [repository governance](../AGENTS.md#communication-and-documentation-skills). Personal recordings remain outside Git; the new model runners do not yet supply the dashboard or execute through ExecuTorch.
+
+## 2026-10-17 — Task plan reorganized by topic and phase
+
+Reworked [the existing plan](plan.md) at the user's request into Mac foundation, models, recognition features, UI, design/ExecuTorch, comparison, Snapdragon deployment, and physical demonstration phases. Preserved earlier task identifiers and evidence limits, added explicit remaining model integrations and feature follow-ups, and removed governance/personal-name cleanup from the task list. Checked tasks distinguish implemented exploration from untested real-camera, participant, and target-device behavior. Updated navigation and source record SH-S-009; no application behavior changed.
+
+## 2026-10-17 — Approved exploration dashboard implemented
+
+Implemented the user-approved dashboard through a subagent and reconciled the [design](design/recognition-and-triggers.md), [runtime stack](design/runtime-stack.md), [Project direction](project.md#live-exploration-dashboard), source record SH-S-008, and SH-T-025 in [the task plan](plan.md#project-setup). Added [startup and interaction steps](runbooks/mac-and-snapdragon-development.md#run-the-live-exploration-dashboard). [Observed checks](experiments-before-saturday.md#dashboard-implementation-observations) record 33 Python tests, two transport tests, Vue type checking/build, native MediaPipe execution on public images, and parent source/browser review. The docs distinguish implemented deterministic triggers and frozen comparison from future decision-model inference. Real-camera, participant accuracy, remote operation, and Windows remain untested. Current personal-name checks remain clear; no Git history was rewritten.
+
+## 2026-10-17 — Design approved and personal-name check repeated
+
+Recorded the user's approval of the reviewed wording and explicit subagent implementation request in [the design](design/index.md), [Project direction](project.md#established-user-direction), source record SH-S-008, and SH-T-025 in [the task plan](plan.md#project-setup). Rechecked current repository content for the requested personal names and reviewed prose candidates for other names. The requested names were already absent from prose after the earlier redactions; working repository and technical source links remain. No further captured text was changed and no Git history was rewritten. Implementation evidence will be recorded separately after verification.
+
+## 2026-10-17 — Recognition design and local ExecuTorch check
+
+Added [system design](design/index.md) at the user's request: continuous recognition versus command triggers, proposed calibration/state transitions, dashboard exploration modes, package boundaries, and the reviewed [runtime stack](design/runtime-stack.md). Recorded the user's five-candidate Mac exploration and mixed-runtime preference separately from proposed product behavior and unresolved organizer acceptance. Added `just smoke-executorch` with a standalone script lock; the [observed Mac check](experiments-before-saturday.md#executorch-cpu-smoke-observation) verifies export, XNNPACK delegation, `.pte` loading, and agreement with PyTorch on 12 synthetic inputs. Updated the [runbook](runbooks/mac-and-snapdragon-development.md#run-the-executorch-cpu-smoke-check), project direction, model-index navigation, source records, and SH-T-024/SH-T-005 in [the task plan](plan.md). This is not a trained gesture model, implemented trigger policy, or target-PC result.
+
+## 2026-10-16 — First MediaPipe Python baseline implemented
+
+Implemented the user-requested Face Landmarker and Gesture Recognizer baseline through a subagent, with explicit checked model downloads, image and bounded camera CLIs, structured outputs, and focused tests. Updated [Project direction](project.md#mediapipe-baseline), the [model references](references/models/index.md), the [runbook](runbooks/mac-and-snapdragon-development.md#run-mediapipe-face-and-hand-recognition), and SH-T-023 in [the task plan](plan.md#project-setup). [Dated observations](experiments-before-saturday.md#mediapipe-baseline-observations) record the real image smoke checks, 10 passing tests with local models, and the limits of the evidence. Camera use, Windows, comparative accuracy, and Vue integration remain untested or unimplemented.
+
+## 2026-10-16 — Public-repository privacy policy applied
+
+Applied the user-approved [public repository rule](../AGENTS.md#public-repository-content) and linked the Wiki convention to that owner. Replaced team names with role labels and removed private conversation links and identifiers from the public archive and source record. Marked the redactions and retained the technical exchange content. Updated the model reference's source description and SH-T-022 in [the task plan](plan.md#project-setup). Targeted current-file scans passed; this was not a full secret or history audit. Earlier Git commits retain the original archive and have not been rewritten.
+
+## 2026-10-16 — Local development tasks added
+
+Added the root [justfile](../justfile) for the four commands the user confirmed working, plus combined setup and task listing. Updated [the development runbook](runbooks/mac-and-snapdragon-development.md#try-the-existing-scaffold-on-the-mac) to use the shortcuts and retain the Windows ARM64 dependency limit. Recorded verification under SH-T-021 in [the task plan](plan.md#project-setup). Recipe execution is verified on the Mac except for UI startup, whose command was checked by dry run; Windows execution remains untested.
+
+## 2026-10-16 — Mac and Snapdragon development runbook added
+
+Created [the development runbook](runbooks/mac-and-snapdragon-development.md) from the user-approved workflow explanation. Consolidated installation and check commands from [Project direction](project.md#development-procedure), while retaining package responsibilities and observed verification there. Recorded the separate checkouts and environments, Git workflow, T3 execution context, and current lockfile's Windows ARM64 PyTorch limitation. Updated [navigation and source records](index.md) and SH-T-020 in [the task plan](plan.md#project-setup). The Windows and remote-connection procedures remain untested.
+
 ## 2026-10-16 — Model references added
 
 Added [the model reference index](references/models/index.md) and detail pages for the five recommended starting candidates supplied by the user. Reviewed the full captured conversation for other model mentions, including HSEmotion in the older quoted ranking; retained additional leads and distinguished deferrals from exclusions. Updated the [source records](index.md#source-records), [model-selection Question](project.md#sh-q-001--model-and-runtime-selection), experiment context, and SH-T-019 in [the task plan](plan.md#reference-review). The archive is unchanged. Historical technical claims remain unverified except where a primary-source check is explicitly stated; no models were installed or evaluated.

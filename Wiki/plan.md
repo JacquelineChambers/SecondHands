@@ -1,46 +1,115 @@
-# SecondHands task plan
+# SecondHands plan
 
-This is the task-tracking owner selected by the user on 2026-10-14. The sequence below is proposed from the [current proposal](proposal.md), [experiment plan](experiments-before-saturday.md), and [project evidence gaps](project.md#implementation-and-evidence-limits), with the 2026-10-16 camera decision recorded in [Project direction](project.md#established-user-direction). Completed tasks need the evidence specified below. Owners are not yet assigned.
+Updated 2026-10-17 at the user's request. This is the single task tracker, organized by topic and phase. Checked tasks have implementation or verification evidence; their stated limits still apply. Unchecked tasks are remaining work or explicitly marked proposals, not blanket approval to implement every option.
 
-Keep task status, blockers, and verification links here. Check a task only when its completion evidence is available. Product decisions remain in their owning topic; this checklist does not settle open design choices or authorize execution of every task.
+Current position: all five starting candidates execute on the Mac. The two MediaPipe bundles feed the local exploration dashboard; Laya Vision, Mapika, and SmolVLM run as separate image experiments. Public-image inference and automated checks pass, but the image experiments expose false face classifications from Laya and SmolVLM. Physical-camera use, comparative accuracy, and Snapdragon execution remain unverified. Detailed behavior stays in [the design](design/index.md), commands in [the runbook](runbooks/mac-and-snapdragon-development.md), and results in [experiments](experiments-before-saturday.md).
+
+## Team coordination
+
+The user requested these GitHub work items on 2026-10-17. Use the issues for named team coordination and this plan for the detailed project checklist. Issue descriptions contain the requested owners; only confirmed GitHub accounts receive formal assignments.
+
+| Workstream | GitHub issue |
+| --- | --- |
+| Hackathon stack review | [Review the stack and Snapdragon deployment path](https://github.com/davidmoshal/SecondHands/issues/1) |
+| Femto Bolt hardware | [Windows laptop first, then Dell Snapdragon](https://github.com/davidmoshal/SecondHands/issues/2) |
+| Model evaluation | [Evaluate five local candidates](https://github.com/davidmoshal/SecondHands/issues/3) |
+| UI | [Review and extend the dashboard](https://github.com/davidmoshal/SecondHands/issues/4) |
+| Presentation | [Confirm the lead and prepare the presentation](https://github.com/davidmoshal/SecondHands/issues/5) |
+| 3D room simulation | [Build the browser room with optional Quest 2 WebXR viewing](https://github.com/davidmoshal/SecondHands/issues/6) |
+| Clinical application | [Define the clinical application — Kate](https://github.com/davidmoshal/SecondHands/issues/7) |
+
+- [ ] **SH-T-041 — Resolve the Dell camera path.** Record the tested outcome for [SH-Q-002](hardware/femto-bolt.md#sh-q-002--which-capture-path-works-on-the-dell), including a precise blocker or fallback if required.
+- [ ] **SH-T-042 — Confirm GitHub owner accounts.** Resolve [SH-Q-003](project.md#sh-q-003--github-accounts-for-the-named-owners) before assigning unverified accounts or changing repository access.
+- [ ] **SH-T-043 — Confirm the presentation lead.** Resolve [SH-Q-004](project.md#sh-q-004--presentation-lead); Kate remains proposed.
+- [ ] **SH-T-046 — Define the clinical application.** Kate owns [issue #7](https://github.com/davidmoshal/SecondHands/issues/7). Record the intended application and agreed requirements, then connect them to model evaluation, UI, and demonstration work. [Project direction](project.md#established-user-direction) records the confirmed role; presentation ownership remains separate.
 
 ## Project setup
 
-- [x] **SH-T-018 — Configure the Python project and UI package.** Requested on 2026-10-16; the user selected Vue 3, TypeScript, and Vite. Added the Python package layout, uv dependency locking, optional PyTorch dependencies, development tools, and an independent Vue UI scaffold. [Setup verification](project.md#setup-verification) records package imports, a PyTorch CPU calculation, Python distribution builds, Ruff checks, and UI type checking and production build on the Mac. This completes configuration only; camera capture, model integration, the API connection, and Windows verification remain unimplemented or untested.
+**Phase 1: Mac foundation.**
 
-## Reference review
+- [x] **SH-T-018 — Configure Python and Vue packages.** Python 3.12, uv locking, optional PyTorch dependencies, and Vue 3/TypeScript/Vite are configured. [Setup checks](project.md#setup-verification) passed on the Mac.
+- [x] **SH-T-021 — Add just commands.** Setup, model download, image/camera inference, dashboard services, tests, and the ExecuTorch smoke check are exposed through the [justfile](../justfile).
+- [x] **SH-T-020 — Document shared Mac/PC development.** [The runbook](runbooks/mac-and-snapdragon-development.md) covers separate environments, Git synchronization, T3 execution context, and known Windows dependency limits. Remote connection and PC execution remain untested.
 
-- [x] **SH-T-019 — Record model references and review captured model mentions.** Requested on 2026-10-16. Added the [model reference index](references/models/index.md), five detail pages for the supplied starting recommendation, and additional candidates from the full captured conversation. Recorded historical limits and the absence of explicit user exclusions in that capture. Updated navigation, source dispositions, and the model-selection Question's reference. Local links, heading targets, and Markdown whitespace were checked. No model was installed or evaluated by this documentation task.
+## Models
 
-## Before Saturday, October 17
+**Phase 2: establish about five runnable candidates on the Mac before porting.** The first completed baseline below contains two recognition bundles; the other three are separate integrations. A compatibility blocker must be recorded and does not count as a working model.
 
-- [ ] **SH-T-001 — Confirm the Compute environment and event requirements.** Published-source review completed on 2026-10-14 in [the Compute Track summary](hackathon-compute.md). Remaining work: confirm the allocated PC configuration, bundle location, mixed-runtime acceptance, and other [unresolved event details](hackathon-compute.md#unresolved-event-details). Done when those findings or explicit organizer deferrals are recorded in that owner. This source review alone does not complete the task.
-- [ ] **SH-T-002 — Define the demonstration and acceptance criteria.** Select the physical object, the two volunteers' movements, and the expected confirmation and failure behavior for the [proposed demonstration](proposal.md#the-hackathon-demonstration). Agree how response time and false activations will be judged. Done when the intended behavior and examples are recorded and approved in the owning project topic; do not invent numerical thresholds from model benchmarks.
-- [ ] **SH-T-003 — Establish local camera capture.** Use the Mac's built-in camera first, following the [2026-10-16 camera decision](project.md#established-user-direction). Record usable inputs and compatibility limits. Done when repeatable sample capture works; otherwise leave it unchecked and record the blocker. Astra 2 and a phone camera streaming over Wi-Fi are optional follow-up inputs.
-- [ ] **SH-T-004 — Collect and label the comparison observations.** After capture works, prepare the shared observations specified by the [experiment plan](experiments-before-saturday.md#models-and-observations). Done when the two-volunteer set includes deliberate, neutral, and ambiguous movements with labels that can be reused across models.
-- [ ] **SH-T-005 — Prepare a repeatable model comparison.** Establish local execution for the three experiment candidates and a common way to supply observations and record the [measurements](experiments-before-saturday.md#measurements). Done when each candidate has a reproducible invocation or a documented compatibility blocker, with model/runtime versions recorded.
-- [ ] **SH-T-006 — Run the Mac experiments.** Use the same labeled set for each runnable candidate. Done when measured results and limitations are recorded on the [experiment page](experiments-before-saturday.md), separately from the proposed method. Record failed or unsupported runs explicitly.
-- [ ] **SH-T-007 — Review the results and choose the initial integration candidate.** Use SH-T-001 and SH-T-006 to inform [SH-Q-001](project.md#sh-q-001--model-and-runtime-selection). Done when the choice, reasons, and remaining target-PC checks are recorded there. A provisional Mac choice must remain labeled provisional.
-- [ ] **SH-T-008 — Establish physical control independently.** Using the object and behavior agreed in SH-T-002, test the microcontroller and actuator with an explicit manual command. Done when the intended action and agreed failure behavior can be demonstrated without a model in the loop. This can proceed alongside the model comparison.
+### Reference review
 
-## Saturday: verify the supplied PC
+- [x] **SH-T-019 — Record model references.** [The model index](references/models/index.md) contains the top five, individual detail pages, and other retained candidates from the captured chats.
 
-- [ ] **SH-T-009 — Run the supplied ExecuTorch demonstration.** Record the actual PC configuration and locate the supplied DeepLab model and matching runner. Done when the demonstration runs and its output is inspected. Distinguish a default-input smoke test from a real-image result; claim accelerator use only with supporting evidence.
-- [ ] **SH-T-010 — Verify camera and candidate execution on the PC.** Test the capture path and initial candidate selected above on the actual device. Done when representative inputs produce inspected outputs and measured latency/memory results; otherwise leave it unchecked and record the blockers. Revisit [SH-Q-001](project.md#sh-q-001--model-and-runtime-selection) if the Mac choice cannot be deployed.
+### Mac integrations
 
-SH-T-009 establishes the supplied framework baseline. SH-T-010 establishes the application's target-device feasibility; neither task alone proves the integrated demonstration works.
+- [x] **SH-T-023 — Integrate MediaPipe Face Landmarker and Gesture Recognizer.** Both run on public sample images, with checked downloads, structured results, image/camera CLIs, and dashboard integration. [Observed results](experiments-before-saturday.md#mediapipe-baseline-observations); physical-camera use and participant accuracy remain untested.
+- [x] **SH-T-026 — Integrate Laya Vision 201M.** The isolated CLI loads pinned weights, answers configurable image questions on Mac MPS and CPU, and records runtime, latency, memory, and failures. [Observed results](experiments-before-saturday.md#decision-model-image-observations) include an incorrect face classification. Dashboard integration and participant accuracy remain open.
+- [x] **SH-T-027 — Integrate Mapika Decider 2B Vision.** The isolated CLI runs pinned weights on Mac MPS, with its MPS patch active. [The same image questions](experiments-before-saturday.md#decision-model-image-observations) establish output and cost differences from Laya; the participant benchmark, dashboard integration, and Windows path remain unverified.
+- [x] **SH-T-028 — Integrate SmolVLM-500M-Instruct locally.** The isolated CLI executes pinned weights on Mac MPS and records image-conditioned text, runtime, latency, and memory. [Observed results](experiments-before-saturday.md#decision-model-image-observations) include an incorrect face classification. Generated text is not a typed decision score; dashboard integration and an ExecuTorch port remain separate work.
 
-## Build and verify the demonstration
+## Recognition features
 
-- [ ] **SH-T-011 — Implement personalized calibration.** Build the calibration flow against the movements and behavior agreed in SH-T-002, using the verified capture/model path. Done when the two volunteers can establish different movement mappings for the same action and those mappings can be exercised independently.
-- [ ] **SH-T-012 — Connect recognition, confirmation, and physical action.** Integrate SH-T-008 with SH-T-011 using the agreed confirmation and failure behavior. Done when deliberate, neutral, and ambiguous examples exercise the real path from camera input to actuator, with outcomes compared against the agreed examples.
-- [ ] **SH-T-013 — Add the live demonstration interface.** Display the movement, action, confirmation status, and measured response latency specified in the [proposal](proposal.md#the-hackathon-demonstration). Done when these values come from the running application, with the latency measurement boundaries stated.
-- [ ] **SH-T-014 — Rehearse the two-volunteer demonstration.** Run the same physical action using each volunteer's personalized movement. Done when the agreed acceptance criteria are evaluated on the target PC, results and failures are recorded, and local operation without cloud transmission of camera data is checked.
-- [ ] **SH-T-015 — Prepare the presentation and evidence.** Use the observed demonstration to explain adaptive calibration, the actual ExecuTorch contribution, measured performance, and remaining limits. Done when the presentation separates demonstrated capabilities from experiments and future proposals, and externally sourced claims used in it have supporting references.
+**Phase 3: turn observations into configurable command experiments.** Implemented features below are deterministic logic over MediaPipe measurements, not validated intention recognition.
+
+- [x] **SH-T-029 — Implement configurable trigger rules.** Face, hand, either, combined, and hand-then-face sequence modes include hold, hysteresis, confirmation timeout, cancellation, release, and cooldown. [Trigger behavior and limits](design/recognition-and-triggers.md#trigger-policy).
+- [x] **SH-T-030 — Implement session calibration.** Collect neutral/deliberate measurements, show signal separation, and suggest an experimental threshold pair. Collection disables simulation; data stays in memory.
+- [x] **SH-T-031 — Bound work and reject old results.** One camera owner, one frame job, session/frame/mapping identity, invalidation after control changes, and cleanup on Stop/disconnect are implemented and [tested](experiments-before-saturday.md#dashboard-implementation-observations).
+- [ ] **SH-T-040 — Connect a decision model to candidate events.** Supply selected images, context, and configurable choices after a possible command is detected. Bound outstanding requests and reject expired decisions; do not require a large model on every frame.
+- [ ] **SH-T-032 — Investigate independent face/hand thresholds.** Proposed improvement: current mappings share one activation/release pair, so applying one modality's calibration replaces that pair for both cues.
+- [ ] **SH-T-033 — Add temporal movement experiments.** After selecting a movement such as nodding, test observations over time. MediaPipe video tracking alone does not implement movement-sequence recognition.
+- [ ] **SH-T-011 — Validate personalized calibration with two participants.** The generic calibration flow exists; still demonstrate distinct usable movements mapped to the same action, against agreed criteria.
+
+## UI
+
+**Phase 4: let the team inspect capabilities and try command mappings.**
+
+- [x] **SH-T-025 — Implement the live exploration dashboard.** Vue connects to the Python service and displays matched preview/landmarks, facial blendshapes, hand categories, timings, mapping controls, calibration, bounded history, and a simulated lamp. Comparison freezes existing MediaPipe results; three unintegrated candidates are labeled honestly. [Verification](experiments-before-saturday.md#dashboard-implementation-observations).
+- [ ] **SH-T-003 — Verify the physical Mac camera and live dashboard.** Start capture, inspect real face/hand output, exercise mappings, and check Stop/restart. Public-image and mocked-camera checks do not complete this task.
+- [ ] **SH-T-013 — Complete the demonstration interface.** Extend the working dashboard to show the actual selected action/device state and measured capture-to-action latency. Current task/frame timings exclude transport, display, and physical response.
+- [ ] **SH-T-044 — Build and connect the 3D room simulation.** Under [issue #6](https://github.com/davidmoshal/SecondHands/issues/6), David and Vishwa will make an accepted gesture or facial command change a light in a browser-based room. Follow [the approved direction](project.md#established-user-direction); confirm the command/state connection and demonstrate the response. No implementation is complete yet.
+- [ ] **SH-T-045 — Try optional Quest 2 viewing through WebXR.** Use the same room as a web experience, without an Android SDK. Record headset/browser compatibility, connection setup, and whether the selected movement remains observable when the participant wears the headset. Keep ordinary browser viewing available. Coordinate through [issue #6](https://github.com/davidmoshal/SecondHands/issues/6).
+
+## Design and ExecuTorch
+
+**Phase 5: document boundaries and establish useful framework execution.**
+
+- [x] **SH-T-024 — Document the initial design and run ExecuTorch on the Mac.** [Design docs](design/index.md) exist. ExecuTorch 1.5.1 exported and executed an untrained XNNPACK CPU network with outputs matching PyTorch on 12 synthetic inputs. [Smoke result](experiments-before-saturday.md#executorch-cpu-smoke-observation); this is not a recognition model.
+- [ ] **SH-T-034 — Expand the design documentation.** Proposed follow-ups: `architecture.md` for component/data boundaries, `model-integration.md` for adding candidates, and `dashboard.md` for exploration flows. Move existing owned explanations when splitting; do not duplicate them. These files are not yet created.
+- [ ] **SH-T-035 — Run a useful SecondHands component through ExecuTorch.** Select a recognition or decision component, validate its outputs against its source runtime, and connect it to the application. CPU execution and Qualcomm NPU execution need separate evidence.
+
+## Comparison and selection
+
+**Phase 6: measure the candidates on relevant observations.** [The experiment topic](experiments-before-saturday.md) owns methods and results. Its older Laya/Mapika/MobileCLIP2 benchmark remains a proposal; the five-candidate integration goal above is the newer direction.
+
+- [ ] **SH-T-004 — Collect and label comparison observations.** Include deliberate, neutral, and ambiguous movements from two volunteers; retain personal recordings outside Git.
+- [ ] **SH-T-005 — Build a repeatable comparison runner.** The shared image CLI now preserves distinct output types, versions, and timings for three candidates on the same inputs. Dataset-level aggregation and the labeled participant comparison remain to be implemented.
+- [ ] **SH-T-006 — Run the Mac comparison.** Record accuracy, false activations, abstention, median/p95 latency, memory, calibration effort, and configurability. Smoke tests are not these measurements.
+- [ ] **SH-T-007 — Select the initial integration candidate.** Record the choice and evidence under [SH-Q-001](project.md#sh-q-001--model-and-runtime-selection), including licensing and remaining PC checks.
+
+## Snapdragon deployment
+
+**Phase 7: verify the actual hackathon PC.** [The Compute summary](hackathon-compute.md) owns the supplied stack and unresolved event details. Mac success does not establish Windows ARM64 or NPU compatibility.
+
+- [ ] **SH-T-001 — Confirm device configuration and event details.** The guide review is complete and the [deployment laptop's reported X1E80100 processor](hardware/snapdragon-x-elite.md) is recorded. Actual RAM, Windows build, installed runtimes, bundle location, mixed-runtime acceptance, and other organizer details remain open.
+- [ ] **SH-T-036 — Verify Mac-to-PC development access.** Establish the selected T3/remote-command connection and confirm commands use the PC checkout and environment. Git synchronization is documented but not device-tested.
+- [ ] **SH-T-009 — Run the supplied DeepLabV3 ExecuTorch demonstration.** Inspect real inputs and rendered outputs; retain profiling evidence before claiming Qualcomm NPU execution.
+- [ ] **SH-T-010 — Run SecondHands on the PC.** Verify dependencies, camera, selected models, dashboard, output quality, latency, and memory. Record blockers and revise the provisional model choice if necessary.
+
+## Physical demonstration
+
+**Phase 8: connect the validated interaction to an actual object.** This remains separate from the implemented virtual lamp.
+
+- [ ] **SH-T-002 — Agree demonstration behavior and acceptance criteria.** Choose the object, participants' movements, confirmation/failure behavior, response targets, and acceptable false activations.
+- [ ] **SH-T-008 — Test physical control manually.** Verify the selected microcontroller/actuator independently of recognition.
+- [ ] **SH-T-012 — Connect recognition to the physical action.** Exercise deliberate, neutral, ambiguous, and failed-input cases against the agreed behavior.
+- [ ] **SH-T-014 — Rehearse the two-participant demonstration.** Verify personalized mappings, physical response, target-PC operation, and local processing.
+- [ ] **SH-T-015 — Prepare presentation and evidence.** Separate demonstrated behavior, measured results, the actual ExecuTorch contribution, and future proposals.
 
 ## Optional experiments
 
-These tasks are separate from the initial demonstration sequence. Keep their results in the [experiment topic](experiments-before-saturday.md) and any selection decision in [SH-Q-001](project.md#sh-q-001--model-and-runtime-selection).
+These remain outside the initial completion requirement; record results in [experiments](experiments-before-saturday.md).
 
-- [ ] **SH-T-016 — Evaluate Clef-Flash as the higher-level decision layer.** Test the role described in the [current proposal](proposal.md#how-it-works), subject to actual memory and runtime support. Done when a bounded comparison has recorded results or a deployment blocker. Its experimental status does not make it a prerequisite for the continuous recognition path.
-- [ ] **SH-T-017 — Investigate the proposed SmolVLM-500M ExecuTorch path.** Verify the deployment claim from the earlier [model review](SecondHands-conversation.md#exchange-5--decision-model-ranking) against current primary documentation and the supplied environment before attempting a port. Done when feasibility and the effort required are recorded, with any execution result distinguished from documentation evidence.
+- [ ] **SH-T-017 — Investigate SmolVLM's Qualcomm ExecuTorch path.** Verify the recipe/version/Windows route before porting. The cited Android recipe is not a ready-made Compute PC package.
+- [ ] **SH-T-016 — Evaluate Clef-Flash as a higher-level decision layer.** Subject to memory and runtime feasibility; it remains deferred, not excluded.
+- [ ] **SH-T-037 — Connect Orbbec Femto Bolt.** Follow [the hardware procedure](hardware/femto-bolt.md): establish color and depth capture on the x86 Windows laptop first, then test the Dell Snapdragon. Record driver, Viewer, Python, and application results separately. This replaces the Astra 2 hardware task.
+- [ ] **SH-T-038 — Try a phone camera over Wi-Fi.** Verify input compatibility, latency, and disconnect behavior.
+- [ ] **SH-T-039 — Explore audio recognition.** Select a useful audio interaction and candidate model if time permits; none is implemented yet.
