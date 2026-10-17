@@ -4,6 +4,8 @@ The [current proposal](proposal.md) owns the SecondHands vision, demonstration, 
 
 ## Established user direction
 
+- On 2026-10-17, the user requested a migration from Vue to React, with Bun preferred over pnpm. [Issue #11](https://github.com/davidmoshal/SecondHands/issues/11) records the work. React, TypeScript, Vite, and Bun now supply the dashboard; this supersedes the earlier Vue selection. [Migration checks](experiments-before-saturday.md#react-and-bun-migration-observations) record Mac verification and remaining device limits.
+
 - On 2026-10-17, the user requested Tailscale setup on the Dell Snapdragon laptop, assigned to Vishwa in [issue #9](https://github.com/davidmoshal/SecondHands/issues/9). The repository collaborator account `theja2289` has a matching public profile name and is assigned to this issue. [SH-T-036](plan.md#snapdragon-deployment) tracks verification; the connection has not been tested.
 - On 2026-10-17, the user confirmed that Kate will work on the clinical application of SecondHands. [Issue #7](https://github.com/davidmoshal/SecondHands/issues/7) records that ownership; specific clinical requirements remain to be defined. This does not resolve the separate [presentation lead question](#sh-q-004--presentation-lead).
 - On 2026-10-17, the user added a browser-based 3D room demonstration: an accepted gesture or facial-expression command turns on a light in the room. David and Vishwa will build it under [issue #6](https://github.com/davidmoshal/SecondHands/issues/6). Normal browser viewing is the baseline; optional viewing through the available Oculus Quest 2 should use WebXR, with no Android SDK or native Android application. No 3D implementation, library selection, headset compatibility, or connection has been verified. This is an addition; the request does not cancel physical-control work. [The plan](plan.md#ui) tracks implementation.
@@ -20,7 +22,7 @@ The supplied text is the user's current proposal. The assistant's earlier model 
 
 At the 2026-10-14 import, this repository contained no application, build process, or test suite. The archive preserves five exchanges and is incomplete; see [its import scope](SecondHands-conversation.md#import-scope).
 
-The 2026-10-16 setup added an installable Python package, Vue scaffold, and MediaPipe image/camera CLIs. The approved 2026-10-17 implementation connects Vue to a local Python service and adds configurable trigger experiments, in-memory calibration, and a simulated lamp. Real-model image execution, protocol behavior, and deterministic trigger behavior are checked on the Mac. Physical camera operation, recognition accuracy for participants, and Windows execution remain untested. The Snapdragon PC is first available at the hackathon.
+The 2026-10-16 setup added an installable Python package, Vue scaffold, and MediaPipe image/camera CLIs. The approved 2026-10-17 implementation connects the dashboard, now migrated to React, to a local Python service and adds configurable trigger experiments, in-memory calibration, and a simulated lamp. Real-model image execution, protocol behavior, and deterministic trigger behavior are checked on the Mac. Physical camera operation, recognition accuracy for participants, and Windows execution remain untested. The Snapdragon PC is first available at the hackathon.
 
 The [Compute Track review](hackathon-compute.md) verifies the published event direction and documented deployment target as of 2026-10-14. It distinguishes those source statements from actual-device evidence and records unresolved event details. The exact allocated PC configuration, Femto Bolt compatibility, target-PC model compatibility and performance, and acceptance of mixed runtimes remain unverified. Other assistant claims and the proposal's market-size claims remain unchecked research leads. No model was run in that 2026-10-14 review.
 
@@ -28,7 +30,7 @@ The later [runtime-stack review](design/runtime-stack.md) rechecks the relevant 
 
 ## Development setup
 
-The user requested Python configuration on 2026-10-16 and selected Vue 3, TypeScript, and Vite for the UI. The repository uses one Python package under `src/secondhands/` and one independent frontend package under `ui/`. Python 3.12 is the selected starting version; [the Compute guide](https://github.com/aaishikasb/qc-executorch-guide/blob/9f3aae1f53053729ed28a242643e39feaf38fb9d/Compute/README.md) also specifies Python 3.12 for its optional export workflow. The initial setup created scaffolding; the current recognition baseline is described below.
+The user requested Python configuration on 2026-10-16 and initially selected Vue 3, TypeScript, and Vite. On 2026-10-17, the user replaced Vue with React and preferred Bun for UI tooling. The current UI uses React 19, TypeScript, Vite, and Bun 1.4.3. The repository uses one Python package under `src/secondhands/` and one independent frontend package under `ui/`. Python 3.12 is the selected starting version; [the Compute guide](https://github.com/aaishikasb/qc-executorch-guide/blob/9f3aae1f53053729ed28a242643e39feaf38fb9d/Compute/README.md) also specifies Python 3.12 for its optional export workflow. The initial setup created scaffolding; the current recognition baseline is described below.
 
 ### Package responsibilities
 
@@ -36,18 +38,20 @@ The user requested Python configuration on 2026-10-16 and selected Vue 3, TypeSc
 - [`src/secondhands/recognition/`](../src/secondhands/recognition/__init__.py): gesture and facial movement recognition, including model loading for that task.
 - [`src/secondhands/decisions/`](../src/secondhands/decisions/__init__.py): decision models and interpretation of observations over time.
 - [`src/secondhands/training/`](../src/secondhands/training/__init__.py): PyTorch training, evaluation, and model export. Keep these offline operations separate from live recognition.
-- [`src/secondhands/api/`](../src/secondhands/api/__init__.py): FastAPI service and session state, with WebSocket commands/results connecting the Python camera worker to Vue.
-- [`ui/`](../ui/package.json): Vue components, browser interaction, and presentation. It has its own dependencies and build; it is not included in the Python wheel.
+- [`src/secondhands/api/`](../src/secondhands/api/__init__.py): FastAPI service and session state, with WebSocket commands/results connecting the Python camera worker to React.
+- [`ui/`](../ui/package.json): React components, browser interaction, and presentation. It has its own dependencies and build; it is not included in the Python wheel.
 
 The capture and recognition packages implement the MediaPipe baseline; decisions implements deterministic trigger policy, and API implements the local dashboard service. Training remains a placeholder. Behavior tests are under `tests/`; model-backed integration is opt-in. Experimental scripts stay outside the live application package. Local recordings and datasets belong under `data/`, and model weights and exported models under `artifacts/`; both paths are ignored by Git. Model bundles are created by an explicit download command, not ordinary package setup.
 
-The implemented local boundary has Vue send commands and display results while Python owns capture and inference. This preserves the intended separation for a future Mac-to-PC connection. Remote access is not configured by the loopback-only dashboard; the [design](design/recognition-and-triggers.md#code-and-data-boundaries) owns the current protocol and limits.
+The implemented local boundary has React send commands and display results while Python owns capture and inference. This preserves the intended separation for a future Mac-to-PC connection. Remote access is not configured by the loopback-only dashboard; the [design](design/recognition-and-triggers.md#code-and-data-boundaries) owns the current protocol and limits.
 
 ### Development procedure
 
 The [Mac and Snapdragon development runbook](runbooks/mac-and-snapdragon-development.md) owns installation, local commands, Git synchronization, remote T3 execution, and platform-specific dependency limits. Python and UI dependencies are managed separately; no JavaScript workspace or additional Python packages are needed for this initial layout.
 
 ### Setup verification
+
+The later [React and Bun migration checks](experiments-before-saturday.md#react-and-bun-migration-observations) describe the current frontend. The following Vue results are historical.
 
 Observed on the Apple Silicon Mac on 2026-10-16: Python 3.12.9 imported all six package modules; PyTorch 2.14.1 and torchvision 0.29.1 imported and a CPU tensor calculation returned the expected values. Ruff lint and formatting checks passed. `uv build` produced a source distribution and wheel; the wheel imported successfully in an isolated environment outside the repository. The Vue UI passed `vue-tsc` and its Vite production build.
 
