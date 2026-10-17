@@ -1,5 +1,9 @@
 # Wiki change log
 
+## 2026-10-17 — React and Bun dashboard migration
+
+Recorded the user-approved replacement of Vue with React and pnpm with Bun in [Project direction](project.md#development-setup), [runtime stack](design/runtime-stack.md), and [recognition design](design/recognition-and-triggers.md). Updated [runbook commands](runbooks/mac-and-snapdragon-development.md), SH-T-047 in [the plan](plan.md#ui), source SH-S-017, and [migration evidence](experiments-before-saturday.md#react-and-bun-migration-observations). Historical Vue checks remain labeled as earlier results. Issue #11 tracks the requested migration; Windows and physical-camera checks remain open.
+
 ## 2026-10-17 — Event backers recorded
 
 Added GitHub, Meta, and Qualcomm to [the judging page](hackathon/judging-criteria.md#event-backers), following the user's identification and the logos visible in the supplied photograph. No specific sponsorship roles or commitments are inferred.

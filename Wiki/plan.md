@@ -28,7 +28,7 @@ The user requested these GitHub work items on 2026-10-17. Use the issues for nam
 
 **Phase 1: Mac foundation.**
 
-- [x] **SH-T-018 — Configure Python and Vue packages.** Python 3.12, uv locking, optional PyTorch dependencies, and Vue 3/TypeScript/Vite are configured. [Setup checks](project.md#setup-verification) passed on the Mac.
+- [x] **SH-T-018 — Configure Python and Vue packages.** Python 3.12, uv locking, optional PyTorch dependencies, and the original Vue 3/TypeScript/Vite scaffold were configured. SH-T-047 supersedes the frontend selection. [Setup checks](project.md#setup-verification) passed on the Mac.
 - [x] **SH-T-021 — Add just commands.** Setup, model download, image/camera inference, dashboard services, tests, and the ExecuTorch smoke check are exposed through the [justfile](../justfile).
 - [x] **SH-T-020 — Document shared Mac/PC development.** [The runbook](runbooks/mac-and-snapdragon-development.md) covers separate environments, Git synchronization, T3 execution context, and known Windows dependency limits. Remote connection and PC execution remain untested.
 
@@ -63,7 +63,8 @@ The user requested these GitHub work items on 2026-10-17. Use the issues for nam
 
 **Phase 4: let the team inspect capabilities and try command mappings.**
 
-- [x] **SH-T-025 — Implement the live exploration dashboard.** Vue connects to the Python service and displays matched preview/landmarks, facial blendshapes, hand categories, timings, mapping controls, calibration, bounded history, and a simulated lamp. Comparison freezes existing MediaPipe results; three unintegrated candidates are labeled honestly. [Verification](experiments-before-saturday.md#dashboard-implementation-observations).
+- [x] **SH-T-047 — Migrate the dashboard to React and Bun.** Completed the user-requested [issue #11](https://github.com/davidmoshal/SecondHands/issues/11) implementation with the same Python API, controls, and layout. Bun replaces pnpm; [verification](experiments-before-saturday.md#react-and-bun-migration-observations) covers locked installation, interaction tests, types, build, and stopped browser checks. Windows execution remains part of SH-T-010.
+- [x] **SH-T-025 — Implement the live exploration dashboard.** The dashboard connects to the Python service and displays matched preview/landmarks, facial blendshapes, hand categories, timings, mapping controls, calibration, bounded history, and a simulated lamp. Comparison freezes existing MediaPipe results; three unintegrated candidates are labeled honestly. [Verification](experiments-before-saturday.md#dashboard-implementation-observations).
 - [ ] **SH-T-003 — Verify the physical Mac camera and live dashboard.** Start capture, inspect real face/hand output, exercise mappings, and check Stop/restart. Public-image and mocked-camera checks do not complete this task.
 - [ ] **SH-T-013 — Complete the demonstration interface.** Extend the working dashboard to show the actual selected action/device state and measured capture-to-action latency. Current task/frame timings exclude transport, display, and physical response.
 - [ ] **SH-T-044 — Build and connect the 3D room simulation.** Under [issue #6](https://github.com/davidmoshal/SecondHands/issues/6), David and Vishwa will make an accepted gesture or facial command change a light in a browser-based room. Follow [the approved direction](project.md#established-user-direction); confirm the command/state connection and demonstrate the response. No implementation is complete yet.
