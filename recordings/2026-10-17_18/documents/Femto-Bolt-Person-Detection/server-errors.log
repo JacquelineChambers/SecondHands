@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "[redacted-home]\Documents\Femto-Bolt-Person-Detection\person_app.py", line 76, in worker
+    depth_samples=drain(depth_camera);color_history.extend(drain(color_camera))
+  File "[redacted-home]\Documents\Femto-Bolt-Person-Detection\person_app.py", line 35, in drain
+    if not values:values.append(camera.read(timeout=3))
+                                ~~~~~~~~~~~^^^^^^^^^^^
+  File "[redacted-home]\Documents\Femto-Bolt-Depth-Test-2026-10-17\bridge\direct_capture.py", line 167, in read
+    except queue.Empty:raise TimeoutError('No sensor frame arrived within 8 seconds; check USB and camera power') from None
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: No sensor frame arrived within 8 seconds; check USB and camera power
+Traceback (most recent call last):
+  File "[redacted-home]\Documents\Femto-Bolt-Person-Detection\person_app.py", line 68, in worker
+    if calibration_info.get('error'):raise RuntimeError(calibration_info['error'])
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Invalid index value for argument "index"
+Traceback (most recent call last):
+  File "[redacted-home]\Documents\Femto-Bolt-Person-Detection\person_app.py", line 68, in worker
+    if calibration_info.get('error'):raise RuntimeError(calibration_info['error'])
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Invalid index value for argument "index"
+Traceback (most recent call last):
+  File "[redacted-home]\Documents\Femto-Bolt-Person-Detection\person_app.py", line 68, in worker
+    if calibration_info.get('error'):raise RuntimeError(calibration_info['error'])
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Invalid index value for argument "index"

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-17T22:15:22.417294+00:00",
+  "model": "Mapika/decider-2b-vision",
+  "revision": "863e290863655f1d6b69324d77d09ac972d21609",
+  "code_revision": "d6fc522aed7fc392576a9b66a330409bc6c382bd",
+  "runner_sha256": "a0c3311968838bb3f4f19dc068ddd34ee98af9d453081381dedbd15a3bf6d93b",
+  "runtime": {
+    "device": "cpu",
+    "dtype": "torch.float32",
+    "cpu_threads": 8,
+    "python": "3.12.15",
+    "system": "Windows",
+    "machine": "ARM64",
+    "torch": "2.14.1",
+    "transformers": "5.20.1"
+  },
+  "load_ms": 18963.655200321227,
+  "peak_process_rss_mib": null,
+  "question": "Which visible hand gesture is present?",
+  "context": "Describe visible posture only. Do not infer a command or intent.",
+  "choices": [
+    "thumbs up",
+    "open palm",
+    "closed fist",
+    "other hand pose",
+    "no visible hand"
+  ],
+  "results": [
+    {
+      "image": "portrait.jpg",
+      "sha256": "a6f11efaa834706db23f275b6115058fa87fc7f14362681e6abe14e82749de3e",
+      "first_request_ms": 19501.59290013835,
+      "warm_request_ms": [
+        20074.785999953747,
+        21042.382299900055,
+        22044.25359982997
+      ],
+      "warm_median_ms": 21042.382299900055,
+      "warm_max_ms": 22044.25359982997,
+      "output": {
+        "kind": "choice",
+        "choice": "open palm",
+        "scores": {
+          "thumbs up": 0.030567564070224762,
+          "open palm": 0.41078606247901917,
+          "closed fist": 0.07324369996786118,
+          "other hand pose": 0.24268782138824463,
+          "no visible hand": 0.24271489679813385
+        }
+      },
+      "outputs_identical": true
+    },
+    {
+      "image": "thumb_up.jpg",
+      "sha256": "5d673c081ab13b8a1812269ff57047066f9c33c07db5f4178089e8cb3fdc0291",
+      "first_request_ms": 5477.904699742794,
+      "warm_request_ms": [
+        5939.177399966866,
+        5864.135600160807,
+        5950.918499846011
+      ],
+      "warm_median_ms": 5939.177399966866,
+      "warm_max_ms": 5950.918499846011,
+      "output": {
+        "kind": "choice",
+        "choice": "thumbs up",
+        "scores": {
+          "thumbs up": 0.9861140847206116,
+          "open palm": 0.0017202127492055297,
+          "closed fist": 0.010926607996225357,
+          "other hand pose": 0.0006635173922404647,
+          "no visible hand": 0.0005757008912041783
+        }
+      },
+      "outputs_identical": true
+    }
+  ],
+  "timing_scope": "Request includes preprocessing, inference, decoding and device sync; excludes image file reading and model loading.",
+  "scope": "Static image smoke experiment; not calibrated command intent or a statistical benchmark."
+}

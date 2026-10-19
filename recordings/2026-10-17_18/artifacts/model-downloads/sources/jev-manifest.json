@@ -1,0 +1,54 @@
+{
+  "name": "JEVision",
+  "bundle_type": "routed KEV-compatible typed decision service",
+  "base_model": {
+    "repo_id": "Qwen/Qwen3.5-0.8B-Base",
+    "revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+    "license": "apache-2.0",
+    "weights_included": false
+  },
+  "default_text_adapter": "jevvision-text",
+  "text_adapters": {
+    "jevvision-text": {
+      "path": "text/jevvision-text",
+      "role": "default typed-decision text branch"
+    },
+    "jevbench-m3": {
+      "path": "text/jevbench-m3",
+      "role": "compatibility path for the default text branch"
+    },
+    "kev-0.8b": {
+      "path": "text/kev-0.8b",
+      "role": "pinned KEV text baseline",
+      "repo_id": "jaredpalmer/kev-0.8b",
+      "revision": "54f4f8777356cd5bbbb6c6919c657f26e6f2f6d8"
+    }
+  },
+  "visual_adapter": {
+    "path": ".",
+    "adapter": "adapter/adapter_model.safetensors",
+    "head": "pointer_head.pt",
+    "role": "image-aware typed-decision sidecar"
+  },
+  "routing": {
+    "without_images": "selected text adapter",
+    "with_images": "visual sidecar"
+  },
+  "context": {
+    "max_request_tokens": 80000
+  },
+  "artifact_sha256": {
+    "text/jevvision-text/adapter_model.safetensors": "0f71c01d01cc9a82648417f3b036e329e0fe27dd44cd6847fa141b85518e1022",
+    "text/jevvision-text/adapter_config.json": "917dbb4e84a81737b187d98633afe8139eded84eabe83cfcf8c9e210a3001615",
+    "text/jevvision-text/head.pt": "b3ac9f2e10a903bfec76020ee4a730921c22531267de7493aff57b80c741e906",
+    "text/jevbench-m3/adapter_model.safetensors": "0f71c01d01cc9a82648417f3b036e329e0fe27dd44cd6847fa141b85518e1022",
+    "text/jevbench-m3/adapter_config.json": "917dbb4e84a81737b187d98633afe8139eded84eabe83cfcf8c9e210a3001615",
+    "text/jevbench-m3/head.pt": "b3ac9f2e10a903bfec76020ee4a730921c22531267de7493aff57b80c741e906",
+    "text/kev-0.8b/adapter_model.safetensors": "c81d5716f0af7622d8d2b97013c333d48263ca01113f9a7cf4526e96f6ac0b26",
+    "text/kev-0.8b/adapter_config.json": "748acb2cda88454cb1ba69d745ba336f3fcb5486eac349e90960c8b8d8d3e854",
+    "text/kev-0.8b/head.pt": "39f4343ccccc65e583bbfff0de0e11bfedb849fcfaaf94b50ac4f2b73bc79c65",
+    "adapter/adapter_config.json": "e6cef9780f0b336b051e317e7ba2becd7cc6bbb139a18c64f83ddae9fc441cdd",
+    "adapter/adapter_model.safetensors": "ffee0467a55883e8aa212035426eefad09380d903e0be49bbc69ebb1cf6de436",
+    "pointer_head.pt": "4c5c16989c6aec9c290c6e5382d972c7c3e9ce5ebdc6f013d599195faa5e17ed"
+  }
+}

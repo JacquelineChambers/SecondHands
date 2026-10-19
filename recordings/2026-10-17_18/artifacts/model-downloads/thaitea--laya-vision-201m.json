@@ -1,0 +1,127 @@
+{
+  "_id": "6ab4b689dde0b92006019579",
+  "id": "thaitea/laya-vision-201m",
+  "private": false,
+  "pipeline_tag": "visual-question-answering",
+  "library_name": "laya",
+  "tags": [
+    "laya",
+    "safetensors",
+    "calibration",
+    "decision-model",
+    "vision",
+    "smolvlm",
+    "games",
+    "visual-question-answering",
+    "en",
+    "dataset:HuggingFaceM4/the_cauldron",
+    "dataset:MMInstruction/VLFeedback",
+    "dataset:HuggingFaceM4/A-OKVQA",
+    "dataset:derek-thomas/ScienceQA",
+    "dataset:lmms-lab-encoder/VQAv2",
+    "base_model:HuggingFaceTB/SmolVLM-256M-Instruct",
+    "base_model:finetune:HuggingFaceTB/SmolVLM-256M-Instruct",
+    "license:cc-by-nc-sa-4.0",
+    "region:us"
+  ],
+  "downloads": 0,
+  "likes": 1,
+  "modelId": "thaitea/laya-vision-201m",
+  "author": "thaitea",
+  "sha": "0b6228f7a0762566de1c4539e9aa4eb1c1aef5f4",
+  "lastModified": "2026-09-24T05:35:10.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "license": "cc-by-nc-sa-4.0",
+    "base_model": "HuggingFaceTB/SmolVLM-256M-Instruct",
+    "library_name": "laya",
+    "pipeline_tag": "visual-question-answering",
+    "datasets": [
+      "HuggingFaceM4/the_cauldron",
+      "MMInstruction/VLFeedback",
+      "HuggingFaceM4/A-OKVQA",
+      "derek-thomas/ScienceQA",
+      "lmms-lab-encoder/VQAv2"
+    ],
+    "language": [
+      "en"
+    ],
+    "tags": [
+      "laya",
+      "calibration",
+      "decision-model",
+      "vision",
+      "smolvlm",
+      "games"
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "74def53f51c45a19f02d141a988885a7e98ef206",
+      "size": 7109
+    },
+    {
+      "rfilename": "backbone/config.json",
+      "blobId": "3627489ffce1ac6f125123d6d48a347b828b8ab6",
+      "size": 5288
+    },
+    {
+      "rfilename": "model.safetensors",
+      "blobId": "001818b9733db63409d141087fc55f670965f63a",
+      "size": 804696880,
+      "lfs": {
+        "sha256": "31220803f38b44b8b1649b207c632612c9a35dee0da2ef1ea35d21e4b424be68",
+        "size": 804696880,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "processor/chat_template.jinja",
+      "blobId": "29e5b5e1984a29d63749e1d1029148087dcae130",
+      "size": 403
+    },
+    {
+      "rfilename": "processor/processor_config.json",
+      "blobId": "40891213a3c6828c3f4e1d24579317b23719b025",
+      "size": 586
+    },
+    {
+      "rfilename": "processor/tokenizer.json",
+      "blobId": "d3043cffd569a7096dfa5aaef711dd658f0484a2",
+      "size": 3548471
+    },
+    {
+      "rfilename": "processor/tokenizer_config.json",
+      "blobId": "a0461df196a497c5c301673b13a107932421e28e",
+      "size": 586
+    },
+    {
+      "rfilename": "training_metrics.json",
+      "blobId": "a3aef6c37be92618d1714903bb2e196278f45383",
+      "size": 20862
+    },
+    {
+      "rfilename": "vlm_agent_config.json",
+      "blobId": "fdf87885d9b8c88fd569ba3edef0d16f26a5c6f0",
+      "size": 554
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2026-09-24T05:35:05.000Z",
+  "safetensors": {
+    "parameters": {
+      "F32": 201161350
+    },
+    "total": 201161350
+  },
+  "usedStorage": 804696880
+}

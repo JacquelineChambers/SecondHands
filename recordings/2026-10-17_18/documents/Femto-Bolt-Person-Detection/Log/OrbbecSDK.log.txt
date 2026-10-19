@@ -1,0 +1,48 @@
+[10/17 13:07:23.870897][info][8588][HostTimestampProvider.cpp:36] Update clock type to: realtime(0)
+[10/17 13:07:24.015954][info][8588][DeviceManager.cpp:25] Current found device(s): (1)
+[10/17 13:07:24.015968][info][8588][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8E751007C, Connection: USB3.1
+[10/17 13:07:24.015976][info][8588][DeviceManager.cpp:488] Enable net device enumeration: true
+[10/17 13:07:25.041865][info][8588][DeviceManager.cpp:25] Current device(s) list: (1)
+[10/17 13:07:25.041903][info][8588][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8E751007C, Connection: USB3.1
+[10/17 13:07:25.489566][info][8588][DeviceManager.cpp:200] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8E751007C FW: 1.0.9
+[10/17 13:08:56.829016][info][24872][HostTimestampProvider.cpp:36] Update clock type to: realtime(0)
+[10/17 13:08:56.923330][info][24872][DeviceManager.cpp:25] Current found device(s): (1)
+[10/17 13:08:56.923343][info][24872][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8E751007C, Connection: USB3.1
+[10/17 13:08:56.923359][info][24872][DeviceManager.cpp:488] Enable net device enumeration: true
+[10/17 13:08:57.944324][info][24872][DeviceManager.cpp:25] Current device(s) list: (1)
+[10/17 13:08:57.944361][info][24872][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8E751007C, Connection: USB3.1
+[10/17 13:09:00.679390][info][24872][DeviceManager.cpp:200] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8E751007C FW: 1.0.9
+[10/17 14:24:14.580179][info][29360][HostTimestampProvider.cpp:36] Update clock type to: realtime(0)
+[10/17 14:24:14.601170][info][29360][DeviceManager.cpp:25] Current found device(s): (0)
+[10/17 14:24:14.601213][info][29360][DeviceManager.cpp:488] Enable net device enumeration: true
+[10/17 14:24:15.630906][info][29360][DeviceManager.cpp:25] Current device(s) list: (0)
+[10/17 14:24:15.631182][warning][29360][Device.cpp:276] Invalid index value for argument "index"
+[10/17 14:24:15.631248][warning][29360][ObException.cpp:26] A recoverable_exception has occurred!
+ - where: Device.cpp(276)
+ - msg: Invalid index value for argument "index"
+ - type: INVALID_VALUE
+ - status: 100
+[10/17 14:24:45.564530][info][32020][HostTimestampProvider.cpp:36] Update clock type to: realtime(0)
+[10/17 14:24:45.582212][info][32020][DeviceManager.cpp:25] Current found device(s): (0)
+[10/17 14:24:45.582250][info][32020][DeviceManager.cpp:488] Enable net device enumeration: true
+[10/17 14:24:46.603117][info][32020][DeviceManager.cpp:25] Current device(s) list: (0)
+[10/17 14:24:46.603552][warning][32020][Device.cpp:276] Invalid index value for argument "index"
+[10/17 14:24:46.603668][warning][32020][ObException.cpp:26] A recoverable_exception has occurred!
+ - where: Device.cpp(276)
+ - msg: Invalid index value for argument "index"
+ - type: INVALID_VALUE
+ - status: 100
+[10/17 14:25:26.457004][info][28392][HostTimestampProvider.cpp:36] Update clock type to: realtime(0)
+[10/17 14:25:26.489253][error][28392][WinHelpers.cpp:532] CreateFile failed
+[10/17 14:25:26.489452][error][28392][WinHelpers.cpp:567] could not find camera in windows device tree
+[10/17 14:25:26.619682][error][28392][WinHelpers.cpp:532] CreateFile failed
+[10/17 14:25:26.619991][error][28392][WinHelpers.cpp:567] could not find camera in windows device tree
+[10/17 14:25:26.661628][info][28392][DeviceManager.cpp:25] Current found device(s): (0)
+[10/17 14:25:26.661755][info][28392][DeviceManager.cpp:488] Enable net device enumeration: true
+[10/17 14:25:27.698089][info][28392][DeviceManager.cpp:25] Current device(s) list: (0)
+[10/17 14:25:27.698821][warning][28392][Device.cpp:276] Invalid index value for argument "index"
+[10/17 14:25:27.699060][warning][28392][ObException.cpp:26] A recoverable_exception has occurred!
+ - where: Device.cpp(276)
+ - msg: Invalid index value for argument "index"
+ - type: INVALID_VALUE
+ - status: 100

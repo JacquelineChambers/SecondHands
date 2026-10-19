@@ -1,0 +1,632 @@
+
+I 00:00:00.000171 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:226] Setting runtime log level: 1
+I 00:00:00.000197 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:237] Setting runtime performance mode: 1
+I 00:00:00.000200 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:246] Setting runtime profile level: 0
+I 00:00:00.000590 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:335] Model file gesture_qnn.pte is loaded.
+I 00:00:00.000597 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:345] Using method forward
+I 00:00:00.000603 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:392] Setting up planned buffer 0, size 544.
+[INFO] [Qnn ExecuTorch]: Deserializing processed data using QnnContextCustomProtocol
+[INFO] [Qnn ExecuTorch]: soc_model in soc_info: SC8380XP
+[INFO] [Qnn ExecuTorch]: backend_type: kHtpBackend
+[INFO] [Qnn ExecuTorch]: library_path: 
+[INFO] [Qnn ExecuTorch]: dump intermediate outputs: (null)
+[INFO] [Qnn ExecuTorch]: log_level: kLogLevelDebug
+[INFO] [Qnn ExecuTorch]: profile_level: kProfileOff
+[INFO] [Qnn ExecuTorch]: the size of qnn context binary: 356352
+[INFO] [Qnn ExecuTorch]: Is on-device graph construction: 0
+[INFO] [Qnn ExecuTorch]: Enable shared buffer: 0
+[INFO] [Qnn ExecuTorch]: The number of op packages: 0
+[INFO] [Qnn ExecuTorch]: Creating new backend bundle.
+[INFO] [Qnn ExecuTorch]: create QNN Logger with log_level 5
+[INFO] [Qnn ExecuTorch]:  <I> QnnLog_create started.
+
+[INFO] [Qnn ExecuTorch]:  <V> Registered a new graph environment 0 with priority: 100, num hvx threads: 1001, num hmx threads: 1001
+
+[WARNING] [Qnn ExecuTorch]:  <W> Initializing HtpProvider
+
+[INFO] [Qnn ExecuTorch]:  <V> Creating default router
+
+[INFO] [Qnn ExecuTorch]:  <V> RouterWindows creater
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: Initializing the router
+
+[INFO] [Qnn ExecuTorch]:  <V> Detected Snapdragon SOC Dynamic SDM with 4 SOCs
+
+[INFO] [Qnn ExecuTorch]:  <V> Allocating PlatformInfo struct size 120
+
+[INFO] [Qnn ExecuTorch]:  <V> Multicore support is unavailable
+
+[INFO] [Qnn ExecuTorch]:  <V> Force to use single core in default platformInfo when MultiCore is not supported, numHwDevices= 1
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: Initializing the graph registry
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: Initializing the context registry
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: Initializing the device registry
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: Initializing the tensor counter
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: setting isExitCalled to false
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: setting ssrInProgress to false
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: FinalCleanupFn fnPtr is nullptr
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: initializing mem registry
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: initializing mmap registry
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: Initializing the logger lifecycle manager
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: constructing bundle
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph environment handle not opened as preparelib or driverlib is not yet loaded
+
+[INFO] [Qnn ExecuTorch]:  <V> Set default graph environment 0 remoteHandle 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Opened default graph env, envRemoteHandle 0
+
+[INFO] [Qnn ExecuTorch]:  <I> exit with 0
+
+[INFO] [Qnn ExecuTorch]:  <I> exit with 0
+
+[INFO] [Qnn ExecuTorch]:  <V> HTP: initialization completed successfully
+
+[INFO] [Qnn ExecuTorch]:  <I> QnnLog_create exit.
+
+[INFO] [Qnn ExecuTorch]:  <I> QnnBackend_create started. backend = 0x63191608
+
+[INFO] [Qnn ExecuTorch]:  <V> Oem key validation infra not found, limiting oemMaxPriority to HIGHEST
+
+[INFO] [Qnn ExecuTorch]:  <V> Backend handle created: 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph environment handle not opened as preparelib or driverlib is not yet loaded
+
+[INFO] [Qnn ExecuTorch]:  <V> Set default graph environment 0 remoteHandle 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Opened default graph env, envRemoteHandle 0
+
+[INFO] [Qnn ExecuTorch]:  <I> QnnBackend_create done successfully. backend = 0x63191608
+
+[INFO] [Qnn ExecuTorch]:  <V> Deactivated logger with handle 0000000000000001
+
+[INFO] [Qnn ExecuTorch]:  <I> QnnDevice_create started
+
+[INFO] [Qnn ExecuTorch]:  <V> Create device with id 0x1
+
+[INFO] [Qnn ExecuTorch]:  <V> Config not passed. Loading default platform info!
+
+[INFO] [Qnn ExecuTorch]:  <V> Setting default value for unsigned PD usage
+
+[INFO] [Qnn ExecuTorch]:  <V> DSP Driver Path: C:\WINDOWS\System32\DriverStore\FileRepository\qcnspmcdm8380.inf_arm64_e663a92a933cab52
+
+[INFO] [Qnn ExecuTorch]:  <I> First connection to QNN stub established!
+
+[INFO] [Qnn ExecuTorch]:  <V> Off-chip memory allocator not available - this is expected for on-chip only builds
+
+[INFO] [Qnn ExecuTorch]:  <V> Loading remote funcs
+
+[INFO] [Qnn ExecuTorch]:  <V> Getting effective domain ID of domain name cdsp
+
+[INFO] [Qnn ExecuTorch]:  <V> Effective cdsp_id is: 3, Session_id is: 0 for original Device Id: 0, DeviceId: 0, CoreId: 0, pdId: 0
+
+[INFO] [Qnn ExecuTorch]:  <V> No ADAS pltform detected, BCS disabled
+
+[INFO] [Qnn ExecuTorch]:  <V> Transport config  BCS_enable:0  [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <V> Dspqueue is supported in this meta.
+
+[INFO] [Qnn ExecuTorch]:  <V> Successfully created dspqueue for priority 100
+
+[INFO] [Qnn ExecuTorch]:  <V> isPollingAvailable 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Returning queueid 0 for priority 100
+
+[INFO] [Qnn ExecuTorch]:  <V> transport execute faster ipc start polling [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <D> qnn_transport_execute_fasterIpc_start_polling time: 0 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> exits with 2, successfully initialized rpc memory
+
+[INFO] [Qnn ExecuTorch]:  <V> Successful rpcMemInit
+
+[INFO] [Qnn ExecuTorch]:  <V> 8 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> 136 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <D> Calling RPC transport with params 000001E367820000 [8 B], 0000000000000000 [0 B], 000001E367830000 [88 B]
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> transport run [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <D> qnn_transport_run time: 6 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> 16 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> 8 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <D> Calling RPC transport with params 000001E367840000 [10 B], 0000000000000000 [0 B], 000001E367820000 [8 B]
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> transport run [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <D> qnn_transport_run time: 0 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> exits device initialization with  0
+
+[INFO] [Qnn ExecuTorch]:  <V> Function not called, PrepareLib isn't loaded!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> transport run [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <D> qnn_transport_run time: 0 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> setSkelLogLevel return 0
+
+[INFO] [Qnn ExecuTorch]:  <I> QnnDevice_create done. device = 0x1. status 0x0
+
+[INFO] [Qnn ExecuTorch]:  <V> Deactivated logger with handle 0000000000000001
+
+[INFO] [Qnn ExecuTorch]:  <I> htpPerfInfrastructureCreatePowerConfigId started for deviceId: 0, coreId: 0
+
+
+[INFO] [Qnn ExecuTorch]:  <V> Device with devID[0] coreID[0], pdId[0] found with CoreType:0
+
+[INFO] [Qnn ExecuTorch]:  <V> Created power config id 4271633296 for device id 0 core id 0 processDomain id 0
+
+[INFO] [Qnn ExecuTorch]:  <I> htpPerfInfrastructureCreatePowerConfigId done. status 0x0
+
+[INFO] [Qnn ExecuTorch]:  <V> Deactivated logger with handle 0000000000000001
+
+[INFO] [Qnn ExecuTorch]:  <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -23334000
+
+
+[INFO] [Qnn ExecuTorch]:  <V> Get HTP power device instance for device id 0 core id 0 processDomain id 0 coreType 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Get HTP power device instance for device id 0 core id 0 processDomain id 0 coreType 0
+
+[INFO] [Qnn ExecuTorch]:  <V> set power settings DCVS V3 for context id -23334000:
+
+[INFO] [Qnn ExecuTorch]:  <V> setDcvsEnable 1
+
+[INFO] [Qnn ExecuTorch]:  <V> dcvsEnable 0
+
+[INFO] [Qnn ExecuTorch]:  <V> powerMode 16
+
+[INFO] [Qnn ExecuTorch]:  <V> setSleepLatency 1
+
+[INFO] [Qnn ExecuTorch]:  <V> sleepLatency 40
+
+[INFO] [Qnn ExecuTorch]:  <V> setSleepDisable 0
+
+[INFO] [Qnn ExecuTorch]:  <V> sleepDisable 0
+
+[INFO] [Qnn ExecuTorch]:  <V> setBusParams 1
+
+[INFO] [Qnn ExecuTorch]:  <V> busVoltageCornerMin 160
+
+[INFO] [Qnn ExecuTorch]:  <V> busVoltageCornerTarget 160
+
+[INFO] [Qnn ExecuTorch]:  <V> busVoltageCornerMax 160
+
+[INFO] [Qnn ExecuTorch]:  <V> setCoreParams 1
+
+[INFO] [Qnn ExecuTorch]:  <V> coreVoltageCornerMin 160
+
+[INFO] [Qnn ExecuTorch]:  <V> coreVoltageCornerTarget 160
+
+[INFO] [Qnn ExecuTorch]:  <V> coreVoltageCornerMax 160
+
+[INFO] [Qnn ExecuTorch]:  <V> Resetting polling rpc graph stats
+
+[INFO] [Qnn ExecuTorch]:  <V> Polling not supported in resetDeviceGraphStats
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> transport run [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <D> qnn_transport_run time: 0 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> Set perf settings success
+
+[INFO] [Qnn ExecuTorch]:  <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+[INFO] [Qnn ExecuTorch]:  <V> Deactivated logger with handle 0000000000000001
+
+[INFO] [Qnn ExecuTorch]:  <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -23334000
+
+
+[INFO] [Qnn ExecuTorch]:  <V> Get HTP power device instance for device id 0 core id 0 processDomain id 0 coreType 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Get HTP power device instance for device id 0 core id 0 processDomain id 0 coreType 0
+
+[INFO] [Qnn ExecuTorch]:  <V> set power settings rpc control latency 100
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> set remote rpc control return 0
+
+[INFO] [Qnn ExecuTorch]:  <V> set power settings rpc polling time 9999
+
+[INFO] [Qnn ExecuTorch]:  <V> Setting poll QoS to 9999
+
+[INFO] [Qnn ExecuTorch]:  <V> Polling not supported in setPollQos
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> m_isPollingEnabledAtRunTime is: 1
+
+[INFO] [Qnn ExecuTorch]:  <V> set power settings rpc polling time 9999
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> set remote rpc control return 0
+
+[INFO] [Qnn ExecuTorch]:  <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+[INFO] [Qnn ExecuTorch]:  <V> Deactivated logger with handle 0000000000000001
+
+[WARNING] [Qnn ExecuTorch]: Qnn API version 2.34.0 is used. The version is tested against 2.27.0.
+[INFO] [Qnn ExecuTorch]: Initialize Qnn backend parameters for Qnn executorch backend type 2
+[INFO] [Qnn ExecuTorch]: htp_arch in htp_info: V73
+[INFO] [Qnn ExecuTorch]: vtcm_size_in_mb in htp_info: 8
+[INFO] [Qnn ExecuTorch]: performance_mode in htp_options: kHtpBurst
+[INFO] [Qnn ExecuTorch]: precision in htp_options: kHtpFp16
+[INFO] [Qnn ExecuTorch]: pd_session in htp_options: kHtpUnsignedPd
+[INFO] [Qnn ExecuTorch]: use_conv_hmx in htp_options: 1
+[INFO] [Qnn ExecuTorch]: use_dlbc in htp_options: 0
+[INFO] [Qnn ExecuTorch]: use_fold_relu in htp_options: 1
+[INFO] [Qnn ExecuTorch]: use_slc_allocator in htp_options: 0
+[INFO] [Qnn ExecuTorch]: use_multi_contexts in htp_options: 0
+[INFO] [Qnn ExecuTorch]: use_weight_sharing in htp_options: 0
+[INFO] [Qnn ExecuTorch]: Caching: Caching is in RESTORE MODE.
+[INFO] [Qnn ExecuTorch]: QnnContextCustomProtocol expected magic number: 0x5678abcd but get: 0x2000000
+[INFO] [Qnn ExecuTorch]:  <I> QnnContext_createFromBinary started. backend = 0x1, device = 0x1
+
+[INFO] [Qnn ExecuTorch]:  <V> Context Blob version: 3.3.4
+
+[INFO] [Qnn ExecuTorch]:  <V> EncryptionFlag is 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Multicore support is unavailable
+
+[INFO] [Qnn ExecuTorch]:  <V> Context create from binary with context 0x1
+
+[INFO] [Qnn ExecuTorch]:  <V> Context Binary contains 1 graphs
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph memory usage summary, context id 1, shared graph weights size 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Added 1 to registered graph env 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph environment handle not opened as preparelib or driverlib is not yet loaded
+
+[INFO] [Qnn ExecuTorch]:  <V> Successfully opened graph env handle, envId 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Registered to graph env, envId 0 
+
+[INFO] [Qnn ExecuTorch]:  <V> Multicore support is unavailable
+
+[INFO] [Qnn ExecuTorch]:  <V> Force to use single core for HTP_FEATURE_NUM_CORES when MultiCore is not supported
+
+[INFO] [Qnn ExecuTorch]:  <V> Multicore support is unavailable
+
+[INFO] [Qnn ExecuTorch]:  <V> Force to use single core for HTP_FEATURE_NUM_CORES when MultiCore is not supported
+
+[INFO] [Qnn ExecuTorch]:  <V> DLBC is set to 0 for graph 0
+
+[INFO] [Qnn ExecuTorch]:  <V> DLBC_WEIGHTS is set to 0 for graph 0
+
+[INFO] [Qnn ExecuTorch]:  <V> SPARSE_WEIGHTS_COMPRESSION is set to 0 for graph 0
+
+[INFO] [Qnn ExecuTorch]:  <V> NUM_CORES is set to 1 for graph 0
+
+[INFO] [Qnn ExecuTorch]:  <V> SLC_ALLOCATOR is set to 0 for graph 0
+
+[INFO] [Qnn ExecuTorch]:  <V> DSP ARCH graph is set to 73 for graph 0
+
+[INFO] [Qnn ExecuTorch]:  <V> BF16 is set to 0 for graph 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Context Binary Graph 0 'forward' added for the processing
+
+[INFO] [Qnn ExecuTorch]:  <V> Get graph estimates from pickle
+
+[INFO] [Qnn ExecuTorch]:  <V> Context 1 graph forward estimated PD size ~10.09MB, including nonSharedWeight 2097152 B I/O 24576 B runlist 65024 B spillfill 0 B 
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph memory usage summary, context id 1, graph name:forward, hexagon graph id 256 in graph info: nonShared Wts/constSize 2097152, graphIOTensorSize 24576 vtcm 8388608 spillFillBufferSizes 0, OpDataSize 33792
+
+[INFO] [Qnn ExecuTorch]:  <V> Setting context 1 adapter buffer size estimate to 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Setting context 1 shared weight near size estimate to 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Setting context 1 reserved space to 10575360
+
+[WARNING] [Qnn ExecuTorch]:  <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+[INFO] [Qnn ExecuTorch]:  <V> Allocation is not required because no updatable component in serialize bin
+
+[INFO] [Qnn ExecuTorch]:  <V> Context 1 succeed to create from binary on Stub
+
+[INFO] [Qnn ExecuTorch]:  <V> Context 1 estimated PD size requirement is ~10.09MB, including largest Graph estimate 10575360 B
+
+[INFO] [Qnn ExecuTorch]:  <V> PD 0 chosen for context 1, estimated future space on pd ~10.09 MB
+
+[INFO] [Qnn ExecuTorch]:  <V> Trying to deserialize contextId 1 on pdId 0 with deviceId 0 coreId 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Get HTP device state deviceId 0x0 coreId 0x0 pdId 0x0 state 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Device is already initialized deviceId 0 coreId 0 pdId 0 state 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Transport session already exists for deviceId 0, coreId 0, pdId 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Mapping is not required because no updatable component in serialize bin
+
+[INFO] [Qnn ExecuTorch]:  <V> Function not called, PrepareLib isn't loaded!
+
+[INFO] [Qnn ExecuTorch]:  <V> Polling not supported in initializeGraphStats
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph rpc memory manager::alloc deviceId 0, coreId 0, pdId 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph rpc memory manager::alloc numCores 1
+
+[INFO] [Qnn ExecuTorch]:  <V> 896 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> RpcMemory Allocated for Persistent buffer with Host adddress 000001E367830000, fd 68, size 896
+
+[INFO] [Qnn ExecuTorch]:  <V> 160 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> RpcMemory Allocated for Persistent buffer with Host adddress 000001E367840000, fd 69, size 160
+
+[INFO] [Qnn ExecuTorch]:  <V> 2904 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> RpcMemory Allocated for Persistent buffer with Host adddress 000001E367850000, fd 70, size 2904
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> First entry for fd 68 on domain 3, adding to refCount
+
+[INFO] [Qnn ExecuTorch]:  <V> fastrpc memory map for fd: 68 with length: 896 succeeded
+
+[INFO] [Qnn ExecuTorch]:  <V> Successfully mapped buffer on host side with Device 0, Core 0, Pd 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> transport shared buffer [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <D> qnn_transport_shared_buffer time: 0 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> sharedBufferMapping op 2 fd 68 with offset 0 size 896, va 0x00000000041000, devConfig {0, 0, 0}, err 0
+
+[INFO] [Qnn ExecuTorch]:  <V> With fd: 68 Device Id 0, Core Id 0, and Pd Id 0, RefCount of NSP side map call is: 1, NSP VA is: 0x00000000041000
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> First entry for fd 69 on domain 3, adding to refCount
+
+[INFO] [Qnn ExecuTorch]:  <V> fastrpc memory map for fd: 69 with length: 160 succeeded
+
+[INFO] [Qnn ExecuTorch]:  <V> Successfully mapped buffer on host side with Device 0, Core 0, Pd 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> transport shared buffer [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <D> qnn_transport_shared_buffer time: 0 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> sharedBufferMapping op 2 fd 69 with offset 0 size 160, va 0x000000fdd04000, devConfig {0, 0, 0}, err 0
+
+[INFO] [Qnn ExecuTorch]:  <V> With fd: 69 Device Id 0, Core Id 0, and Pd Id 0, RefCount of NSP side map call is: 1, NSP VA is: 0x000000fdd04000
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> First entry for fd 70 on domain 3, adding to refCount
+
+[INFO] [Qnn ExecuTorch]:  <V> fastrpc memory map for fd: 70 with length: 2904 succeeded
+
+[INFO] [Qnn ExecuTorch]:  <V> Successfully mapped buffer on host side with Device 0, Core 0, Pd 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> transport shared buffer [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <D> qnn_transport_shared_buffer time: 0 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> sharedBufferMapping op 2 fd 70 with offset 0 size 2904, va 0x000000fdd07000, devConfig {0, 0, 0}, err 0
+
+[INFO] [Qnn ExecuTorch]:  <V> With fd: 70 Device Id 0, Core Id 0, and Pd Id 0, RefCount of NSP side map call is: 1, NSP VA is: 0x000000fdd07000
+
+[INFO] [Qnn ExecuTorch]:  <V> 72 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> RpcMemory Allocated for Persistent buffer with Host adddress 000001E367860000, fd 71, size 72
+
+[INFO] [Qnn ExecuTorch]:  <V> RPC Memory allocated for graph forward with In 000001E367830000 [380 B], Inouts 000001E367850000 [b58 B], Outs 000001E367840000 [a0 B]
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph rpc memory allocate or mapping for copyless weights buffer deviceId 0, coreId 0, pd 0
+
+[INFO] [Qnn ExecuTorch]:  <V> 2097152 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> RPC Memory allocated for Weights 000001E367870000 [2097152 B] @ OS 6000
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> First entry for fd 72 on domain 3, adding to refCount
+
+[INFO] [Qnn ExecuTorch]:  <V> fastrpc memory map for fd: 72 with length: 2097152 succeeded
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> transport shared buffer [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <D> qnn_transport_shared_buffer time: 0 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> sharedBufferMapping op 18 fd 72 with offset 0 size 2097152, va 0x000000fde00000, devConfig {0, 0, 0}, err 0
+
+[INFO] [Qnn ExecuTorch]:  <V> SharedMemoryMod 18 create/register fd 72 with len 2097152, offset(dspPa) = 0, va 0x000000fde00000
+
+[INFO] [Qnn ExecuTorch]:  <V> sharedMemoryMod Latency 961
+
+[INFO] [Qnn ExecuTorch]:  <V> RPC Memory mapped for Weights 000001E367870000 [2097152 B] @ VA fde00000
+
+[INFO] [Qnn ExecuTorch]:  <V> Successfully copied 319488 bytes of weights! Actual bytes to transfer: 319488
+
+[INFO] [Qnn ExecuTorch]:  <V> HtpTransport::graphPrepareDsp done. graph.m_hexNNGraphHandle = 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Context binary being sent to skel for processing. Number of graphs = 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Context Blob version: 3.3.4
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph does not have mc metadata
+
+[INFO] [Qnn ExecuTorch]:  <V> 33136 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> 40 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph does not have mc metadata
+
+[INFO] [Qnn ExecuTorch]:  <V> reducedBlobSize = 32768, buffer.capacity = 33136, ctxBinPtr = 000001E367A70038
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <D> Calling RPC transport with params 000001E367A70000 [8170 B], 000001E367A80000 [28 B], 0000000000000000 [0 B]
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> transport run [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <D> qnn_transport_run time: 12 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> Context 1 deserialized on pd 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Succeed to deserialize contextId 1 on pdId 0 with deviceId 0 coreId 0
+
+[INFO] [Qnn ExecuTorch]:  <I> graph forward is loaded 1
+
+[INFO] [Qnn ExecuTorch]:  <V> 48 isInit 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <D> Calling RPC transport with params 000001E367A70000 [30 B], 0000000000000000 [8 B], 0000000000000000 [8 B]
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> transport run [status = 0]
+
+[INFO] [Qnn ExecuTorch]:  <D> qnn_transport_run time: 0 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <D> QNN (load binary) time time: 16 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> Wake up free backend (id: 1)'s thread(s)
+
+[INFO] [Qnn ExecuTorch]:  <I> Number of existing contexts: 1, graphs: 1
+
+[INFO] [Qnn ExecuTorch]:  <I> QnnContext_createFromBinary done successfully. context = 0x1
+
+[INFO] [Qnn ExecuTorch]:  <V> Deactivated logger with handle 0000000000000001
+
+[INFO] [Qnn ExecuTorch]: Running level=1 optimization.
+[INFO] [Qnn ExecuTorch]:  <I> QnnGraph_retrieve started. context = 0x1
+
+[INFO] [Qnn ExecuTorch]:  <V> Wake up free backend (id: 1)'s thread(s)
+
+[INFO] [Qnn ExecuTorch]:  <I> Number of existing contexts: 1, graphs: 1
+
+[INFO] [Qnn ExecuTorch]:  <I> QnnGraph_retrieve done. status 0x0
+
+[INFO] [Qnn ExecuTorch]:  <V> Deactivated logger with handle 0000000000000001
+
+I 00:00:00.215709 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:416] Method loaded.
+E 00:00:00.215732 executorch:[redacted-home]\Desktop\git\executorch\runtime\executor\method.cpp:1381] Output 0 is memory planned, or is a constant. Cannot override the existing data pointer.
+I 00:00:00.215737 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:476] ignoring error from set_output_data_ptr(): 0x2
+I 00:00:00.215739 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:479] Inputs prepared.
+I 00:00:00.215827 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:485] Number of inputs: 2
+I 00:00:00.215981 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:598] Perform 0 inference for warming up
+I 00:00:00.215987 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:604] Start inference (0)
+[INFO] [Qnn ExecuTorch]:  <I> QnnGraph_execute started. graph = 0x1
+
+[INFO] [Qnn ExecuTorch]:  <V> Set sanitized tensor type 0 to user tensor type 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph I/O tensor (ID 1) has batch size 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Set sanitized tensor type 0 to user tensor type 0
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph I/O tensor (ID 4) has batch size 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Set sanitized tensor type 1 to user tensor type 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Graph I/O tensor (ID 134) has batch size 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Found transport session 000001E363199D90 for deviceId 0x0 coreId 0x0 pdId 0x0!
+
+[INFO] [Qnn ExecuTorch]:  <V> polling enablement 1 find 1
+
+[INFO] [Qnn ExecuTorch]:  <V> canUsePolling 1
+
+[INFO] [Qnn ExecuTorch]:  <V> Using polling for execution
+
+[INFO] [Qnn ExecuTorch]:  <I> Graph forward execution finished with result 0
+
+[INFO] [Qnn ExecuTorch]:  <D> Copying 32 B from RPC mem 000001E367840080 to client buf 000001E3631200C0
+
+[INFO] [Qnn ExecuTorch]:  <D> QNN (execute) time time: 1 (ms)
+
+
+[INFO] [Qnn ExecuTorch]:  <V> Wake up free backend (id: 1)'s thread(s)
+
+[INFO] [Qnn ExecuTorch]:  <I> QnnGraph_execute done. status 0x0
+
+[INFO] [Qnn ExecuTorch]:  <V> Deactivated logger with handle 0000000000000001
+
+I 00:00:00.217408 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:622] 1 inference took 1.418000 ms, avg 1.418000 ms
+I 00:00:00.217670 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:666] Total 1 inference took 1.418000 ms, avg 1.418000 ms
+I 00:00:00.217869 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:731] Write etdump to etdump.etdp, Size = 424

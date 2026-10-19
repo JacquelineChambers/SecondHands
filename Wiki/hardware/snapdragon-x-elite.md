@@ -1,6 +1,6 @@
 # Dell Snapdragon deployment laptop
 
-**Status:** Deployment laptop identified by the user on 2026-10-17. The processor description below is user-reported. Saved evidence from a separate local setup establishes [Femto Bolt bridge and person-position tests](../setup/ms-09-femto-bolt-bridge.md); SecondHands itself has not been tested on this machine.
+**Status:** Deployment laptop identified by the user on 2026-10-17. The processor description below is user-reported. Saved evidence establishes [Femto Bolt bridge and person-position tests](../setup/ms-09-femto-bolt-bridge.md). Later checks verify [SecondHands Orbbec recognition with CPU face/hand landmarks and a native ExecuTorch/QNN gesture classifier on the NPU](../setup/orbbec-mediapipe.md). Facial NPU execution remains unverified.
 
 ## Known hardware
 
@@ -11,6 +11,8 @@ The user supplied this processor description:
 | Field | Recorded value |
 | --- | --- |
 | Laptop manufacturer | Dell, as identified in the earlier deployment discussion |
+| Observed model | Latitude 7455, from `Win32_ComputerSystem` on 2026-10-17 |
+| OS-visible physical memory | 33,893,679,104 bytes, from `Win32_ComputerSystem` on 2026-10-17 |
 | Processor family | Snapdragon X Elite |
 | Processor identifier | `X1E80100`, exactly as supplied |
 | CPU name | Qualcomm Oryon |
@@ -21,7 +23,7 @@ The reported CPU speed is an identification detail, not a measured inference rat
 
 ## Details still to record
 
-Before selecting model sizes or installing deployment packages, record the RAM capacity, exact laptop model, and the architecture of each additional Python or application process. The bridge and person application use x64 Python under ARM64 emulation; native ARM64 capture was tested separately. An x64 process and an ARM64 process can require different packages even on the same laptop.
+The model and OS-visible physical memory are now recorded above. Record the architecture of each additional Python or application process. The bridge, person application, and later MediaPipe CLI use x64 Python under ARM64 emulation; native ARM64 capture was tested separately. An x64 process and an ARM64 process can require different packages even on the same laptop.
 
 Also record the installed ExecuTorch and Qualcomm runtime versions and the supplied model-bundle location. Camera detection and standalone capture results are in the [setup summary](../setup/ms-09-femto-bolt-bridge.md#recorded-results). Keep serial numbers, account names, device identifiers, and other personal machine details out of the public record.
 

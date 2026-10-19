@@ -1,0 +1,71 @@
+{
+  "_id": "68ac94837688157066fd6ed5",
+  "id": "apple/MobileCLIP2-S0",
+  "private": false,
+  "library_name": "mobileclip",
+  "tags": [
+    "mobileclip",
+    "arxiv:2508.20691",
+    "arxiv:2103.00020",
+    "arxiv:2303.15343",
+    "arxiv:2309.17425",
+    "license:apple-amlr",
+    "region:us"
+  ],
+  "downloads": 463,
+  "likes": 55,
+  "modelId": "apple/MobileCLIP2-S0",
+  "author": "apple",
+  "sha": "3136ea51c8ed56b9f9abfab04cb816735aaad6cb",
+  "lastModified": "2025-10-09T17:53:00.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "license": "apple-amlr",
+    "library_name": "mobileclip"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "LICENSE",
+      "blobId": "2b55aced2f91ede627cd778600eb1ac4d8ce0bb9",
+      "size": 5816
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "a9e0be3e62ba40e8acc05ec7037617b57c5483d1",
+      "size": 6769
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "614bf199cff69d4c460470536254ad863e0b0d5c",
+      "size": 477
+    },
+    {
+      "rfilename": "fig_accuracy_latency_v2.png",
+      "blobId": "b1d02a053adb79b0eea20827faa99b0edb890449",
+      "size": 85450
+    },
+    {
+      "rfilename": "mobileclip2_s0.pt",
+      "blobId": "8f8262c5cbb94590ebf6aa2237239356a65c0ddf",
+      "size": 299864852,
+      "lfs": {
+        "sha256": "bc3bc861baa680df2f9e3dc1aa0acbe5a21af21032df385026dda70c33505aa6",
+        "size": 299864852,
+        "pointerSize": 134
+      }
+    }
+  ],
+  "spaces": [
+    "Nightfury16/clipick"
+  ],
+  "createdAt": "2025-08-25T16:51:15.000Z",
+  "usedStorage": 299864852
+}

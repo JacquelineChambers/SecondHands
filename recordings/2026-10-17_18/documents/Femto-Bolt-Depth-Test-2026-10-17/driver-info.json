@@ -1,0 +1,38 @@
+﻿[
+    {
+        "name":  "Orbbec Femto Bolt Depth Camera",
+        "status":  "OK",
+        "properties":  [
+                           {
+                               "KeyName":  "DEVPKEY_Device_DriverVersion",
+                               "Data":  "10.0.26100.9444"
+                           },
+                           {
+                               "KeyName":  "DEVPKEY_Device_DriverProvider",
+                               "Data":  "Microsoft"
+                           },
+                           {
+                               "KeyName":  "DEVPKEY_Device_Service",
+                               "Data":  "usbvideo"
+                           }
+                       ]
+    },
+    {
+        "name":  "Orbbec Femto Bolt RGB Camera",
+        "status":  "OK",
+        "properties":  [
+                           {
+                               "KeyName":  "DEVPKEY_Device_DriverVersion",
+                               "Data":  "10.0.26100.9444"
+                           },
+                           {
+                               "KeyName":  "DEVPKEY_Device_DriverProvider",
+                               "Data":  "Microsoft"
+                           },
+                           {
+                               "KeyName":  "DEVPKEY_Device_Service",
+                               "Data":  "usbvideo"
+                           }
+                       ]
+    }
+]

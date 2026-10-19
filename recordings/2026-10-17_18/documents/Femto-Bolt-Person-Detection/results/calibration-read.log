@@ -1,0 +1,5 @@
+[10/17 14:25:26.489253][error][28392][WinHelpers.cpp:532] CreateFile failed
+[10/17 14:25:26.489452][error][28392][WinHelpers.cpp:567] could not find camera in windows device tree
+[10/17 14:25:26.619682][error][28392][WinHelpers.cpp:532] CreateFile failed
+[10/17 14:25:26.619991][error][28392][WinHelpers.cpp:567] could not find camera in windows device tree
+Invalid index value for argument "index"

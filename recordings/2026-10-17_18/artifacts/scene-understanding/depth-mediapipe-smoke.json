@@ -1,0 +1,10 @@
+{
+  "frames": 12,
+  "depth_frame_changes": 12,
+  "max_faces": 1,
+  "max_hands": 2,
+  "valid_depth_percent": 46.71142578125,
+  "median_depth_mm": 1015.0,
+  "depth_decode_ms": 5.619200001092395,
+  "mediapipe_ms": 61.907399999999996
+}

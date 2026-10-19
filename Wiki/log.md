@@ -1,5 +1,53 @@
 # Wiki change log
 
+## 2026-10-18 — Recorded experiments prepared for GitHub
+
+Added the user-requested [dated experiment archive](../recordings/2026-10-17_18/README.md), including explicitly approved raw sensor frames and RGB/depth captures. Its manifest accounts for 252 files and 40,813,252 bytes, with SHA-256 checksums and marked redactions in 39 text files. Calibration packets, credentials, dependency/model installations, browser profiles, and unrelated personal recordings remain outside the archive. Linked the archive from navigation and the relevant evidence owners, recorded source SH-S-042, and clarified the earlier local-only source dispositions. Publication checks passed 69 Python tests with one optional skip, 11 UI tests, Ruff, TypeScript, production build, archive checksums/JSON, and targeted privacy scans. No fresh camera or accuracy test was performed.
+
+## 2026-10-18 — Simultaneous webcam and Orbbec capture
+
+Recorded the user-requested [two-camera test](hardware/femto-bolt.md#simultaneous-capture-with-the-built-in-webcam): native Windows shared-read capture produced changing 1080p built-in and 720p Orbbec frames at about 30 FPS each over a common 30-second interval, followed by a successful 10-second reopen check. Preserved the earlier access errors and static DirectShow output as failed usable-video evidence. Added source SH-S-041 and linked the result from SH-T-010 while retaining application and sustained-reliability limits. Reports and the local probe remain ignored; no camera images were saved.
+
+## 2026-10-17 — NPU gestures in the depth viewer
+
+Extended [the combined depth viewer](setup/ms-09-femto-bolt-bridge.md#depth-viewer-with-npu-gestures) at the user's request to use the native ExecuTorch/QNN gesture classifier. Recorded the CPU landmark/depth boundary, removed redundant CPU gesture classification in that mode, and added visible runtime/timing labels. Documented the live 30-frame/51-call check, clean shutdown, responsive preview, HTP libraries, and focused tests. Updated runtime roles, source SH-S-027, and SH-T-055 without publishing imagery, calibration, or local logs.
+
+## 2026-10-17 — Combined depth and MediaPipe viewer
+
+Added [the combined viewer procedure and evidence](setup/ms-09-femto-bolt-bridge.md#depth-with-mediapipe) after the user's explicit launch request. Recorded simultaneous measured depth and CPU face/hand tracking, pointer distance readings, a 12-frame check with clean shutdown, and a responsive live window. Added source SH-S-026 and completed SH-T-054. Updated SH-S-025 and SH-T-053 with the earlier browser viewer's later 2,097-frame stopped status. Image alignment and measurement accuracy remain unverified; private calibration and images stay in memory.
+
+## 2026-10-17 — Depth viewer server started
+
+Updated [the depth setup record](setup/ms-09-femto-bolt-bridge.md#depth-viewer-alongside-secondhands), SH-S-025, and SH-T-053 after the user repeated the launch request. The server started on port 8767, returned HTTP 200, and reported idle with zero frames. Automatic approval review blocked the follow-up capture/browser command; no fresh depth-stream verification is claimed.
+
+## 2026-10-17 — Scene application and requested depth viewer
+
+Added [the scene application runbook](setup/scene-understanding.md) for the user's requested MediaPipe/Orbbec scene understanding. Recorded the implemented CPU model pipeline, delayed JEVision source images, shared camera ownership, real API Stop/restart verification, automated checks, and browser inspection blocked by automatic approval review. Updated design/runtime boundaries, project evidence, navigation, source SH-S-024, and SH-T-052. Also recorded the subsequent [depth viewer launch request](setup/ms-09-femto-bolt-bridge.md#depth-viewer-alongside-secondhands), connected sensor status, blocked server launch, and manual port-8767 procedure under SH-S-025 and SH-T-053. Reports and private camera artifacts remain outside Git.
+
+## 2026-10-17 — JEVision camera experiment
+
+Added [the JEVision Orbbec runbook](setup/jevvision-orbbec.md) and camera client after the user's request to run a JEV vision model with the camera. Recorded the prepared CPU service, a successful live-image request, a responsive preview with sampled-frame results, observed latency, and focused code checks. Updated model execution evidence, navigation, source SH-S-023, and completed SH-T-051. Camera images remain in memory; model files, logs, and result reports stay outside Git.
+
+## 2026-10-17 — Reconnected Orbbec NPU gesture preview
+
+Recorded the user's requested [live application run](setup/orbbec-mediapipe.md#observed-checks): the final CPU-landmark/NPU-gesture pipeline completed 30 camera frames with clean shutdown, then opened a responsive preview with the QNN HTP runtime loaded. Updated SH-T-050 to close the pending live rerun while retaining the unresolved facial NPU scope. Extended source SH-S-021. The aggregate report and process logs remain outside Git.
+
+## 2026-10-17 — Requested profile read access
+
+Updated [the SSH access record](runbooks/tailscale-and-ssh.md#read-model-files-from-a-separate-windows-account) after the user explicitly broadened the request to the PC owner's entire profile folder. Applied inheritable read and execute permission for the existing standard SSH account and checked the profile root and ordinary top-level directories. Protected permissions remain unchanged; remote SSH access remains unverified. Updated source SH-S-022 without publishing the account name or absolute profile path.
+
+## 2026-10-17 — SSH access to model folders
+
+Updated [the SSH runbook](runbooks/tailscale-and-ssh.md#read-model-files-from-a-separate-windows-account) after granting a separate standard account read access to the located model stores. Recorded permission checks on 606 files and directories, a local path catalog, and the pending remote access check. Added [the additional local model locations](references/models/device-downloads.md#additional-local-model-locations), updated SH-T-036, and recorded source SH-S-022. Account names, absolute personal paths, and permission reports remain outside Git.
+
+## 2026-10-17 — Device model files and live Orbbec recognition
+
+Added [the device model inventory](references/models/device-downloads.md) for the completed all-candidate downloads, with unpublished/untrained artifacts identified separately. Added [the Orbbec recognition setup](setup/orbbec-mediapipe.md) for the CPU baseline and native ExecuTorch/QNN gesture classifier, reproducible build/export scripts, numerical comparison, and successful live run. Recorded the resolved native shutdown failure, final public-image VIDEO-mode check, missing camera at the final rerun, remaining CPU facial/landmark stages, and upstream sample search. Updated model navigation, MediaPipe status pages, [runtime roles](design/runtime-stack.md), hardware/project evidence limits, source records SH-S-020/021, and tasks. Downloaded weights and local reports remain outside Git; full facial NPU execution remains unverified.
+
+## 2026-10-17 — Tailscale and SSH runbook and access check
+
+Created [the Tailscale and SSH runbook](runbooks/tailscale-and-ssh.md) after enabling the Windows OpenSSH Server on the deployment PC. It records the observed service, firewall, network-profile, and sharing state, the Mac connection and SSH-key steps, dashboard port forwarding, and troubleshooting. The dashboard gained a Tailscale access panel with a connection test. Updated navigation, source SH-S-019, the [development runbook](runbooks/mac-and-snapdragon-development.md#run-pc-commands-through-t3), and [SH-T-036](plan.md#snapdragon-deployment). Logins from teammates' machines remain untested.
+
 ## 2026-10-17 — Local depth bridge setup documented
 
 Created [the MS-09 / Femto Bolt setup summary](setup/ms-09-femto-bolt-bridge.md) in the user-requested `setup` folder. Reviewed the earlier local session and saved installation/test evidence to explain the SDK failure, direct capture bridge, depth decoding, person-position application, and launch procedure. Preserved the initial successful checks and a later capture timeout as separate observations. Updated navigation, source SH-S-018, [hardware findings](hardware/femto-bolt.md), [deployment hardware](hardware/snapdragon-x-elite.md), [project evidence limits](project.md#implementation-and-evidence-limits), and [task status](plan.md). No camera tests were rerun, no application integration was performed, and no private recordings or calibration files were copied into Git.

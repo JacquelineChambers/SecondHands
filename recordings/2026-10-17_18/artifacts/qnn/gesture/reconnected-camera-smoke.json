@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-10-18T01:07:07.488603+00:00",
+  "exit_code": 0,
+  "frames": 30,
+  "frames_with_hands": 30,
+  "npu_classified_hands": 30,
+  "gesture_labels": [
+    "None"
+  ],
+  "runtime": {
+    "face": "mediapipe-cpu",
+    "hand_landmarks": "mediapipe-cpu",
+    "gesture_classifier": "executorch-qnn-htp"
+  },
+  "median_npu_ms_on_hand_frames": 0.30835,
+  "cpu_gesture_results_present": false
+}

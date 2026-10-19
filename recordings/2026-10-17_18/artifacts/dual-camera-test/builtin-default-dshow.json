@@ -1,0 +1,37 @@
+{
+  "time_utc": "2026-10-18T19:35:06.399000+00:00",
+  "status": "blank_or_static_frames",
+  "measurement_seconds": 5.0,
+  "orbbec_backend": "bridge",
+  "builtin_backend": "dshow",
+  "native_mode": true,
+  "opencv_version": "4.14.0",
+  "cameras": {
+    "built_in": {
+      "frames": 5,
+      "read_errors": 0,
+      "changed_frames": 0,
+      "flat_frames": 0,
+      "clean_shutdown": true,
+      "name": "QC Front Camera",
+      "backend": "DSHOW",
+      "index": 0,
+      "requested_fps": null,
+      "reported_fps": 0.0,
+      "resolution": [
+        640,
+        480
+      ],
+      "last_frame_value_range": [
+        0,
+        163
+      ],
+      "measured_fps": 1.0,
+      "median_interval_ms": 1001.155,
+      "max_interval_ms": 1005.968,
+      "first_frame_offset_seconds": 0.981,
+      "last_frame_offset_seconds": 4.99
+    }
+  },
+  "images_saved": false
+}

@@ -70,8 +70,53 @@ Documents/
 
 Both viewers bind to `127.0.0.1`, so these addresses work on the setup computer while the corresponding server is running. Neither is configured to start with Windows. New saves replace the latest reports and exports.
 
+### Depth viewer alongside SecondHands
+
+The SecondHands API also uses port 8765. When it is running, start the depth viewer on port 8767 from PowerShell:
+
+```powershell
+$depthRoot = Join-Path $env:USERPROFILE 'Documents/Femto-Bolt-Depth-Test-2026-10-17'
+& "$depthRoot\.venv\Scripts\python.exe" "$depthRoot\bridge\run_bridge.py" --serve --port 8767
+```
+
+Keep that terminal open, visit [the depth viewer on port 8767](http://127.0.0.1:8767/), and click **Start depth**. Stop the scene camera before starting depth capture. The viewer's **Stop & save** button releases capture and writes its existing local exports; Ctrl+C stops the viewer server.
+
+For the user's subsequent launch request on 2026-10-17, Windows reported both Orbbec depth and RGB devices present with OK status. Automatic approval review initially rejected the depth-server launch. After the user repeated the request, the server started successfully on port 8767: the viewer returned HTTP 200 and its status endpoint reported idle with zero frames. The follow-up capture/browser command was rejected with “blocked by policy.” At that check, fresh depth capture remained unverified. The later 2,097-frame status observation below completes the capture portion of [SH-T-053](../plan.md#snapdragon-deployment); the earlier recorded depth results remain distinct.
+
+### Depth with MediaPipe
+
+On 2026-10-17, the user requested the Orbbec depth viewer with MediaPipe. [The combined viewer](../../experiments/orbbec_depth_mediapipe.py) now opens a local window with the color image and MediaPipe face/hand overlays on the left, and measured depth on the right. Stop capture in other camera applications before starting it. From the prepared SecondHands checkout:
+
+```powershell
+.\.venv\Scripts\python.exe experiments/orbbec_depth_mediapipe.py
+```
+
+The window title starts with **Orbbec depth + MediaPipe** and identifies the CPU or NPU gesture mode. Move the pointer over the depth pane to read that depth pixel's distance. The color scale covers 0.2–5.0 metres; black pixels have no valid return. Press **Q**, **Esc**, or close the window to release both streams. Use `--bridge-directory` for another prepared bridge installation and `--model-dir` for the two MediaPipe bundles.
+
+The [depth capture adapter](../../src/secondhands/capture/orbbec_depth.py) reads calibration, starts the vendor depth engine, and decodes 640 × 576 depth on a dedicated worker thread. Its queue retains only the newest frame. A separate worker captures RGB, and MediaPipe analyses the displayed 640 × 360 color image on the CPU. The depth and color images have different coordinates and host arrival times; this viewer does not align them or assign measured 3D positions to hand landmarks. The depth age and decoding time are displayed. No calibration, camera images, or recordings are saved. Optional `--report` output contains aggregate counts and measurements only.
+
+Observed verification: a **12-frame** run without a window completed with 12 changing depth-frame numbers, one detected face, up to two hands, and clean stream shutdown. The last frame had 46.71% valid depth pixels, 5.62 ms depth decoding, and 61.91 ms MediaPipe processing. A subsequent interactive launch created a responsive window and processed at least **150 frames**, with changing depth and face/hand results. Focused Ruff lint and formatting checks passed. These are execution observations; distance accuracy, recognition accuracy, pixel alignment, and long-duration reliability remain unvalidated. The aggregate check and launch logs are under ignored `artifacts/scene-understanding/`.
+
+Before launching this combined viewer, the earlier browser depth viewer's status endpoint reported **stopped with 2,097 captured frames**. This establishes that capture occurred after its earlier idle check, without claiming automated browser inspection. [SH-T-053 and SH-T-054](../plan.md#snapdragon-deployment) record the launch outcomes.
+
+### Depth viewer with NPU gestures
+
+The user's next request on 2026-10-17 adds NPU use to the same viewer. Launch the prepared native gesture classifier with:
+
+```powershell
+.\.venv\Scripts\python.exe experiments/orbbec_depth_mediapipe.py --gesture-backend executorch-qnn
+```
+
+The window title includes **NPU gestures**, and the left pane identifies **ExecuTorch / Snapdragon NPU** with per-frame gesture model timing. MediaPipe performs face detection, facial measurements, hand detection, and hand landmarks on the CPU. Its CPU gesture classifier is disabled in this mode. The pretrained gesture network runs in the persistent native ARM64 worker through ExecuTorch/QNN HTP; native errors stop the run rather than silently switching classification to the CPU. Depth decoding also remains on the CPU. A frame without tracked hands makes no NPU gesture calls and displays that state.
+
+[The NPU setup owner](orbbec-mediapipe.md#executorch-and-npu-prerequisites) maintains the model, runtime, and build requirements. The viewer accepts `--qnn-runner`, `--qnn-model`, `--qnn-dsp-dir`, and `--qnn-log` overrides. Its default runtime log is ignored `artifacts/qnn/gesture/depth-viewer-runtime.log`. The optional aggregate report distinguishes MediaPipe time, summed NPU model-call time, and the classifier round trip including host work; these do not measure end-to-end interaction latency.
+
+Observed verification on the prepared laptop: a **30-frame** live depth/RGB check made **51 NPU hand-classification calls**, with changing depth on all 30 frames, up to two tracked hands, native exit 0, and clean stream shutdown. The last frame's summed gesture model time was **0.374 ms**, round trip **1.375 ms**, MediaPipe time **47.31 ms**, and depth decoding **5.62 ms**. These are one-frame observations, not benchmark medians. The subsequent interactive window was responsive after **90 frames and 177 NPU calls**; its native worker loaded `QnnHtp.dll` and `QnnHtpV73Stub.dll`. Together with the existing delegated-model verification, this establishes NPU execution for gesture classification, not acceleration of the full pipeline.
+
+The existing recognition, camera-lifecycle, and QNN protocol tests passed **16 tests**; focused Ruff checks passed. Aggregate results and launch/runtime logs are under ignored `artifacts/scene-understanding/depth-npu-*`. No images or calibration were saved. [SH-T-055](../plan.md#snapdragon-deployment) records this launch; facial NPU inference, image alignment, and accuracy remain separate work.
+
 ## Evidence and project boundary
 
-The review used the earlier local conversation, installation READMEs, bridge source, `test-evidence.json`, `bridge/bridge-results.json`, both `verification.json` files, and the later person-app `results/test-results.json`. [Source record SH-S-018](../index.md#source-records) records their incorporation. Raw reports, images, recordings, calibration, private session identifiers, and machine-specific paths remain outside Git; only this technical summary is added to the Wiki.
+The review used the earlier local conversation, installation READMEs, bridge source, `test-evidence.json`, `bridge/bridge-results.json`, both `verification.json` files, and the later person-app `results/test-results.json`. [Source record SH-S-018](../index.md#source-records) records their original incorporation. On 2026-10-18, the user explicitly approved publishing the saved reports and raw recordings in [the dated archive](../../recordings/2026-10-17_18/README.md), including sensor frames and RGB/depth snapshots. Factory calibration packets, private conversations, and machine-specific account details remain outside Git; published text reports have marked privacy redactions.
 
-The installed bridge and person application remain outside the SecondHands checkout. They have not been integrated into [SecondHands capture](../../src/secondhands/capture/camera.py), its recognition dashboard, or its trigger policy. The results establish local RGB/depth and person-position experiments, not ExecuTorch execution, Qualcomm NPU use, or completion of the previously planned x86 reference-laptop test. [Project direction](../project.md#implementation-and-evidence-limits) records that distinction.
+The installed bridge and person application remain outside the SecondHands checkout. Later [Orbbec CLI recognition](orbbec-mediapipe.md) and the [scene dashboard](scene-understanding.md) use the bridge's RGB capture, with live execution checks. The combined viewer above adds simultaneous depth display and CPU MediaPipe tracking, with an optional verified ExecuTorch/QNN gesture classifier. Depth decoding itself remains on the CPU. Aligned depth/person positioning, trigger-policy integration, and the previously planned x86 reference-laptop test remain separate work. [Project direction](../project.md#implementation-and-evidence-limits) records the broader project boundaries.

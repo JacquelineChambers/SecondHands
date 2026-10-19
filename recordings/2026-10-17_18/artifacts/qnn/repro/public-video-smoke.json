@@ -1,0 +1,10 @@
+{
+  "source": "Qualcomm public thumbs_up.jpg repeated in VIDEO mode; no live camera",
+  "model": "repro/gesture_qnn.pte",
+  "frames": 30,
+  "frames_with_hands": 30,
+  "thumb_up_frames": 30,
+  "cpu_gesture_classifier_used": false,
+  "native_exit_code": 0,
+  "median_npu_ms": 0.3053
+}

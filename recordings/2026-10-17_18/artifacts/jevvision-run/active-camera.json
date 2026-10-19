@@ -1,0 +1,8 @@
+{
+  "ProcessId": 13664,
+  "StartedAt": "2026-10-17T18:29:06.8527973-07:00",
+  "StdoutLog": "[redacted-home]\\SecondHands\\artifacts\\jevvision-run\\camera-20261017-182906.stdout.log",
+  "StderrLog": "[redacted-home]\\SecondHands\\artifacts\\jevvision-run\\camera-20261017-182906.stderr.log",
+  "Model": "JEVision",
+  "Device": "cpu"
+}

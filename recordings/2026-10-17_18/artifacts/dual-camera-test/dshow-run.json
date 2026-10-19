@@ -1,0 +1,51 @@
+{
+  "time_utc": "2026-10-18T19:34:19.899426+00:00",
+  "status": "passed",
+  "measurement_seconds": 30.0,
+  "orbbec_backend": "bridge",
+  "opencv_version": "4.14.0",
+  "cameras": {
+    "built_in": {
+      "frames": 30,
+      "read_errors": 0,
+      "changed_frames": 0,
+      "flat_frames": 30,
+      "clean_shutdown": true,
+      "name": "QC Front Camera",
+      "backend": "DSHOW",
+      "index": 0,
+      "requested_fps": 15,
+      "reported_fps": 15.000015000015,
+      "resolution": [
+        1280,
+        720
+      ],
+      "measured_fps": 1.0,
+      "median_interval_ms": 1001.614,
+      "max_interval_ms": 1002.538,
+      "first_frame_offset_seconds": 0.117,
+      "last_frame_offset_seconds": 29.16
+    },
+    "orbbec": {
+      "frames": 449,
+      "read_errors": 0,
+      "changed_frames": 448,
+      "flat_frames": 0,
+      "clean_shutdown": true,
+      "name": "Orbbec Femto Bolt RGB Camera",
+      "backend": "KS proxy",
+      "requested_fps": 15,
+      "resolution": [
+        1280,
+        720
+      ],
+      "bridge_queue_drops": 0,
+      "measured_fps": 14.967,
+      "median_interval_ms": 66.446,
+      "max_interval_ms": 133.134,
+      "first_frame_offset_seconds": 0.028,
+      "last_frame_offset_seconds": 29.936
+    }
+  },
+  "images_saved": false
+}

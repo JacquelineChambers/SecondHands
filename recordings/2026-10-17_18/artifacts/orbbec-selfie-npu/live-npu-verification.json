@@ -1,0 +1,12 @@
+{
+  "camera_frames": 10,
+  "executed_providers": [
+    "QNNExecutionProvider"
+  ],
+  "cpu_fallback_disabled": true,
+  "device": "NPU",
+  "backend": "QnnHtp.dll",
+  "onnxruntime": "1.31.0",
+  "qnn_plugin": "2.7.0",
+  "profile": "live-npu-profile_2026-10-17_17-11-37_050.json"
+}

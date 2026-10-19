@@ -1,0 +1,231 @@
+{
+  "frames": [
+    {
+      "id": 1,
+      "faces": 0,
+      "hands": 2,
+      "poses": 1,
+      "object_count": 17,
+      "processing_ms": 3763.351400000829,
+      "timing_ms": {
+        "mediapipe": 74.4417,
+        "pose": 47.747400001753704,
+        "objects": 468.17579999878944
+      }
+    },
+    {
+      "id": 2,
+      "faces": 0,
+      "hands": 2,
+      "poses": 1,
+      "object_count": 18,
+      "processing_ms": 534.5481000003929,
+      "timing_ms": {
+        "mediapipe": 43.7192,
+        "pose": 53.90609999994922,
+        "objects": 427.4316999999428
+      }
+    },
+    {
+      "id": 3,
+      "faces": 0,
+      "hands": 2,
+      "poses": 1,
+      "object_count": 17,
+      "processing_ms": 541.9853999992483,
+      "timing_ms": {
+        "mediapipe": 52.5428,
+        "pose": 53.65469999924244,
+        "objects": 427.4390999999014
+      }
+    },
+    {
+      "id": 4,
+      "faces": 0,
+      "hands": 2,
+      "poses": 1,
+      "object_count": 18,
+      "processing_ms": 549.0451000005123,
+      "timing_ms": {
+        "mediapipe": 53.3296,
+        "pose": 53.11749999964377,
+        "objects": 434.05929999971704
+      }
+    },
+    {
+      "id": 5,
+      "faces": 0,
+      "hands": 1,
+      "poses": 1,
+      "object_count": 16,
+      "processing_ms": 562.1123000000807,
+      "timing_ms": {
+        "mediapipe": 53.371,
+        "pose": 53.11999999867112,
+        "objects": 447.0448000010947
+      }
+    },
+    {
+      "id": 6,
+      "faces": 0,
+      "hands": 2,
+      "poses": 1,
+      "object_count": 16,
+      "processing_ms": 591.3329000013618,
+      "timing_ms": {
+        "mediapipe": 78.49969999999999,
+        "pose": 55.90380000103323,
+        "objects": 448.5856999999669
+      }
+    },
+    {
+      "id": 7,
+      "faces": 0,
+      "hands": 0,
+      "poses": 1,
+      "object_count": 18,
+      "processing_ms": 552.5992000002589,
+      "timing_ms": {
+        "mediapipe": 53.393600000000006,
+        "pose": 54.62629999965429,
+        "objects": 436.58119999963674
+      }
+    },
+    {
+      "id": 8,
+      "faces": 0,
+      "hands": 1,
+      "poses": 1,
+      "object_count": 16,
+      "processing_ms": 555.6916000005003,
+      "timing_ms": {
+        "mediapipe": 55.172799999999995,
+        "pose": 53.03540000022622,
+        "objects": 439.16150000040943
+      }
+    },
+    {
+      "id": 9,
+      "faces": 0,
+      "hands": 2,
+      "poses": 1,
+      "object_count": 14,
+      "processing_ms": 635.0128000012774,
+      "timing_ms": {
+        "mediapipe": 89.0964,
+        "pose": 63.147299999400275,
+        "objects": 474.2251000006945
+      }
+    },
+    {
+      "id": 10,
+      "faces": 0,
+      "hands": 2,
+      "poses": 1,
+      "object_count": 14,
+      "processing_ms": 610.935700000482,
+      "timing_ms": {
+        "mediapipe": 58.0936,
+        "pose": 58.761000000231434,
+        "objects": 484.3928999998752
+      }
+    },
+    {
+      "id": 11,
+      "faces": 0,
+      "hands": 2,
+      "poses": 1,
+      "object_count": 13,
+      "processing_ms": 584.1981000012311,
+      "timing_ms": {
+        "mediapipe": 48.2881,
+        "pose": 62.999800000397954,
+        "objects": 463.3726000010938
+      }
+    },
+    {
+      "id": 12,
+      "faces": 0,
+      "hands": 2,
+      "poses": 1,
+      "object_count": 13,
+      "processing_ms": 584.4474999994418,
+      "timing_ms": {
+        "mediapipe": 57.862899999999996,
+        "pose": 57.512000001224806,
+        "objects": 460.28169999954116
+      }
+    },
+    {
+      "id": 13,
+      "faces": 0,
+      "hands": 2,
+      "poses": 1,
+      "object_count": 15,
+      "processing_ms": 591.2062000006699,
+      "timing_ms": {
+        "mediapipe": 56.9758,
+        "pose": 57.635499999378226,
+        "objects": 467.18009999858623
+      }
+    },
+    {
+      "id": 14,
+      "faces": 0,
+      "hands": 0,
+      "poses": 2,
+      "object_count": 17,
+      "processing_ms": 661.5003000006254,
+      "timing_ms": {
+        "mediapipe": 61.9881,
+        "pose": 94.243200001074,
+        "objects": 495.3051000011328
+      }
+    },
+    {
+      "id": 15,
+      "faces": 0,
+      "hands": 2,
+      "poses": 2,
+      "object_count": 16,
+      "processing_ms": 650.2766999983578,
+      "timing_ms": {
+        "mediapipe": 76.11720000000001,
+        "pose": 63.52159999914875,
+        "objects": 500.42240000038873
+      }
+    }
+  ],
+  "models": [
+    {
+      "name": "MediaPipe face + hands",
+      "state": "ready",
+      "runtime": "CPU"
+    },
+    {
+      "name": "MediaPipe pose",
+      "state": "ready",
+      "runtime": "CPU"
+    },
+    {
+      "name": "YOLOv5s objects",
+      "state": "ready",
+      "runtime": "CPU"
+    },
+    {
+      "name": "JEVision scene",
+      "state": "waiting",
+      "runtime": "CPU"
+    }
+  ],
+  "scene_result": {
+    "description": "A person seated near a desk or computer.",
+    "probability": 1.0,
+    "latency_ms": 7658.5,
+    "model": "JEVision 0.8B",
+    "runtime": "CPU",
+    "captured_ms": 10449921
+  },
+  "stop_restart_passed": true,
+  "median_frame_ms": 584.4474999994418
+}

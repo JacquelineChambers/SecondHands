@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "checks": [
+    "RGB and depth previews loaded",
+    "Changing sensor frame counter",
+    "Live person detections",
+    "Factory-calibrated depth associated with people",
+    "No measured locations for stale pairs",
+    "HTML report export",
+    "Mobile layout",
+    "Stop and restart capture",
+    "No JavaScript exceptions"
+  ],
+  "test_summary": {
+    "frames": 400,
+    "frames_with_people": 398,
+    "frames_with_measured_people": 397,
+    "detection_fps": 4.6896428810197905,
+    "inference_ms_median": 113.7669999152422,
+    "depth_queue_drops": 0,
+    "color_queue_drops": 0
+  }
+}

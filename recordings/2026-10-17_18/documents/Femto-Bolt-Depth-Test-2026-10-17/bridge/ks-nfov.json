@@ -1,0 +1,11 @@
+{
+  "requested": {
+    "width": 7680,
+    "height": 434,
+    "fps": 15,
+    "frames": 4,
+    "label": "ks-nfov"
+  },
+  "samples": [],
+  "error": "[Errno 87] KsCreatePin rejected format"
+}

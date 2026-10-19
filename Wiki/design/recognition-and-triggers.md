@@ -62,11 +62,19 @@ The UI shows raw recognition separately from candidate, confirmation, and activa
 
 ## Code and data boundaries
 
+### Scene understanding mode
+
+The user's 2026-10-17 request adds a separate **Scene understanding** mode. It combines MediaPipe face/hand/pose observations, YOLOv5s object boxes, and asynchronous JEVision scene hypotheses. These are observations, without command activation. The original trigger experiments remain available under **Gesture experiments**. Switching modes closes the previous session; both endpoints share camera ownership.
+
+The scene preview and its overlays refer to the same RGB frame. JEVision analyses less frequent snapshots and retains its own source image, timestamp, and age in a separate panel. One global scene request prevents requests from accumulating across Stop/restart; late results from a closed session are discarded. A failed scene request does not stop tracking. [The scene application owner](../setup/scene-understanding.md) maintains model choices, runtime limits, launch instructions, and observed checks.
+
+### Gesture protocol
+
 Keep the [existing package responsibilities](../project.md#package-responsibilities). `capture` owns input, `recognition` owns model adapters, `decisions` owns calibration and temporal command policy, `training` owns offline training/export, `api` connects Python to React, and `ui` owns interaction and display. A model adapter means a small module that converts a runtime's input/output into application observations while retaining model-specific fields.
 
 The CLI recognition JSON schema remains unchanged inside the dashboard envelope. The envelope adds session ID, frame ID, server capture timestamp, and mapping version, with the JPEG and its matching observations. Status includes model/runtime identity and bounded state events referring to frame/mapping IDs. Future decision-model outputs must retain their own meaning; do not treat blendshape measurements, option probabilities, and generated text as one universal confidence value.
 
-The browser requests one frame at a time, with one pending user command. The service allows one camera owner and one outstanding frame job. Both MediaPipe models stay loaded for the session; native capture/inference runs on one worker thread. Stop, cancel, calibration, and mapping changes invalidate pending results. Native work must finish before its resources can close; forced interruption of a blocked camera driver is not implemented. Future decision-model scheduling and process isolation remain separate work.
+The browser requests one frame at a time, with one pending user command. The service allows one camera owner and one outstanding frame job. Both MediaPipe models stay loaded for the gesture session; native capture/inference runs on one worker thread. Stop, cancel, calibration, and mapping changes invalidate pending results. Native work must finish before its resources can close; forced interruption of a blocked camera driver is not implemented. Decision-model scheduling for command candidates and process isolation remain separate from the implemented scene sampling.
 
 The selected local service is FastAPI: HTTP provides health status; WebSocket carries session commands and events. Vite proxies `/api` to the loopback service and uses fixed port 5173. The service permits the two local Vite browser origins. Preview frames and landmarks arrive together; the UI renders that frame's coordinates. The UI may later display the PC's results from the Mac through a separately configured remote connection. [The runbook](../runbooks/mac-and-snapdragon-development.md#run-the-live-exploration-dashboard) owns commands.
 

@@ -22,7 +22,7 @@ The requested first machine uses an x86-family processor. Confirm whether Window
 6. Stop and restart capture, then disconnect and reconnect the camera. Record whether streams recover without restarting Windows.
 7. After Viewer works, test a color-frame capture through the [Python SDK v2 wrapper](https://github.com/orbbec/pyorbbecsdk/tree/v2-main). Pin the version that works with the installed SDK and Python interpreter. Its `main` branch targets SDK v1; do not combine branches by name alone.
 
-Completion means repeatable color and depth capture with recorded versions and stream settings. A Viewer screenshot alone does not establish Python integration or recognition accuracy. Keep recordings outside Git. Use [the existing model commands](../runbooks/mac-and-snapdragon-development.md#run-the-other-three-image-models) only after a compatible color image is available.
+Completion means repeatable color and depth capture with recorded versions and stream settings. A Viewer screenshot alone does not establish Python integration or recognition accuracy. Keep new recordings outside Git unless the user approves publication, as explicitly requested for [the 17–18 October archive](../../recordings/2026-10-17_18/README.md). Use [the existing model commands](../runbooks/mac-and-snapdragon-development.md#run-the-other-three-image-models) only after a compatible color image is available.
 
 ## Dell Snapdragon test
 
@@ -35,6 +35,23 @@ Camera capture and neural-network execution are separate checks. A working camer
 ## Results to record
 
 For each machine, record the OS and process architecture, SDK/wrapper/firmware versions, connection and stream settings, color/depth results, restart behavior, and exact errors. State whether the evidence comes from Viewer, a Python example, or SecondHands. The [2026-10-17 bridge results](../setup/ms-09-femto-bolt-bridge.md#recorded-results) provide standalone Snapdragon evidence, including a later capture timeout. Viewer success, x86 reference results, and SecondHands integration remain unverified. Work status belongs in [the task plan](../plan.md).
+
+## Simultaneous capture with the built-in webcam
+
+On 2026-10-18, the user requested a test of two separate cameras on the [Dell Latitude 7455](snapdragon-x-elite.md). A native ARM64 Python probe captured the **QC Front Camera and Orbbec Femto Bolt RGB Camera simultaneously**, using Windows Media Foundation in shared-read mode. This verifies two physical color-camera inputs; Orbbec depth was not used in this test.
+
+The probe enumerated devices by name and created a source reader for each on a separate thread. It set `MF_DEVSOURCE_ATTRIBUTE_FRAMESERVER_SHARE_MODE` to `1`, which [Microsoft documents as sharing the current camera format without taking control of that format](https://learn.microsoft.com/en-us/windows/win32/medfound/mf-devsource-attribute-frameserver-share-mode). It read samples in memory and counted frames, changes in pixel-buffer checksums, arrival intervals, and cleanup outcomes. Checksums and camera images were not saved. Frame rates below use one shared 30-second measurement interval after both cameras started.
+
+| Camera | Captured format | Frames | Measured FPS | Largest arrival gap |
+| --- | --- | --- | --- | --- |
+| Built-in QC Front Camera | 1920 × 1080, NV12 | 901 | 30.03 | 43.75 ms |
+| Orbbec Femto Bolt RGB Camera | 1280 × 720, YUY2 | 902 | 30.07 | 41.28 ms |
+
+Every measured frame after the first had different pixel-buffer content on both cameras. Both streams released successfully. A fresh process then reopened both for a 10-second check: 300 built-in frames and 301 Orbbec frames, again with changing content, no capture errors, and successful release. The source readers had already shut down their media sources during cleanup; the subsequent explicit shutdown returned the expected `MF_E_SHUTDOWN`, rather than indicating an unreleased stream.
+
+Earlier attempts distinguish the working route from camera detection alone. With existing camera applications open, the Orbbec bridge initially failed with `0x800705AA`. OpenCV's Media Foundation path returned `0xC00D3704`, including for the built-in camera after the user reported stopping the other feeds. DirectShow then returned identical blank or static webcam frames at about 1 FPS while the Orbbec bridge produced changing 720p frames at about 15 FPS. The user confirmed the physical privacy shutter was already open. These earlier attempts do not establish usable dual video. The final native shared-read probe changed both process architecture and sharing mode, so this test does not isolate which difference resolved the webcam failure.
+
+The local harness and aggregate reports remain under ignored `artifacts/dual-camera-test/`: `native_mf_test.py`, `native-dual-30s.json`, and `native-dual-restart-10s.json`. The earlier `dshow-run.json` labeled transport completion as passed, but its own counters show a static webcam; the final reports require changing frames. No images, recordings, audio, or calibration were saved. This is a short capture and restart check, not a long-duration reliability result, synchronized-camera measurement, dual-display output test, or two-camera AI/dashboard integration. [SH-T-010](../plan.md#snapdragon-deployment) retains the broader application verification scope.
 
 ## Questions
 

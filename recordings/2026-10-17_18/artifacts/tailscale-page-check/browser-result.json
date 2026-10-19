@@ -1,0 +1,12 @@
+{
+  "title": "SecondHands",
+  "heading": "Understand what\u2019s in view.",
+  "buttons": [
+    "Scene understanding",
+    "Gesture experiments",
+    "Start scene camera",
+    "Stop scene camera"
+  ],
+  "readyState": "complete",
+  "javascript_exceptions": []
+}

@@ -1,0 +1,32 @@
+{
+  "time_utc": "2026-10-18T19:30:50.356741+00:00",
+  "status": "failed",
+  "measurement_seconds": 30.0,
+  "orbbec_backend": "bridge",
+  "opencv_version": "4.14.0",
+  "cameras": {
+    "built_in": {
+      "frames": 0,
+      "read_errors": 0,
+      "changed_frames": 0,
+      "flat_frames": 0,
+      "clean_shutdown": true,
+      "name": "QC Front Camera",
+      "backend": "MSMF",
+      "index": 1,
+      "requested_fps": 15,
+      "reported_fps": 30.0,
+      "measured_fps": 0.0
+    },
+    "orbbec": {
+      "frames": 0,
+      "read_errors": 0,
+      "changed_frames": 0,
+      "flat_frames": 0,
+      "clean_shutdown": false,
+      "error": "OSError: COM method 7: HRESULT 0x800705AA",
+      "measured_fps": 0.0
+    }
+  },
+  "images_saved": false
+}

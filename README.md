@@ -2,6 +2,10 @@
 
 Development: see [Python and UI setup](Wiki/project.md#development-setup) for installation, commands, and package responsibilities.
 
+Available application: [Orbbec scene understanding](Wiki/setup/scene-understanding.md) combines live MediaPipe tracking, object detection, and local JEVision scene descriptions, with launch instructions and device test results.
+
+Recorded evidence: [17–18 October experiment archive](recordings/2026-10-17_18/README.md) includes saved reports, raw depth frames, RGB/depth captures, logs, and checksums, published at the user's request.
+
 # SecondHands
 **Making the Physical World Accessible Through AI**
 

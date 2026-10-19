@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-10-17T12:16:05.526498-07:00",
+  "status": "initialization_stalled",
+  "stage": "enumerating devices",
+  "test": "live depth-only capture",
+  "requested": {
+    "width": 640,
+    "height": 576,
+    "fps": 15,
+    "measurement_seconds": 12,
+    "warmup_seconds": 2
+  },
+  "sdk_directory": "[redacted-home]\\Documents\\Femto-Bolt-Depth-Test-2026-10-17\\sdk\\OrbbecSDK_v1.10.37\\Example\\bin",
+  "errors": [
+    {
+      "stage": "opening device",
+      "message": "Stopped after repeated firmware-profile / NVRAM read failures; no depth stream started."
+    }
+  ],
+  "frames": [],
+  "finished_at": "2026-10-17T12:17:28.7098977-07:00"
+}

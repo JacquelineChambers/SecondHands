@@ -1,0 +1,42 @@
+[
+  {
+    "file": "anchors_face_back.npy",
+    "git_sha1": "3ce25a3a24bd4dbdc21fa66a756009c045e61eb1",
+    "revision": "65f2549ba35cd61dfd29f402f6c21882a32fabb1"
+  },
+  {
+    "file": "anchors_palm.npy",
+    "git_sha1": "7923b7d236050a68b98cba5ffa86b2296e34af5f",
+    "revision": "65f2549ba35cd61dfd29f402f6c21882a32fabb1"
+  },
+  {
+    "file": "anchors_pose.npy",
+    "git_sha1": "3ce25a3a24bd4dbdc21fa66a756009c045e61eb1",
+    "revision": "65f2549ba35cd61dfd29f402f6c21882a32fabb1"
+  },
+  {
+    "file": "blazefaceback.pth",
+    "git_sha1": "98f4ac6aec058d722d4fd74107c989e3d4a76640",
+    "revision": "65f2549ba35cd61dfd29f402f6c21882a32fabb1"
+  },
+  {
+    "file": "blazeface_landmark.pth",
+    "git_sha1": "75294bb1d6f69d91c2f7c28d5436513766f0dbb5",
+    "revision": "65f2549ba35cd61dfd29f402f6c21882a32fabb1"
+  },
+  {
+    "file": "blazepalm.pth",
+    "git_sha1": "758628680b2f58f42d19c4299660a65d061f393d",
+    "revision": "65f2549ba35cd61dfd29f402f6c21882a32fabb1"
+  },
+  {
+    "file": "blazepose.pth",
+    "git_sha1": "89f6e2a8fbc3038de5c830f75d19aa10df21c5e6",
+    "revision": "65f2549ba35cd61dfd29f402f6c21882a32fabb1"
+  },
+  {
+    "file": "blazepose_landmark.pth",
+    "git_sha1": "f8eb7eb3d4b9bbce8f2b0e32a0a67289caffb088",
+    "revision": "65f2549ba35cd61dfd29f402f6c21882a32fabb1"
+  }
+]

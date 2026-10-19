@@ -1,0 +1,2 @@
+numpy==2.4.4
+torch @ https://download-r2.pytorch.org/whl/cpu/torch-2.14.1%2Bcpu-cp312-cp312-win_arm64.whl#sha256=2f8162c6b265eaf2b0bdd6bef20e96cece430f308e1477a32d0aef51e472124c

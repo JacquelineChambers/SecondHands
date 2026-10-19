@@ -1,0 +1,45 @@
+{
+  "frames": [
+    {
+      "width": 640,
+      "height": 576,
+      "decode_ms": 308.22320003062487,
+      "sensor_c": 31.09174346923828,
+      "laser_c": 0.0,
+      "frame_number": 5,
+      "captures": 9,
+      "file": "direct-nfov-000.bin",
+      "valid_percent": 50.417751736111114,
+      "median_mm": 932.0
+    },
+    {
+      "width": 640,
+      "height": 576,
+      "decode_ms": 7.1624997071921825,
+      "sensor_c": 30.90825653076172,
+      "laser_c": 0.0,
+      "frame_number": 6,
+      "captures": 9,
+      "file": "direct-nfov-001.bin",
+      "valid_percent": 50.185818142361114,
+      "median_mm": 931.0
+    },
+    {
+      "width": 640,
+      "height": 576,
+      "decode_ms": 6.44939998164773,
+      "sensor_c": 31.27522850036621,
+      "laser_c": 0.0,
+      "frame_number": 7,
+      "captures": 9,
+      "file": "direct-nfov-002.bin",
+      "valid_percent": 50.141330295138886,
+      "median_mm": 931.0
+    }
+  ],
+  "engine_version": [
+    2,
+    2,
+    0
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "frames": 30,
+  "depth_frame_changes": 30,
+  "max_faces": 0,
+  "max_hands": 2,
+  "gesture_backend": "executorch-qnn",
+  "npu_hand_calls": 51,
+  "clean_shutdown": true,
+  "valid_depth_percent": 50.085177951388886,
+  "median_depth_mm": 1045.0,
+  "depth_decode_ms": 5.621899999823654,
+  "mediapipe_ms": 47.3077,
+  "gesture_npu_ms": 0.3737,
+  "gesture_round_trip_ms": 1.3746999993600184
+}

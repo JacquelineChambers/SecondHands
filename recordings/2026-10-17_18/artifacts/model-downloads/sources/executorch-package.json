@@ -1,0 +1,606 @@
+{
+  "info": {
+    "author": null,
+    "author_email": "PyTorch Team <[redacted-email]>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 5 - Production/Stable",
+      "Intended Audience :: Developers",
+      "Intended Audience :: Education",
+      "Intended Audience :: Science/Research",
+      "Programming Language :: C++",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Topic :: Scientific/Engineering",
+      "Topic :: Scientific/Engineering :: Artificial Intelligence",
+      "Topic :: Scientific/Engineering :: Mathematics",
+      "Topic :: Software Development",
+      "Topic :: Software Development :: Libraries",
+      "Topic :: Software Development :: Libraries :: Python Modules"
+    ],
+    "description": "**ExecuTorch** is a [PyTorch](https://pytorch.org/) platform that provides\ninfrastructure to run PyTorch programs everywhere from AR/VR wearables to\nstandard on-device iOS and Android mobile deployments. One of the main goals for\nExecuTorch is to enable wider customization and deployment capabilities of the\nPyTorch programs.\n\nThe `executorch` pip package is in beta.\n* Supported python versions: 3.10, 3.11, 3.12, 3.13, 3.14\n* Compatible systems: Linux x86_64, Linux aarch64, macOS aarch64\n\nTo build a minimal wheel from source, set\n`EXECUTORCH_BUILD_MINIMAL=1` when running `pip wheel` or `pip install`.\nThat wheel contains the Python EXIR export path and `flatc` for `.pte`\nserialization, but omits runtime pybindings, kernels, backend packages, headers,\nexamples, and devtools. It also declares only the Python dependencies the export\npath needs (no `coremltools`, `pandas`, `scikit-learn`, `hydra-core`, or\n`omegaconf`), so a normal install stays small. Like the full wheel it does not\nbundle PyTorch, so install a compatible `torch` separately. The wheel is still\nplatform specific because it ships `flatc`.\n\nThe prebuilt `executorch.runtime` module included in this package provides a way\nto run ExecuTorch `.pte` files, with some restrictions:\n* Only [core ATen operators](docs/source/ir-ops-set-definition.md) are linked into the prebuilt module\n* Only the [XNNPACK backend delegate](docs/source/backends/xnnpack/xnnpack-overview.md) is linked into the prebuilt module.\n* \\[macOS only] [Core ML](docs/source/backends/coreml/coreml-overview.md) and MLX backends are\n  also linked into the prebuilt module.\n* \\[Linux x86_64] [QNN](docs/source/backends-qualcomm.md) backend is linked into the prebuilt module.\n* \\[Linux] [OpenVINO](docs/source/build-run-openvino.md) backend is also linked into the\n  prebuilt module. OpenVINO requires the runtime to be installed separately:\n  `pip install executorch[openvino]`\n\nPlease visit the [ExecuTorch website](https://pytorch.org/executorch) for\ntutorials and documentation. Here are some starting points:\n* [Getting Started](https://pytorch.org/executorch/main/getting-started-setup)\n  * Set up the ExecuTorch environment and run PyTorch models locally.\n* [Working with local LLMs](docs/source/llm/getting-started.md)\n  * Learn how to use ExecuTorch to export and accelerate a large-language model\n    from scratch.\n* [Exporting to ExecuTorch](https://pytorch.org/executorch/main/tutorials/export-to-executorch-tutorial)\n  * Learn the fundamentals of exporting a PyTorch `nn.Module` to ExecuTorch, and\n    optimizing its performance using quantization and hardware delegation.\n* Running etLLM on [iOS](https://github.com/meta-pytorch/executorch-examples/tree/main/llm/apple) and [Android](https://github.com/meta-pytorch/executorch-examples/tree/main/llm/android) devices.\n  * Build and run LLaMA in a demo mobile app, and learn how to integrate models\n    with your own apps.\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": [
+      "License-File",
+      "Requires-Dist"
+    ],
+    "home_page": null,
+    "keywords": "pytorch, machine learning",
+    "license": "BSD-3-Clause",
+    "license_expression": null,
+    "license_files": [
+      "LICENSE"
+    ],
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "executorch",
+    "package_url": "https://pypi.org/project/executorch/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/executorch/",
+    "project_urls": {
+      "Changelog": "https://github.com/pytorch/executorch/releases",
+      "Homepage": "https://pytorch.org/executorch/",
+      "Issues": "https://github.com/pytorch/executorch/issues",
+      "Repository": "https://github.com/pytorch/executorch"
+    },
+    "provides_extra": [
+      "vgf",
+      "ethos-u",
+      "openvino"
+    ],
+    "release_url": "https://pypi.org/project/executorch/1.5.1/",
+    "requires_dist": [
+      "expecttest",
+      "flatbuffers",
+      "hypothesis",
+      "kgb",
+      "mpmath==1.3.0",
+      "numpy>=2.0.0; python_version >= \"3.10\"",
+      "packaging",
+      "pandas>=2.2.2; python_version >= \"3.10\"",
+      "parameterized",
+      "py-cpuinfo",
+      "requests",
+      "pytorch-tokenizers>=1.5.0",
+      "torchao<0.19,>=0.18.0",
+      "pyyaml",
+      "ruamel.yaml",
+      "sympy",
+      "tabulate",
+      "typing-extensions>=4.10.0",
+      "coremltools==9.0; (platform_system == \"Darwin\" or (platform_system == \"Linux\" and platform_machine == \"x86_64\")) and python_version < \"3.14\"",
+      "scikit-learn>=1.7.1; (platform_system == \"Darwin\" or (platform_system == \"Linux\" and platform_machine == \"x86_64\")) and python_version < \"3.14\"",
+      "hydra-core>=1.3.0",
+      "omegaconf>=2.3.0",
+      "ai_ml_emulation_layer_for_vulkan==0.10.0; extra == \"vgf\"",
+      "ai_ml_sdk_model_converter==0.10.0; extra == \"vgf\"",
+      "ml_dtypes==0.5.1; extra == \"vgf\"",
+      "tosa-tools==2026.5.0; extra == \"vgf\"",
+      "ethos-u-vela==5.1.0; extra == \"ethos-u\"",
+      "ml_dtypes==0.5.1; extra == \"ethos-u\"",
+      "tosa-tools==2026.5.0; extra == \"ethos-u\"",
+      "openvino<2026.0.0,>=2025.1.0; platform_system == \"Linux\" and extra == \"openvino\""
+    ],
+    "requires_python": "<3.15,>=3.10",
+    "summary": "On-device AI across mobile, embedded and edge for PyTorch",
+    "version": "1.5.1",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "last_serial": 41652999,
+  "ownership": {
+    "organization": "meta-platforms",
+    "roles": [
+      {
+        "role": "Owner",
+        "user": "atalman"
+      },
+      {
+        "role": "Owner",
+        "user": "chenlai"
+      },
+      {
+        "role": "Owner",
+        "user": "larryliu0820"
+      },
+      {
+        "role": "Owner",
+        "user": "seemethere"
+      }
+    ]
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "09d643751801d7479631e0769a5cf5e2138322746744f595ef98b8709f175b2f",
+        "md5": "6b5ee23a769899b7f277cea517ec6c7c",
+        "sha256": "8c8e25b68397cd96cc0776d4812c8f1d43b3e916bba07ca488f30343705e79b3"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp310-cp310-macosx_14_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "6b5ee23a769899b7f277cea517ec6c7c",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": "<3.15,>=3.10",
+      "size": 18667286,
+      "upload_time": "2026-09-22T17:40:44",
+      "upload_time_iso_8601": "2026-09-22T17:40:44.930579Z",
+      "url": "https://files.pythonhosted.org/packages/09/d6/43751801d7479631e0769a5cf5e2138322746744f595ef98b8709f175b2f/executorch-1.5.1-cp310-cp310-macosx_14_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "82a336a830ebe65fc056a9781b59b4bf5df5cfd6892fd883c08c38ec9b167773",
+        "md5": "61df7bb9bce8905a4157e98aaa93b2a7",
+        "sha256": "e56525c38b1e1a428a9dd9f85081a2ef29dec1df8661963ac07cef0695cc0cf4"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp310-cp310-manylinux_2_28_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "61df7bb9bce8905a4157e98aaa93b2a7",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": "<3.15,>=3.10",
+      "size": 17804302,
+      "upload_time": "2026-09-22T17:40:48",
+      "upload_time_iso_8601": "2026-09-22T17:40:48.244661Z",
+      "url": "https://files.pythonhosted.org/packages/82/a3/36a830ebe65fc056a9781b59b4bf5df5cfd6892fd883c08c38ec9b167773/executorch-1.5.1-cp310-cp310-manylinux_2_28_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "ca7231324e4926dfebc59c7924fd69d51321e4df02b3d81efb32f790cf698a52",
+        "md5": "9ab0c527efd7d4e62e38919662fc44ec",
+        "sha256": "b73f74ef4a431320aa40ca21c252316264fdbe1b5ae39208414e3a885af55b34"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp310-cp310-manylinux_2_28_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "9ab0c527efd7d4e62e38919662fc44ec",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": "<3.15,>=3.10",
+      "size": 18879256,
+      "upload_time": "2026-09-22T17:40:51",
+      "upload_time_iso_8601": "2026-09-22T17:40:51.020051Z",
+      "url": "https://files.pythonhosted.org/packages/ca/72/31324e4926dfebc59c7924fd69d51321e4df02b3d81efb32f790cf698a52/executorch-1.5.1-cp310-cp310-manylinux_2_28_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "ccf613edd911f4cac67c92173ef715ab5f9a2b3d83d355883bcdd9beed11a853",
+        "md5": "6a913f911602a4e8310abed19fbdcf18",
+        "sha256": "f0fdbae0e90ce3bb7651b167045fda19ed0eb2a5f17c4d009f2f9c8bd6a2961d"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp310-cp310-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "6a913f911602a4e8310abed19fbdcf18",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp310",
+      "requires_python": "<3.15,>=3.10",
+      "size": 14262168,
+      "upload_time": "2026-09-22T17:40:53",
+      "upload_time_iso_8601": "2026-09-22T17:40:53.984496Z",
+      "url": "https://files.pythonhosted.org/packages/cc/f6/13edd911f4cac67c92173ef715ab5f9a2b3d83d355883bcdd9beed11a853/executorch-1.5.1-cp310-cp310-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "77b137045272f708c437a9e21c92f1c720dcc897a4787a2970eaaf44b715216c",
+        "md5": "9d1d2cf65b880926f9b221c93e57f0dc",
+        "sha256": "e747dacb39950a2d234e08f230c1e5540f7b297fd32bc8c8f4296a953bb40dc0"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp311-cp311-macosx_14_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "9d1d2cf65b880926f9b221c93e57f0dc",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": "<3.15,>=3.10",
+      "size": 18676233,
+      "upload_time": "2026-09-22T17:40:56",
+      "upload_time_iso_8601": "2026-09-22T17:40:56.449607Z",
+      "url": "https://files.pythonhosted.org/packages/77/b1/37045272f708c437a9e21c92f1c720dcc897a4787a2970eaaf44b715216c/executorch-1.5.1-cp311-cp311-macosx_14_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "c9e402f092de72be310cfdea4400adc53489322f008b8e60003a77e934b682ce",
+        "md5": "f78f01ac6332e52257b587a4b836f7a1",
+        "sha256": "8ee02348a3ea80ddf770822911ebf78da616b73afce0fbaaa79f23311c88c66a"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp311-cp311-manylinux_2_28_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "f78f01ac6332e52257b587a4b836f7a1",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": "<3.15,>=3.10",
+      "size": 17810491,
+      "upload_time": "2026-09-22T17:41:00",
+      "upload_time_iso_8601": "2026-09-22T17:41:00.096810Z",
+      "url": "https://files.pythonhosted.org/packages/c9/e4/02f092de72be310cfdea4400adc53489322f008b8e60003a77e934b682ce/executorch-1.5.1-cp311-cp311-manylinux_2_28_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "d3dae9b47ab590550d4ecc2b2a447d13e755ade3fa96399d3fa83d9833084c5d",
+        "md5": "a394da25d05977b76f4d1aced69be9ec",
+        "sha256": "274c28c2fe2b76acb03f9fa381537425c40e0098dcf886baf6d97a1a55ffe300"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "a394da25d05977b76f4d1aced69be9ec",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": "<3.15,>=3.10",
+      "size": 18887977,
+      "upload_time": "2026-09-22T17:41:03",
+      "upload_time_iso_8601": "2026-09-22T17:41:03.388747Z",
+      "url": "https://files.pythonhosted.org/packages/d3/da/e9b47ab590550d4ecc2b2a447d13e755ade3fa96399d3fa83d9833084c5d/executorch-1.5.1-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "771a1c293534e49522228b3e51a477287b10b9687494c9da0ac073c2001c61da",
+        "md5": "87b76f2a07ce62e9bb2b5ccc00c587e9",
+        "sha256": "f2c4937950a55693b6056d0dfe6bf2ef6254feaf2227ea1807d2d78a907402a3"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp311-cp311-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "87b76f2a07ce62e9bb2b5ccc00c587e9",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp311",
+      "requires_python": "<3.15,>=3.10",
+      "size": 14271738,
+      "upload_time": "2026-09-22T17:41:06",
+      "upload_time_iso_8601": "2026-09-22T17:41:06.031105Z",
+      "url": "https://files.pythonhosted.org/packages/77/1a/1c293534e49522228b3e51a477287b10b9687494c9da0ac073c2001c61da/executorch-1.5.1-cp311-cp311-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "53c960671dde4fd87affb78f2811333ebb28037c4234c808d1766b4a3e49d3a6",
+        "md5": "fbff63e3c6d96fd376fdfd278216b96e",
+        "sha256": "dfec99d4df4fd3a8e1c5bf094ee8e54859610ccefd4d37535f0b9ab77eb35750"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp312-cp312-macosx_14_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "fbff63e3c6d96fd376fdfd278216b96e",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": "<3.15,>=3.10",
+      "size": 18776045,
+      "upload_time": "2026-09-22T17:41:08",
+      "upload_time_iso_8601": "2026-09-22T17:41:08.912321Z",
+      "url": "https://files.pythonhosted.org/packages/53/c9/60671dde4fd87affb78f2811333ebb28037c4234c808d1766b4a3e49d3a6/executorch-1.5.1-cp312-cp312-macosx_14_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "37f918d126eacacaec6d07dd02cef3b3c5511de9315fe355c6bddaaa22338890",
+        "md5": "bdd25cb91d1ee795194639e62d79c81c",
+        "sha256": "2c177f7922354a8a0d6111628c954519b87549598640e5e0042bef137b4cb83c"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp312-cp312-manylinux_2_28_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "bdd25cb91d1ee795194639e62d79c81c",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": "<3.15,>=3.10",
+      "size": 17930720,
+      "upload_time": "2026-09-22T17:41:11",
+      "upload_time_iso_8601": "2026-09-22T17:41:11.614200Z",
+      "url": "https://files.pythonhosted.org/packages/37/f9/18d126eacacaec6d07dd02cef3b3c5511de9315fe355c6bddaaa22338890/executorch-1.5.1-cp312-cp312-manylinux_2_28_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "0bdc60e4489fe9b23691f0e0ffccb10ff40b54f120f812cfa089df3774cd75a5",
+        "md5": "ab4a9337ad18cf282c2ed52f064a15bd",
+        "sha256": "04897dffff8d96e8af32f554c758d0a7d4f50af5c3530c90dc8d5319bb44c878"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "ab4a9337ad18cf282c2ed52f064a15bd",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": "<3.15,>=3.10",
+      "size": 19027339,
+      "upload_time": "2026-09-22T17:41:14",
+      "upload_time_iso_8601": "2026-09-22T17:41:14.311411Z",
+      "url": "https://files.pythonhosted.org/packages/0b/dc/60e4489fe9b23691f0e0ffccb10ff40b54f120f812cfa089df3774cd75a5/executorch-1.5.1-cp312-cp312-manylinux_2_28_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "58cbc29ff9252aaf857a24ccc01fcf16c9dfbf9818995ea6502bc37bf03ef211",
+        "md5": "17a75d347e514e755234214b553a9494",
+        "sha256": "a518996625bf4f5358cd4f3c262501103c6665f82ae2d9b332da2dfedcaa917f"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp312-cp312-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "17a75d347e514e755234214b553a9494",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp312",
+      "requires_python": "<3.15,>=3.10",
+      "size": 14274129,
+      "upload_time": "2026-09-22T17:41:17",
+      "upload_time_iso_8601": "2026-09-22T17:41:17.081277Z",
+      "url": "https://files.pythonhosted.org/packages/58/cb/c29ff9252aaf857a24ccc01fcf16c9dfbf9818995ea6502bc37bf03ef211/executorch-1.5.1-cp312-cp312-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "125e24176ac36e3876e1df03c64144f4509fd956d1249dd9009fef7763a48b96",
+        "md5": "05cca8fcfdf7541ed23c823606cc6105",
+        "sha256": "76df250f72df3bcbbc7fd6b353d42e91b127208d9ac289cb4a18ba6ac41f42a0"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp313-cp313-macosx_14_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "05cca8fcfdf7541ed23c823606cc6105",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": "<3.15,>=3.10",
+      "size": 18681124,
+      "upload_time": "2026-09-22T17:41:19",
+      "upload_time_iso_8601": "2026-09-22T17:41:19.859363Z",
+      "url": "https://files.pythonhosted.org/packages/12/5e/24176ac36e3876e1df03c64144f4509fd956d1249dd9009fef7763a48b96/executorch-1.5.1-cp313-cp313-macosx_14_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "b41c7b6cf0dba8e700a0c5d66be43f8681687ed0d771ff1618001b914488fd01",
+        "md5": "512470c9c1334dcc105edc5105987d8d",
+        "sha256": "685a8d85b319fc99f2611a5e0ecf598755a91cf5d39a536e057dea60cd8e9682"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp313-cp313-manylinux_2_28_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "512470c9c1334dcc105edc5105987d8d",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": "<3.15,>=3.10",
+      "size": 17807563,
+      "upload_time": "2026-09-22T17:41:22",
+      "upload_time_iso_8601": "2026-09-22T17:41:22.736415Z",
+      "url": "https://files.pythonhosted.org/packages/b4/1c/7b6cf0dba8e700a0c5d66be43f8681687ed0d771ff1618001b914488fd01/executorch-1.5.1-cp313-cp313-manylinux_2_28_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "a4b24dd4648f75585b7fa84a8b9a23ea9588e6c747418ba5ca67afa6b772fc88",
+        "md5": "d71f6d1b5541ed79d9224f65a1703ac9",
+        "sha256": "083f998ebddc0bc98ad299e3fded57f4fcadb67792ef4c6ef920856cfd7bd3a5"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "d71f6d1b5541ed79d9224f65a1703ac9",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": "<3.15,>=3.10",
+      "size": 18892986,
+      "upload_time": "2026-09-22T17:41:25",
+      "upload_time_iso_8601": "2026-09-22T17:41:25.317942Z",
+      "url": "https://files.pythonhosted.org/packages/a4/b2/4dd4648f75585b7fa84a8b9a23ea9588e6c747418ba5ca67afa6b772fc88/executorch-1.5.1-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "b8640bf487f956375f7008e1048e90700e295a122ff8b04ce9f1e63cb6528662",
+        "md5": "e5eed6f1d725c792efc565dc48b89c7b",
+        "sha256": "846f645d1cca775328ca506b7a3fd6cd6eea320b57685675d1be2a296284e73b"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp313-cp313-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "e5eed6f1d725c792efc565dc48b89c7b",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp313",
+      "requires_python": "<3.15,>=3.10",
+      "size": 14274162,
+      "upload_time": "2026-09-22T17:41:28",
+      "upload_time_iso_8601": "2026-09-22T17:41:28.161053Z",
+      "url": "https://files.pythonhosted.org/packages/b8/64/0bf487f956375f7008e1048e90700e295a122ff8b04ce9f1e63cb6528662/executorch-1.5.1-cp313-cp313-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "8790fd8266a6ebbb4a0a7041fe45f763d37b742f96728f9a8d8d7d7863d8bff9",
+        "md5": "f98f9425d6792d790b725a52a4b652e0",
+        "sha256": "cb87812e447dd378a56a04ff66947a16cb9d97aa4fc580b68bf1e957a2262fd3"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp314-cp314-macosx_14_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "f98f9425d6792d790b725a52a4b652e0",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": "<3.15,>=3.10",
+      "size": 18683370,
+      "upload_time": "2026-09-22T17:41:30",
+      "upload_time_iso_8601": "2026-09-22T17:41:30.652129Z",
+      "url": "https://files.pythonhosted.org/packages/87/90/fd8266a6ebbb4a0a7041fe45f763d37b742f96728f9a8d8d7d7863d8bff9/executorch-1.5.1-cp314-cp314-macosx_14_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "957d3033fac7a03d4a17e11881b55a16b82130ee590953f7067597709eb41d70",
+        "md5": "5a2f600fc0c428b1dcff0b8993fbdd3f",
+        "sha256": "d1aa88a029819cd0c8be1075d87fee56c5d35599b1bfcbd8c72de1c9cf657e0b"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp314-cp314-manylinux_2_28_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "5a2f600fc0c428b1dcff0b8993fbdd3f",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": "<3.15,>=3.10",
+      "size": 17810835,
+      "upload_time": "2026-09-22T17:41:33",
+      "upload_time_iso_8601": "2026-09-22T17:41:33.165252Z",
+      "url": "https://files.pythonhosted.org/packages/95/7d/3033fac7a03d4a17e11881b55a16b82130ee590953f7067597709eb41d70/executorch-1.5.1-cp314-cp314-manylinux_2_28_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "84edf0bd7912341856187a1ad42ca3fc20aa563414555dd7349c2b1a5bb469f9",
+        "md5": "b3fc56a7df940e0c82453a57f862d069",
+        "sha256": "2c0ace3dabbff8aa1ae70d804c3b7ae276b6dcdb4e6d6934f35075d23cb0e7ec"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp314-cp314-manylinux_2_28_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "b3fc56a7df940e0c82453a57f862d069",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": "<3.15,>=3.10",
+      "size": 18893807,
+      "upload_time": "2026-09-22T17:41:35",
+      "upload_time_iso_8601": "2026-09-22T17:41:35.790970Z",
+      "url": "https://files.pythonhosted.org/packages/84/ed/f0bd7912341856187a1ad42ca3fc20aa563414555dd7349c2b1a5bb469f9/executorch-1.5.1-cp314-cp314-manylinux_2_28_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "136a8ae2c71d95131329b3ae718f07814efcfdd54603998847eb66cfbed6658f"
+      },
+      "digests": {
+        "blake2b_256": "9e9db7fdf5d18db4ee45f122ca9a0cc66aac2e8f8cc5fd510c078683643f9a7e",
+        "md5": "4658c0d370a7199152052842e8c3594a",
+        "sha256": "0f614847d4966b8004a8347d11f035b4d59687adc86b04221ec0b4d73e46df50"
+      },
+      "downloads": -1,
+      "filename": "executorch-1.5.1-cp314-cp314-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "4658c0d370a7199152052842e8c3594a",
+      "packagetype": "bdist_wheel",
+      "python_version": "cp314",
+      "requires_python": "<3.15,>=3.10",
+      "size": 14275560,
+      "upload_time": "2026-09-22T17:41:38",
+      "upload_time_iso_8601": "2026-09-22T17:41:38.308489Z",
+      "url": "https://files.pythonhosted.org/packages/9e/9d/b7fdf5d18db4ee45f122ca9a0cc66aac2e8f8cc5fd510c078683643f9a7e/executorch-1.5.1-cp314-cp314-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "vulnerabilities": []
+}

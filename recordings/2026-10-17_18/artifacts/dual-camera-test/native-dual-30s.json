@@ -1,0 +1,46 @@
+{
+  "time_utc": "2026-10-18T19:40:36.342695+00:00",
+  "status": "passed",
+  "python_arch": "0xaa64",
+  "shared": true,
+  "seconds": 30.0,
+  "cameras": {
+    "Orbbec Femto Bolt RGB Camera": {
+      "frames": 902,
+      "changed_frames": 901,
+      "clean_shutdown": true,
+      "last_sample_bytes": 1843200,
+      "first_timestamp_100ns": 751836129911,
+      "last_timestamp_100ns": 752135573040,
+      "first_frame_offset_seconds": 0.027,
+      "last_frame_offset_seconds": 29.971,
+      "max_interval_ms": 41.278,
+      "resolution": [
+        1280,
+        720
+      ],
+      "fourcc": "YUY2",
+      "already_shutdown_by_reader": true,
+      "measured_fps": 30.067
+    },
+    "QC Front Camera": {
+      "frames": 901,
+      "changed_frames": 900,
+      "clean_shutdown": true,
+      "last_sample_bytes": 3110400,
+      "first_timestamp_100ns": 751835808844,
+      "last_timestamp_100ns": 752135382844,
+      "first_frame_offset_seconds": 0.02,
+      "last_frame_offset_seconds": 29.977,
+      "max_interval_ms": 43.749,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fourcc": "NV12",
+      "already_shutdown_by_reader": true,
+      "measured_fps": 30.033
+    }
+  },
+  "images_saved": false
+}

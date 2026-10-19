@@ -1,0 +1,207 @@
+{
+  "_id": "6ac64145a60b06086fee06ea",
+  "id": "LMDHQ-0420/vision-jev",
+  "private": false,
+  "pipeline_tag": "image-text-to-text",
+  "library_name": "peft",
+  "tags": [
+    "peft",
+    "safetensors",
+    "vision-language",
+    "lora",
+    "calibration",
+    "decision-making",
+    "image-text-to-text",
+    "base_model:Qwen/Qwen3.5-0.8B",
+    "base_model:adapter:Qwen/Qwen3.5-0.8B",
+    "license:apache-2.0",
+    "region:us"
+  ],
+  "downloads": 0,
+  "likes": 1,
+  "modelId": "LMDHQ-0420/vision-jev",
+  "author": "LMDHQ-0420",
+  "sha": "b42c2f29eb6572f4a2ee31bd99d85d45ae8510c7",
+  "lastModified": "2026-10-07T13:15:29.000Z",
+  "gated": false,
+  "disabled": false,
+  "widgetData": [
+    {
+      "text": "Hi, what can you help me with?"
+    },
+    {
+      "text": "What is 84 * 3 / 2?"
+    },
+    {
+      "text": "Tell me an interesting fact about the universe!"
+    },
+    {
+      "text": "Explain quantum computing in simple terms."
+    }
+  ],
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "license": "apache-2.0",
+    "library_name": "peft",
+    "pipeline_tag": "image-text-to-text",
+    "base_model": [
+      "Qwen/Qwen3.5-0.8B",
+      "Qwen/Qwen3.5-9B"
+    ],
+    "tags": [
+      "vision-language",
+      "peft",
+      "lora",
+      "calibration",
+      "decision-making"
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "7c63ecde4c9047d964c691664bc8db3028f281fc",
+      "size": 1651
+    },
+    {
+      "rfilename": "LICENSE",
+      "blobId": "60cfa90da0ac422dd3f6f95951750bf251d1cc30",
+      "size": 638
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "6844852d7f38aa5f21bf1652a2f5998bb9903d13",
+      "size": 4038
+    },
+    {
+      "rfilename": "results/static-rlcd-test.json",
+      "blobId": "f48ddce1e675535c1246dcf7acc8103ba6c4c84c",
+      "size": 173465
+    },
+    {
+      "rfilename": "vision-jev-0.8b/adapter_config.json",
+      "blobId": "8fbf51e4c651122e1cf2c71b5e4ca2c8e3af996f",
+      "size": 1168
+    },
+    {
+      "rfilename": "vision-jev-0.8b/adapter_model.safetensors",
+      "blobId": "364904d66c82683c078992290a7d63123d364c75",
+      "size": 16140072,
+      "lfs": {
+        "sha256": "fc1ad2fe825c766fa1913e7066f0017dc92c3560b9f2dc1729087c30b550c799",
+        "size": 16140072,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "vision-jev-0.8b/chat_template.jinja",
+      "blobId": "0ef09f214eaa6d9bca297988afc1454b5827b2c7",
+      "size": 7755
+    },
+    {
+      "rfilename": "vision-jev-0.8b/decision_heads.safetensors",
+      "blobId": "be7279d88c0759e0ab69362436451cc871f99440",
+      "size": 7405140,
+      "lfs": {
+        "sha256": "888c9c8143ab4548ce0c78d11d42de15264308f3c20e830a62ba1c37d87790b6",
+        "size": 7405140,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "vision-jev-0.8b/processor_config.json",
+      "blobId": "43c4343ec493f200e452f87a7c6649ecdfcce1ac",
+      "size": 1220
+    },
+    {
+      "rfilename": "vision-jev-0.8b/rlcd_config.json",
+      "blobId": "da29444cff9e45fb508520defef3bfe29a9f8033",
+      "size": 141
+    },
+    {
+      "rfilename": "vision-jev-0.8b/temperatures.json",
+      "blobId": "242c5f5af0b8358fadf218061174942185453ece",
+      "size": 95
+    },
+    {
+      "rfilename": "vision-jev-0.8b/tokenizer.json",
+      "blobId": "726a958c89519f4c6143d4222cfcbd462076950a",
+      "size": 19989507,
+      "lfs": {
+        "sha256": "5a41e6e9d92018a0d3b5dcdfc626e6563d993cef9c506928add7929b54a47e73",
+        "size": 19989507,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "vision-jev-0.8b/tokenizer_config.json",
+      "blobId": "a60ae1a905ad7a2edaa995dbb0fc81a1c4fc42ee",
+      "size": 1505
+    },
+    {
+      "rfilename": "vision-jev-9b/adapter_config.json",
+      "blobId": "194524b4478be0becf07c5fcd5081b5652803096",
+      "size": 1166
+    },
+    {
+      "rfilename": "vision-jev-9b/adapter_model.safetensors",
+      "blobId": "3c0464700d8e2a99e883e593c61cbca2953ff488",
+      "size": 47210368,
+      "lfs": {
+        "sha256": "a855e147c7f381a7655ba499e06b816bff22a691d2e52eac4f212ed2f5c1eb5a",
+        "size": 47210368,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "vision-jev-9b/chat_template.jinja",
+      "blobId": "a585dec894e63da457d9440ec6aa7caa16d20860",
+      "size": 7756
+    },
+    {
+      "rfilename": "vision-jev-9b/decision_heads.safetensors",
+      "blobId": "cb2b29686b7cd0bd00cc99606c40cdbb34135f00",
+      "size": 23256708,
+      "lfs": {
+        "sha256": "13c2b913afc846de8232c04e35e115e88d8475de86b46ce691daaccbd516dce6",
+        "size": 23256708,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "vision-jev-9b/processor_config.json",
+      "blobId": "43c4343ec493f200e452f87a7c6649ecdfcce1ac",
+      "size": 1220
+    },
+    {
+      "rfilename": "vision-jev-9b/rlcd_config.json",
+      "blobId": "e29a6e1841cad8b8311189cf33c49c2e140202ba",
+      "size": 139
+    },
+    {
+      "rfilename": "vision-jev-9b/temperatures.json",
+      "blobId": "014485365244ad759e8f4ec8a482bba4bc40b275",
+      "size": 96
+    },
+    {
+      "rfilename": "vision-jev-9b/tokenizer.json",
+      "blobId": "726a958c89519f4c6143d4222cfcbd462076950a",
+      "size": 19989507,
+      "lfs": {
+        "sha256": "5a41e6e9d92018a0d3b5dcdfc626e6563d993cef9c506928add7929b54a47e73",
+        "size": 19989507,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "vision-jev-9b/tokenizer_config.json",
+      "blobId": "a60ae1a905ad7a2edaa995dbb0fc81a1c4fc42ee",
+      "size": 1505
+    }
+  ],
+  "spaces": [
+    "hotchpotch/S1MB-leaderboard"
+  ],
+  "createdAt": "2026-10-07T12:55:33.000Z",
+  "usedStorage": 114001795
+}

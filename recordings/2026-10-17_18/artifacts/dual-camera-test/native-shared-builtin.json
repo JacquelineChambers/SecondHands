@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "python_arch": "0xaa64",
+  "shared": true,
+  "seconds": 10.0,
+  "cameras": {
+    "QC Front Camera": {
+      "frames": 301,
+      "changed_frames": 300,
+      "clean_shutdown": false,
+      "last_sample_bytes": 3110400,
+      "first_timestamp_100ns": 751457523706,
+      "last_timestamp_100ns": 751557381705,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "shutdown_error": "COM method 12: HRESULT 0xC00D3E85",
+      "measured_fps": 30.1
+    }
+  },
+  "images_saved": false
+}

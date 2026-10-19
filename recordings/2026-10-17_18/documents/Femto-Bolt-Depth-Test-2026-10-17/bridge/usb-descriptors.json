@@ -1,0 +1,284 @@
+{
+  "devices": [
+    {
+      "port": 2,
+      "vid": "0x2bc5",
+      "pid": "0x66b",
+      "config_bytes": 888,
+      "frames": [
+        {
+          "interface": 1,
+          "alternate": 0,
+          "class": 14,
+          "subclass": 2,
+          "format_index": 1,
+          "format_guid": "32595559-0000-0010-8000-00aa00389b71",
+          "bits": 16,
+          "frame_index": 1,
+          "width": 1280,
+          "height": 720,
+          "default_fps": 30.00003000003,
+          "frame_intervals_100ns": [
+            333333,
+            400000,
+            666666,
+            2000000
+          ],
+          "fps": [
+            30.00003000003,
+            25.0,
+            15.000015000015,
+            5.0
+          ]
+        },
+        {
+          "interface": 1,
+          "alternate": 0,
+          "class": 14,
+          "subclass": 2,
+          "format_index": 1,
+          "format_guid": "32595559-0000-0010-8000-00aa00389b71",
+          "bits": 16,
+          "frame_index": 1,
+          "width": 1280,
+          "height": 720,
+          "default_fps": 30.00003000003,
+          "frame_intervals_100ns": [
+            333333,
+            400000,
+            666666,
+            2000000
+          ],
+          "fps": [
+            30.00003000003,
+            25.0,
+            15.000015000015,
+            5.0
+          ]
+        },
+        {
+          "interface": 1,
+          "alternate": 0,
+          "class": 14,
+          "subclass": 2,
+          "format_index": 1,
+          "format_guid": "32595559-0000-0010-8000-00aa00389b71",
+          "bits": 16,
+          "frame_index": 2,
+          "width": 1280,
+          "height": 960,
+          "default_fps": 30.00003000003,
+          "frame_intervals_100ns": [
+            333333,
+            400000,
+            666666,
+            2000000
+          ],
+          "fps": [
+            30.00003000003,
+            25.0,
+            15.000015000015,
+            5.0
+          ]
+        },
+        {
+          "interface": 1,
+          "alternate": 0,
+          "class": 14,
+          "subclass": 2,
+          "format_index": 1,
+          "format_guid": "32595559-0000-0010-8000-00aa00389b71",
+          "bits": 16,
+          "frame_index": 3,
+          "width": 1920,
+          "height": 1080,
+          "default_fps": 30.00003000003,
+          "frame_intervals_100ns": [
+            333333,
+            400000,
+            666666,
+            2000000
+          ],
+          "fps": [
+            30.00003000003,
+            25.0,
+            15.000015000015,
+            5.0
+          ]
+        },
+        {
+          "interface": 1,
+          "alternate": 0,
+          "class": 14,
+          "subclass": 2,
+          "format_index": 1,
+          "format_guid": "32595559-0000-0010-8000-00aa00389b71",
+          "bits": 16,
+          "frame_index": 4,
+          "width": 2560,
+          "height": 1440,
+          "default_fps": 30.00003000003,
+          "frame_intervals_100ns": [
+            333333,
+            400000,
+            666666,
+            2000000
+          ],
+          "fps": [
+            30.00003000003,
+            25.0,
+            15.000015000015,
+            5.0
+          ]
+        },
+        {
+          "interface": 1,
+          "alternate": 0,
+          "class": 14,
+          "subclass": 2,
+          "format_index": 1,
+          "format_guid": "32595559-0000-0010-8000-00aa00389b71",
+          "bits": 16,
+          "frame_index": 5,
+          "width": 3840,
+          "height": 2160,
+          "default_fps": 30.00003000003,
+          "frame_intervals_100ns": [
+            333333,
+            400000,
+            666666,
+            2000000
+          ],
+          "fps": [
+            30.00003000003,
+            25.0,
+            15.000015000015,
+            5.0
+          ]
+        },
+        {
+          "interface": 3,
+          "alternate": 0,
+          "class": 14,
+          "subclass": 2,
+          "format_index": 1,
+          "format_guid": "20363159-0000-0010-8000-00aa00389b71",
+          "bits": 16,
+          "frame_index": 1,
+          "width": 1024,
+          "height": 512,
+          "default_fps": 30.00003000003,
+          "frame_intervals_100ns": [
+            333333,
+            400000,
+            666666,
+            2000000
+          ],
+          "fps": [
+            30.00003000003,
+            25.0,
+            15.000015000015,
+            5.0
+          ]
+        },
+        {
+          "interface": 3,
+          "alternate": 0,
+          "class": 14,
+          "subclass": 2,
+          "format_index": 1,
+          "format_guid": "20363159-0000-0010-8000-00aa00389b71",
+          "bits": 16,
+          "frame_index": 2,
+          "width": 8192,
+          "height": 130,
+          "default_fps": 30.00003000003,
+          "frame_intervals_100ns": [
+            333333,
+            400000,
+            666666,
+            2000000
+          ],
+          "fps": [
+            30.00003000003,
+            25.0,
+            15.000015000015,
+            5.0
+          ]
+        },
+        {
+          "interface": 3,
+          "alternate": 0,
+          "class": 14,
+          "subclass": 2,
+          "format_index": 1,
+          "format_guid": "20363159-0000-0010-8000-00aa00389b71",
+          "bits": 16,
+          "frame_index": 3,
+          "width": 4096,
+          "height": 1154,
+          "default_fps": 15.000015000015,
+          "frame_intervals_100ns": [
+            666666,
+            2000000
+          ],
+          "fps": [
+            15.000015000015,
+            5.0
+          ]
+        },
+        {
+          "interface": 3,
+          "alternate": 0,
+          "class": 14,
+          "subclass": 2,
+          "format_index": 1,
+          "format_guid": "20363159-0000-0010-8000-00aa00389b71",
+          "bits": 16,
+          "frame_index": 4,
+          "width": 7680,
+          "height": 434,
+          "default_fps": 30.00003000003,
+          "frame_intervals_100ns": [
+            333333,
+            400000,
+            666666,
+            2000000
+          ],
+          "fps": [
+            30.00003000003,
+            25.0,
+            15.000015000015,
+            5.0
+          ]
+        },
+        {
+          "interface": 3,
+          "alternate": 0,
+          "class": 14,
+          "subclass": 2,
+          "format_index": 1,
+          "format_guid": "20363159-0000-0010-8000-00aa00389b71",
+          "bits": 16,
+          "frame_index": 5,
+          "width": 8192,
+          "height": 290,
+          "default_fps": 30.00003000003,
+          "frame_intervals_100ns": [
+            333333,
+            400000,
+            666666,
+            2000000
+          ],
+          "fps": [
+            30.00003000003,
+            25.0,
+            15.000015000015,
+            5.0
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

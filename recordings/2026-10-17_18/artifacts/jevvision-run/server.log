@@ -1,0 +1,52 @@
+Loading JEVision text and image adapters on ARM64 CPU.
+python.exe : W1017 17:22:01.767000 11748 torch\utils\_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and 
+is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is 
+deprecated and will be an error in a future release.
+At line:2 char:1
++ & artifacts/qnn/python-arm64/python.exe -u -B artifacts/jevvision-run ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (W1017 17:22:01....future release.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+W1017 17:22:01.822000 11748 torch\utils\_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now 
+natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is 
+deprecated and will be an error in a future release.
+[redacted-home]\SecondHands\artifacts\jevvision-run\packages\peft\utils\save_and_load.py:300: UserWarning: Could not 
+find a config file in Qwen/Qwen3.5-0.8B-Base - will assume that the vocabulary was not modified.
+  warnings.warn(
+serving [redacted-home]\SecondHands\artifacts\huggingface\hub\models--divyanshx11--JEVision\snapshots\e1cfde19bfae6548a46812c64a9a6f1a67459c95\text\jevvision-text ([redacted-home]\SecondHands\artifacts\huggingface\hub\models--divyanshx11--JEVision\snapshots\e1cfde19bfae6548a46812c64a9a6f1a67459c95\text\jevvision-text) on cpu via torch (float32), context=4096 :8009
+INFO:     Started server process [11748]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8009 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51862 - "GET /v1/models HTTP/1.1" 200 OK
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is 
+not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because 
+`flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the 
+optimized kernel.
+INFO:     127.0.0.1:51863 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51864 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51865 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56703 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55579 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55580 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53330 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53331 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62070 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62072 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62075 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61290 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61328 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58929 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65056 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65059 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65062 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60741 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60742 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49835 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49841 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49842 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49843 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55102 - "POST /v1/systemone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55104 - "POST /v1/systemone HTTP/1.1" 200 OK

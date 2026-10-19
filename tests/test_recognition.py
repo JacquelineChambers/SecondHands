@@ -53,6 +53,22 @@ def test_missing_models_give_download_instruction(tmp_path):
         MediaPipeRecognizer(tmp_path)
 
 
+def test_landmark_only_result_does_not_require_cpu_gesture_predictions():
+    landmark = NS(x=0.1, y=0.2, z=0.0)
+    result = frame_result(
+        NS(face_landmarks=[], face_blendshapes=[]),
+        NS(hand_landmarks=[[landmark]], handedness=[[NS(category_name="Right", score=0.9)]]),
+        timestamp_ms=0,
+        width=640,
+        height=480,
+        face_ms=1,
+        hand_ms=2,
+        hand_gestures=[[]],
+    )
+    assert len(result["hands"]) == 1
+    assert result["hands"][0]["gestures"] == []
+
+
 def test_failed_camera_open_releases_device(monkeypatch):
     cv2 = pytest.importorskip("cv2", reason="Install the vision extra for camera tests")
 

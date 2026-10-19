@@ -1,0 +1,199 @@
+{
+  "generated_at": "2026-10-17T12:21:56.535516-07:00",
+  "conclusion": "Depth acquisition failed to initialize. Hardware health is inconclusive.",
+  "environment": {
+    "time": "2026-10-17T12:14:22.5914745-07:00",
+    "os": {
+      "Caption": "Microsoft Windows 11 Pro",
+      "Version": "10.0.26200",
+      "OSArchitecture": "ARM 64-bit Processor"
+    },
+    "devices": [
+      {
+        "Status": "OK",
+        "Class": "Camera",
+        "FriendlyName": "Orbbec Femto Bolt Depth Camera",
+        "InstanceId": "[redacted-device-identifier]"
+      },
+      {
+        "Status": "OK",
+        "Class": "Camera",
+        "FriendlyName": "Orbbec Femto Bolt RGB Camera",
+        "InstanceId": "[redacted-device-identifier]"
+      }
+    ]
+  },
+  "driver_info": [
+    {
+      "name": "Orbbec Femto Bolt Depth Camera",
+      "status": "OK",
+      "properties": [
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.9444"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Service",
+          "Data": "usbvideo"
+        }
+      ]
+    },
+    {
+      "name": "Orbbec Femto Bolt RGB Camera",
+      "status": "OK",
+      "properties": [
+        {
+          "KeyName": "DEVPKEY_Device_DriverVersion",
+          "Data": "10.0.26100.9444"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_DriverProvider",
+          "Data": "Microsoft"
+        },
+        {
+          "KeyName": "DEVPKEY_Device_Service",
+          "Data": "usbvideo"
+        }
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "started_at": "2026-10-17T12:16:05.526498-07:00",
+      "status": "initialization_stalled",
+      "stage": "enumerating devices",
+      "test": "live depth-only capture",
+      "requested": {
+        "width": 640,
+        "height": 576,
+        "fps": 15,
+        "measurement_seconds": 12,
+        "warmup_seconds": 2
+      },
+      "sdk_directory": "[redacted-home]\\Documents\\Femto-Bolt-Depth-Test-2026-10-17\\sdk\\OrbbecSDK_v1.10.37\\Example\\bin",
+      "errors": [
+        {
+          "stage": "opening device",
+          "message": "Stopped after repeated firmware-profile / NVRAM read failures; no depth stream started."
+        }
+      ],
+      "frames": [],
+      "finished_at": "2026-10-17T12:17:28.7098977-07:00",
+      "attempt_directory": "depth-test",
+      "sdk_version": "1.10.37",
+      "elapsed_seconds": 83.183399,
+      "log_excerpt": "[10/17 12:16:07.219535][info][27196][MSDEConverterDevice.cpp:727] Succeed to load depth engine plugin\n[10/17 12:16:07.263017][error][27196][MSDEConverterDevice.cpp:743] Can not find firmware data profile.\n[10/17 12:16:07.468729][info][27196][MSDEConverterDevice.cpp:787] got nvram data failed.retrying...",
+      "nvram_retry_messages": 264
+    },
+    {
+      "started_at": "2026-10-17T12:17:29.441429-07:00",
+      "status": "initialization_or_capture_timeout",
+      "stage": "opening device",
+      "test": "live depth-only capture",
+      "requested": {
+        "width": 640,
+        "height": 576,
+        "fps": 15,
+        "measurement_seconds": 12,
+        "warmup_seconds": 2
+      },
+      "sdk_directory": "[redacted-home]\\Documents\\Femto-Bolt-Depth-Test-2026-10-17\\sdk\\OrbbecSDK_v1.10.37\\Example\\bin",
+      "errors": [
+        {
+          "stage": "opening device",
+          "message": "Test exceeded 35.0 second watchdog; process stopped."
+        }
+      ],
+      "frames": [],
+      "device_count": 1,
+      "finished_at": "2026-10-17T12:18:04.456603-07:00",
+      "attempt_directory": "depth-retry",
+      "sdk_version": "1.10.37",
+      "elapsed_seconds": 35.015174,
+      "log_excerpt": "[10/17 12:17:29.643365][info][5468][MSDEConverterDevice.cpp:727] Succeed to load depth engine plugin\n[10/17 12:17:29.678355][error][5468][MSDEConverterDevice.cpp:743] Can not find firmware data profile.\n[10/17 12:17:29.895111][info][5468][MSDEConverterDevice.cpp:787] got nvram data failed.retrying...",
+      "nvram_retry_messages": 113
+    },
+    {
+      "started_at": "2026-10-17T12:18:10.498402-07:00",
+      "status": "capture_failed",
+      "stage": "enumerating depth profiles",
+      "test": "live depth-only capture",
+      "requested": {
+        "width": 640,
+        "height": 576,
+        "fps": 15,
+        "measurement_seconds": 12,
+        "warmup_seconds": 2
+      },
+      "sdk_directory": "[redacted-home]\\Documents\\Femto-Bolt-Depth-Test-2026-10-17\\sdk-v2\\bin",
+      "errors": [
+        {
+          "stage": "enumerating depth profiles",
+          "message": "ob_pipeline_get_stream_profile_list: DeviceComponentPtr is nullptr",
+          "traceback": "Traceback (most recent call last):\n  File \"[redacted-home]\\Documents\\Femto-Bolt-Depth-Test-2026-10-17\\depth_test.py\", line 154, in <module>\n    profiles = call('ob_pipeline_get_stream_profile_list', pipeline, 3)\n  File \"[redacted-home]\\Documents\\Femto-Bolt-Depth-Test-2026-10-17\\depth_test.py\", line 98, in call\n    raise RuntimeError(f'{name}: {message}')\nRuntimeError: ob_pipeline_get_stream_profile_list: DeviceComponentPtr is nullptr\n"
+        }
+      ],
+      "frames": [],
+      "device_count": 1,
+      "device": {
+        "name": "Orbbec Femto Bolt",
+        "firmware_version": "1.0.9",
+        "usb_type": "USB3.1",
+        "connection_type": "USB3.1",
+        "hardware_version": "1.2"
+      },
+      "finished_at": "2026-10-17T12:18:16.445916-07:00",
+      "attempt_directory": "depth-v2",
+      "sdk_version": "2.10.6",
+      "elapsed_seconds": 5.947514,
+      "log_excerpt": "[10/17 12:18:15.964356][info][27280][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin\n - msg: Can not find firmware data profile.\n[10/17 12:18:15.966178][warning][27280][FemtoBoltDevice.cpp:147] create RawPhaseStreamer failed.\n - msg: DeviceComponentPtr is nullptr",
+      "nvram_retry_messages": 0
+    },
+    {
+      "started_at": "2026-10-17T12:18:27.669229-07:00",
+      "status": "initialization_or_capture_timeout",
+      "stage": "opening device",
+      "test": "live depth-only capture",
+      "requested": {
+        "width": 640,
+        "height": 576,
+        "fps": 15,
+        "measurement_seconds": 12,
+        "warmup_seconds": 2
+      },
+      "sdk_directory": "[redacted-home]\\Documents\\Femto-Bolt-Depth-Test-2026-10-17\\sdk\\OrbbecSDK_v1.10.37\\Example\\bin",
+      "errors": [
+        {
+          "stage": "opening device",
+          "message": "Test exceeded 30.0 second watchdog; process stopped."
+        }
+      ],
+      "frames": [],
+      "device_count": 1,
+      "finished_at": "2026-10-17T12:18:57.673028-07:00",
+      "attempt_directory": "depth-camera-closed",
+      "sdk_version": "1.10.37",
+      "elapsed_seconds": 30.003799,
+      "log_excerpt": "[10/17 12:18:27.842447][info][30288][MSDEConverterDevice.cpp:727] Succeed to load depth engine plugin\n[10/17 12:18:27.879721][error][30288][MSDEConverterDevice.cpp:743] Can not find firmware data profile.\n[10/17 12:18:28.095604][info][30288][MSDEConverterDevice.cpp:787] got nvram data failed.retrying...",
+      "nvram_retry_messages": 97
+    }
+  ],
+  "sdk_sources": [
+    {
+      "name": "OrbbecSDK_C_C++_v1.10.37_20260707_3f75820b8_win_x64_release.zip",
+      "size": 38975738,
+      "browser_download_url": "https://github.com/orbbec/OrbbecSDK/releases/download/v1.10.37/OrbbecSDK_C_C%2B%2B_v1.10.37_20260707_3f75820b8_win_x64_release.zip",
+      "digest": "sha256:22f6330c3e1c9143b9f4fdcb8bc3216def2451b6c35174a8511528eaf8d0cca2"
+    },
+    {
+      "name": "OrbbecSDK_v2.10.6_202609291804_575347c_win_x64.zip",
+      "size": 61288995,
+      "browser_download_url": "https://github.com/orbbec/OrbbecSDK_v2/releases/download/v2.10.6/OrbbecSDK_v2.10.6_202609291804_575347c_win_x64.zip",
+      "digest": "sha256:61888798641df8cd2eccfe9df2a36c2b5417c0725dc88d19134877522c283975"
+    }
+  ]
+}

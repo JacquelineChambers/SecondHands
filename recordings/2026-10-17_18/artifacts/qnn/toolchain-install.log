@@ -1,0 +1,54 @@
+Downloading MSVC v14.50.18.0 and Windows SDK v26100
+Microsoft.VC.14.50.18.0.ASAN.Headers.base.vsix verified-existing
+Microsoft.VC.14.50.18.0.CRT.ARM64.Desktop.base.vsix verified-existing
+Microsoft.VC.14.50.18.0.Tools.HostARM64.TargetARM64.base.vsix 16777216 24793266
+Microsoft.VC.14.50.18.0.Tools.HostARM64.TargetARM64.base.vsix 24793266 24793266
+6ee7bbee8435130a869cf971694fd9e2.cab 16777216 26147929
+6ee7bbee8435130a869cf971694fd9e2.cab 25165824 26147929
+6ee7bbee8435130a869cf971694fd9e2.cab 26147929 26147929
+78fa3c824c2c48bd4a49ab5969adaaf7.cab 16777216 54906889
+78fa3c824c2c48bd4a49ab5969adaaf7.cab 25165824 54906889
+78fa3c824c2c48bd4a49ab5969adaaf7.cab 33554432 54906889
+78fa3c824c2c48bd4a49ab5969adaaf7.cab 41943040 54906889
+78fa3c824c2c48bd4a49ab5969adaaf7.cab 50331648 54906889
+78fa3c824c2c48bd4a49ab5969adaaf7.cab 54906889 54906889
+a1e2a83aa8a71c48c742eeaff6e71928.cab 16777216 27776952
+a1e2a83aa8a71c48c742eeaff6e71928.cab 25165824 27776952
+a1e2a83aa8a71c48c742eeaff6e71928.cab 27776952 27776952
+2e876dd22fa5e6785f137e3422dd50ec.cab 9217386 9217386
+3e2f7be479e3679d700ce0782e4cc318.cab 16777216 32797770
+3e2f7be479e3679d700ce0782e4cc318.cab 25165824 32797770
+3e2f7be479e3679d700ce0782e4cc318.cab 32797770 32797770
+5a22e5cde814b041749fb271547f4dd5.cab 15548462 15548462
+61d57a7a82309cd161a854a6f4619e52.cab 9507278 9507278
+68de71e3e2fb9941ee5b7c77500c0508.cab 16777216 18797975
+68de71e3e2fb9941ee5b7c77500c0508.cab 18797975 18797975
+69661e20556b3ca9456b946c2c881ddd.cab 16777216 18736880
+69661e20556b3ca9456b946c2c881ddd.cab 18736880 18736880
+b82881a61b7477bd4eb5de2cd5037fe2.cab 16777216 27915372
+b82881a61b7477bd4eb5de2cd5037fe2.cab 25165824 27915372
+b82881a61b7477bd4eb5de2cd5037fe2.cab 27915372 27915372
+e3d1b35aecfccda1b4af6fe5988ac4be.cab 15459185 15459185
+Unpacking msi files...
+python.exe : Traceback (most recent call last):
+At line:2 char:1
++ & ../../../.venv/Scripts/python.exe -u ../build-sources/portable-msvc ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "[redacted-home]\SecondHands\artifacts\qnn\build-sources\portable-msvc-parallel.py", line 374, in <module>
+    shutil.rmtree(OUTPUT / "VC/Tools/MSVC" / msvcv / "Auxiliary")
+  File "[redacted-home]\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[redacted-home]\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\shutil.py", line 623, in 
+_rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "[redacted-home]\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "<frozen os>", line 366, in walk
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 
+'msvc\\VC\\Tools\\MSVC\\14.50.35717\\Auxiliary'

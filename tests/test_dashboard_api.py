@@ -53,6 +53,46 @@ def test_origin_is_required_before_camera_access():
                 pass
 
 
+@pytest.mark.parametrize("endpoint", ["/api/session", "/api/scene"])
+def test_remote_origin_requires_configuration(monkeypatch, endpoint):
+    monkeypatch.delenv("SECONDHANDS_ALLOWED_ORIGINS", raising=False)
+    with TestClient(create_app()) as client:
+        with pytest.raises(WebSocketDisconnect):
+            with client.websocket_connect(endpoint, headers={"origin": "https://dashboard.test"}):
+                pass
+
+
+@pytest.mark.parametrize("endpoint", ["/api/session", "/api/scene"])
+def test_configured_origins_are_exact_and_preserve_local_access(monkeypatch, endpoint):
+    monkeypatch.setenv(
+        "SECONDHANDS_ALLOWED_ORIGINS",
+        " https://dashboard.test, https://dashboard.test:8443, ",
+    )
+    with TestClient(create_app()) as client:
+        for origin in (
+            "https://dashboard.test",
+            "https://dashboard.test:8443",
+            "http://localhost:5173",
+            "http://127.0.0.1:5173",
+        ):
+            with client.websocket_connect(endpoint, headers={"origin": origin}) as ws:
+                ws.send_json({"type": "stop"})
+                assert ws.receive_json()["type"] == "stopped"
+        for origin in (
+            "https://other.test",
+            "https://dashboard.test.attacker.test",
+            "http://dashboard.test",
+            "https://dashboard.test:9443",
+            "null",
+            "",
+            None,
+        ):
+            with pytest.raises(WebSocketDisconnect):
+                headers = {} if origin is None else {"origin": origin}
+                with client.websocket_connect(endpoint, headers=headers):
+                    pass
+
+
 def test_start_frame_stop_and_disconnect_release_resources():
     backend = CameraBackend()
     with TestClient(create_app(lambda: backend)) as client:

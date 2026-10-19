@@ -1,0 +1,45 @@
+qnn_executor_runner.exe : I 00:00:00.001035 
+executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:335] Model 
+file [redacted-home]\SecondHands\artifacts\qnn\rtmpose\rtmpose_qnn.pte is loaded.
+At C:\sh\run-rtmpose-npu.ps1:12 char:24
++ ... e-Command { & $runner --model_path "$root\rtmpose\rtmpose_qnn.pte" -- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (I 00:00:00.0010....pte is loaded.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+I 00:00:00.001055 
+executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:345] Using 
+method forward
+I 00:00:00.001062 
+executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:392] 
+Setting up planned buffer 0, size 650752.
+[INFO] [Qnn ExecuTorch]: Deserializing processed data using QnnContextCustomProtocol
+[INFO] [Qnn ExecuTorch]: Creating new backend bundle.
+[INFO] [Qnn ExecuTorch]: create QNN Logger with log_level 1
+[INFO] [Qnn ExecuTorch]: Initialize Qnn backend parameters for Qnn executorch backend type 2
+[INFO] [Qnn ExecuTorch]: Caching: Caching is in RESTORE MODE.
+[INFO] [Qnn ExecuTorch]: QnnContextCustomProtocol expected magic number: 0x5678abcd but get: 0x2000000
+[INFO] [Qnn ExecuTorch]: Running level=1 optimization.
+I 00:00:00.159960 
+executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:416] Method 
+loaded.
+E 00:00:00.160025 executorch:[redacted-home]\Desktop\git\executorch\runtime\executor\method.cpp:1381] Output 0 is 
+memory planned, or is a constant. Cannot override the existing data pointer.
+I 00:00:00.160033 
+executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:476] 
+ignoring error from set_output_data_ptr(): 0x2
+E 00:00:00.160045 executorch:[redacted-home]\Desktop\git\executorch\runtime\executor\method.cpp:1381] Output 1 is 
+memory planned, or is a constant. Cannot override the existing data pointer.
+I 00:00:00.160047 
+executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:476] 
+ignoring error from set_output_data_ptr(): 0x2
+I 00:00:00.160049 
+executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:479] Inputs 
+prepared.
+I 00:00:00.160123 
+executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:485] Number 
+of inputs: 1
+F 00:00:00.160471 
+executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:575] In 
+function main(), assert failed (file_size == tensor_meta->nbytes()): Input(0) size mismatch. file bytes: 
+18446744073709551615, tensor bytes: 589824

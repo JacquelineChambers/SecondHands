@@ -1,0 +1,18 @@
+Orbbec pyorbbecsdk object detection example
+Copyright (c) 2024 Orbbec 3D Technology, Inc.
+Apache License 2.0. The full license is retained at upstream/LICENSE.
+https://github.com/orbbec/pyorbbecsdk
+
+detector.py adapts the upstream YOLOv5s preprocessing and detection pipeline.
+Changes include person-only filtering, objectness-times-class confidence,
+vectorized postprocessing, factory calibration, and measured XYZ extraction.
+The upstream repository is retained unchanged for comparison.
+
+The included YOLOv5s ONNX weights come from the upstream example's models
+directory, corresponding to Ultralytics YOLOv5 v7.0. Ultralytics model/source
+licensing applies independently of the Orbbec example's Apache license.
+https://github.com/ultralytics/yolov5/tree/v7.0
+
+The separately installed Orbbec SDK and proprietary depth-engine DLL retain
+their vendor license terms. OpenCV, ONNX Runtime, NumPy and Pillow retain
+their respective licenses in the isolated Python environment.

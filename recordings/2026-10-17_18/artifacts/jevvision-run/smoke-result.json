@@ -1,0 +1,69 @@
+{
+  "runtime": {
+    "models": [
+      {
+        "id": "jevvision",
+        "aliases": [],
+        "run": "[redacted-home]\\SecondHands\\artifacts\\huggingface\\hub\\models--divyanshx11--JEVision\\snapshots\\e1cfde19bfae6548a46812c64a9a6f1a67459c95\\text\\jevvision-text",
+        "base": "Qwen/Qwen3.5-0.8B-Base",
+        "lora": 16,
+        "visual_route": "JEVision visual sidecar",
+        "device": "cpu",
+        "backend": "torch",
+        "dtype": "float32",
+        "temperature": 1.0,
+        "context_tokens": 4096,
+        "prefix_cache": {
+          "size": 0,
+          "min_state_tokens": 0,
+          "hits": 0,
+          "max_state_tokens": 8192,
+          "misses": 0,
+          "cached_states": 0
+        }
+      }
+    ]
+  },
+  "checks": {
+    "text": {
+      "model": "jevvision",
+      "answers": {
+        "color": {
+          "type": "choice",
+          "choice": "green",
+          "confidence": 1.0,
+          "probabilities": {
+            "red": 0.0,
+            "green": 1.0,
+            "blue": 0.0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 31,
+        "output_tokens": 51
+      },
+      "latency_ms": 1428.4
+    },
+    "image": {
+      "model": "jevvision",
+      "answers": {
+        "color": {
+          "type": "choice",
+          "choice": "green",
+          "confidence": 1.0,
+          "probabilities": {
+            "red": 0.0,
+            "green": 1.0,
+            "blue": 0.0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 103,
+        "output_tokens": 51
+      },
+      "latency_ms": 5237.9
+    }
+  }
+}

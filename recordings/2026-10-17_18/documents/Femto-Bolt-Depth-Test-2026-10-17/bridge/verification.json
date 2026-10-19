@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    "Live browser start/stop",
+    "210+ actual sensor frames",
+    "Distinct sensor frame counters",
+    "13\u201317 FPS observed",
+    "Zero callback queue drops",
+    "Depth and IR previews loaded",
+    "16-bit depth PNG exactly matches NPZ depth array",
+    "Saved report and download links",
+    "Mobile report fits viewport",
+    "No JavaScript exceptions"
+  ],
+  "frames": 215,
+  "capture_fps": 15.04992654903665,
+  "valid_percent_mean": 49.7238813691053,
+  "decode_ms_median_after_warmup": 5.56585006415844,
+  "unique_frame_numbers": 215,
+  "metric_accuracy_verified": false
+}

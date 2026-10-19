@@ -1,0 +1,8 @@
+W1018 10:12:07.864000 23316 torch\utils\_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W1018 10:12:07.899000 23316 torch\utils\_pytree.py:630] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+[redacted-home]\SecondHands\artifacts\jevvision-run\packages\peft\utils\save_and_load.py:300: UserWarning: Could not find a config file in Qwen/Qwen3.5-0.8B-Base - will assume that the vocabulary was not modified.
+  warnings.warn(
+INFO:     Started server process [23316]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8009 (Press CTRL+C to quit)

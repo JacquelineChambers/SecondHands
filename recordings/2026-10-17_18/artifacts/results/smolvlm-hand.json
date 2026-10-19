@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-17T22:15:58.296963+00:00",
+  "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+  "revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+  "code_revision": null,
+  "runner_sha256": "a0c3311968838bb3f4f19dc068ddd34ee98af9d453081381dedbd15a3bf6d93b",
+  "runtime": {
+    "device": "cpu",
+    "dtype": "torch.float32",
+    "cpu_threads": 8,
+    "image_splitting": false,
+    "image_longest_edge": 512,
+    "max_new_tokens": 32,
+    "python": "3.12.15",
+    "system": "Windows",
+    "machine": "ARM64",
+    "torch": "2.14.1",
+    "transformers": "4.57.6"
+  },
+  "load_ms": 18829.902300145477,
+  "peak_process_rss_mib": null,
+  "question": "Which visible hand gesture is present?",
+  "context": "Describe visible posture only. Do not infer a command or intent.",
+  "choices": [
+    "thumbs up",
+    "open palm",
+    "closed fist",
+    "other hand pose",
+    "no visible hand"
+  ],
+  "results": [
+    {
+      "image": "portrait.jpg",
+      "sha256": "a6f11efaa834706db23f275b6115058fa87fc7f14362681e6abe14e82749de3e",
+      "first_request_ms": 1694.1452999599278,
+      "warm_request_ms": [
+        1499.1746000014246,
+        1550.685300026089,
+        1560.6414997018874
+      ],
+      "warm_median_ms": 1550.685300026089,
+      "warm_max_ms": 1560.6414997018874,
+      "output": {
+        "kind": "text",
+        "text": "Other hand pose.",
+        "exact_choice": "other hand pose"
+      },
+      "outputs_identical": true
+    },
+    {
+      "image": "thumb_up.jpg",
+      "sha256": "5d673c081ab13b8a1812269ff57047066f9c33c07db5f4178089e8cb3fdc0291",
+      "first_request_ms": 1543.5739997774363,
+      "warm_request_ms": [
+        1550.7088997401297,
+        1577.3146003484726,
+        1615.4128997586668
+      ],
+      "warm_median_ms": 1577.3146003484726,
+      "warm_max_ms": 1615.4128997586668,
+      "output": {
+        "kind": "text",
+        "text": "Thumbs up.",
+        "exact_choice": "thumbs up"
+      },
+      "outputs_identical": true
+    }
+  ],
+  "timing_scope": "Request includes preprocessing, inference, decoding and device sync; excludes image file reading and model loading.",
+  "scope": "Static image smoke experiment; not calibrated command intent or a statistical benchmark."
+}

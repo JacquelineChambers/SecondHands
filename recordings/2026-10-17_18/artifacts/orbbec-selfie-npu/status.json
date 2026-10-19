@@ -1,0 +1,18 @@
+{
+  "running": false,
+  "model": "MediaPipe Selfie Segmentation",
+  "runtime": "1.31.0",
+  "camera": "Orbbec Femto Bolt",
+  "pid": 26284,
+  "frames": 1656,
+  "qnn_plugin": "2.7.0",
+  "device": "NPU",
+  "cpu_fallback_disabled": true,
+  "worker_pid": 7832,
+  "median_npu_ms": 0.6,
+  "preview_fps": 14.56,
+  "mask_min": 0.0,
+  "mask_max": 0.99609375,
+  "person_fraction": 0.324310302734375,
+  "updated_utc": "2026-10-18T00:13:33.359749+00:00"
+}

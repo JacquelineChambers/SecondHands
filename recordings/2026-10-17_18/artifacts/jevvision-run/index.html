@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JEVision · Local demo</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#10161c;color:#e5edf5;font:16px system-ui,sans-serif}main{max-width:940px;margin:36px auto;padding:0 24px}h1{margin:0}p{line-height:1.6;color:#aebfce}.badge{display:inline-block;background:#213b36;color:#b6ecce;border-radius:20px;padding:5px 12px;font-size:13px}section{background:#19232d;border:1px solid #30404d;border-radius:16px;padding:24px;margin:20px 0}label{display:block;margin:16px 0 7px;font-weight:600}textarea,input[type=text]{width:100%;background:#101820;color:#e5edf5;border:1px solid #4b6274;border-radius:7px;padding:12px;font:inherit}textarea{resize:vertical}button{background:#9de3cf;border:0;border-radius:7px;padding:12px 20px;font:600 15px system-ui;cursor:pointer;color:#14261f;margin:16px 8px 0 0}button:disabled{opacity:.5;cursor:wait}.secondary{background:#344957;color:#e5edf5}a{color:#9de3cf}#preview{display:none;max-width:100%;max-height:280px;margin-top:16px;border-radius:8px}#status{color:#aebfce}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}#answer{font-size:24px;margin-bottom:16px}.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.note{font-size:13px}
+</style></head><body><main>
+<div class="row"><h1>JEVision</h1><span class="badge">Local · ARM64 CPU</span></div>
+<p>Choose among descriptions using an image or text context. This model returns decisions and probabilities.</p>
+<section><form id="form">
+<label for="photo">Image (optional)</label><input id="photo" type="file" accept="image/jpeg,image/png,image/webp"><img id="preview" alt="Selected image">
+<p class="note">Images stay on this laptop and are used for this request. Large images are resized to at most 640 pixels per side.</p>
+<label for="context">Context</label><textarea id="context" rows="3">The indicator light is green.</textarea>
+<label for="question">Question</label><input id="question" type="text" required value="What color is the indicator light?">
+<label for="choices">Possible answers — one per line</label><textarea id="choices" rows="4" required>Red
+Green
+Blue</textarea>
+<button id="run" type="submit">Run JEVision</button><button id="example" class="secondary" type="button">Text example</button>
+<p id="status" role="status">Checking model…</p></form></section>
+<section id="result" hidden><div id="answer"></div><div id="timing"></div><details><summary>Full result</summary><pre id="raw"></pre></details></section>
+<p class="note">Image and text adapters · 4,096-token request limit · <a href="/docs">API reference</a></p>
+</main><script>
+const byId=id=>document.getElementById(id);let imageData=null;let reading=false;
+byId('photo').onchange=async()=>{const file=byId('photo').files[0];imageData=null;byId('preview').style.display='none';if(!file)return;reading=true;byId('run').disabled=true;try{
+ const url=URL.createObjectURL(file);const pic=new Image();try{pic.src=url;await pic.decode();const scale=Math.min(1,640/Math.max(pic.width,pic.height));const canvas=document.createElement('canvas');canvas.width=Math.round(pic.width*scale);canvas.height=Math.round(pic.height*scale);canvas.getContext('2d').drawImage(pic,0,0,canvas.width,canvas.height);imageData=canvas.toDataURL('image/jpeg',.9);}finally{URL.revokeObjectURL(url)}
+ byId('preview').src=imageData;byId('preview').style.display='block';byId('context').value='Use the attached image as visual context.';byId('question').value='Which description best matches the image?';byId('choices').value='A person in a room.\nA desk with a laptop.\nAn empty room.';byId('status').textContent='Image ready. Edit the descriptions to match what you want to compare.';
+}catch(e){byId('status').textContent='Could not read image: '+e.message}finally{reading=false;byId('run').disabled=false}};
+byId('example').onclick=()=>{imageData=null;byId('photo').value='';byId('preview').style.display='none';byId('context').value='The indicator light is green.';byId('question').value='What color is the indicator light?';byId('choices').value='Red\nGreen\nBlue';byId('status').textContent='Text example ready.'};
+byId('form').onsubmit=async e=>{e.preventDefault();if(reading)return;const choices=byId('choices').value.split('\n').map(s=>s.trim()).filter(Boolean);if(choices.length<2){byId('status').textContent='Enter at least two possible answers.';return}const criteria=Object.fromEntries(choices.map((s,i)=>['option_'+(i+1),s]));const body={model:'jevvision',state:byId('context').value,questions:{decision:{type:'choice',instructions:byId('question').value,criteria}}};if(imageData)body.images=[{data_url:imageData}];byId('run').disabled=true;byId('example').disabled=true;byId('photo').disabled=true;byId('status').textContent='Running on CPU… Image requests may take a while.';
+try{const response=await fetch('/v1/systemone',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data=await response.json();if(!response.ok)throw Error(JSON.stringify(data.detail||data));const answer=data.answers.decision;byId('answer').textContent=criteria[answer.choice];byId('timing').textContent='Inference: '+(data.latency_ms/1000).toFixed(2)+' s · '+data.usage.input_tokens+' input tokens';byId('raw').textContent=JSON.stringify(data,null,2);byId('result').hidden=false;byId('status').textContent='Done.'}catch(error){byId('status').textContent=error.message}finally{byId('run').disabled=false;byId('example').disabled=false;byId('photo').disabled=false}};
+fetch('/v1/models').then(r=>{if(!r.ok)throw Error('Model check failed');return r.json()}).then(data=>{const m=data.models[0];byId('status').textContent='Ready · '+m.device+' · '+(m.visual_route?'image and text adapters loaded':'text only')}).catch(e=>byId('status').textContent=e.message);
+</script></body></html>

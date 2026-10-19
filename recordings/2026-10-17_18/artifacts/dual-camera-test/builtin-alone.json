@@ -1,0 +1,24 @@
+{
+  "time_utc": "2026-10-18T19:31:40.843093+00:00",
+  "status": "failed",
+  "measurement_seconds": 5.0,
+  "orbbec_backend": "bridge",
+  "opencv_version": "4.14.0",
+  "cameras": {
+    "built_in": {
+      "frames": 0,
+      "read_errors": 1,
+      "changed_frames": 0,
+      "flat_frames": 0,
+      "clean_shutdown": true,
+      "name": "QC Front Camera",
+      "backend": "MSMF",
+      "index": 1,
+      "requested_fps": 15,
+      "reported_fps": 30.0,
+      "error": "RuntimeError: Camera read returned no image",
+      "measured_fps": 0.0
+    }
+  },
+  "images_saved": false
+}

@@ -1,0 +1,11 @@
+{
+  "exit_code": 2,
+  "frames": 0,
+  "frames_with_faces": 0,
+  "frames_with_hands": 0,
+  "npu_calls": 0,
+  "npu_median_ms_per_frame": null,
+  "elapsed_seconds": 1.563517999999931,
+  "cpu_gesture_classifier_used": false,
+  "gesture_labels": []
+}

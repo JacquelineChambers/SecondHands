@@ -1,0 +1,374 @@
+{
+  "camera": "Orbbec Femto Bolt RGB",
+  "runtime": "MediaPipe CPU, Windows x64 Python under emulation",
+  "frames": 30,
+  "frames_with_faces": 20,
+  "frames_with_hands": 15,
+  "median_inference_ms": 52.670550000000006,
+  "elapsed_seconds": 5.954000000000178,
+  "observations": [
+    {
+      "frame": 0,
+      "faces": 1,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 24.8703,
+        "hand": 22.8178,
+        "total": 47.6881
+      }
+    },
+    {
+      "frame": 1,
+      "faces": 1,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 13.1883,
+        "hand": 20.378,
+        "total": 33.5663
+      }
+    },
+    {
+      "frame": 2,
+      "faces": 1,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 13.2703,
+        "hand": 20.2059,
+        "total": 33.4762
+      }
+    },
+    {
+      "frame": 3,
+      "faces": 0,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 9.5779,
+        "hand": 22.7728,
+        "total": 32.3507
+      }
+    },
+    {
+      "frame": 4,
+      "faces": 1,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 16.9769,
+        "hand": 22.1211,
+        "total": 39.098
+      }
+    },
+    {
+      "frame": 5,
+      "faces": 0,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 10.59,
+        "hand": 41.5625,
+        "total": 52.1525
+      }
+    },
+    {
+      "frame": 6,
+      "faces": 1,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 18.177,
+        "hand": 43.8841,
+        "total": 62.061099999999996
+      }
+    },
+    {
+      "frame": 7,
+      "faces": 1,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 14.5601,
+        "hand": 61.0786,
+        "total": 75.6387
+      }
+    },
+    {
+      "frame": 8,
+      "faces": 1,
+      "hands": 2,
+      "gestures": [
+        "Thumb_Up",
+        "None"
+      ],
+      "timing_ms": {
+        "face": 14.1704,
+        "hand": 62.2728,
+        "total": 76.44319999999999
+      }
+    },
+    {
+      "frame": 9,
+      "faces": 1,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 14.7117,
+        "hand": 38.8672,
+        "total": 53.5789
+      }
+    },
+    {
+      "frame": 10,
+      "faces": 1,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 14.2954,
+        "hand": 22.7443,
+        "total": 37.039699999999996
+      }
+    },
+    {
+      "frame": 11,
+      "faces": 1,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 13.9416,
+        "hand": 21.6833,
+        "total": 35.6249
+      }
+    },
+    {
+      "frame": 12,
+      "faces": 1,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 14.8023,
+        "hand": 38.3863,
+        "total": 53.1886
+      }
+    },
+    {
+      "frame": 13,
+      "faces": 1,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 13.2184,
+        "hand": 38.1172,
+        "total": 51.3356
+      }
+    },
+    {
+      "frame": 14,
+      "faces": 1,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 14.1939,
+        "hand": 56.6489,
+        "total": 70.8428
+      }
+    },
+    {
+      "frame": 15,
+      "faces": 1,
+      "hands": 2,
+      "gestures": [
+        "None",
+        "None"
+      ],
+      "timing_ms": {
+        "face": 13.1728,
+        "hand": 57.0486,
+        "total": 70.2214
+      }
+    },
+    {
+      "frame": 16,
+      "faces": 1,
+      "hands": 2,
+      "gestures": [
+        "None",
+        "None"
+      ],
+      "timing_ms": {
+        "face": 12.3727,
+        "hand": 37.5159,
+        "total": 49.888600000000004
+      }
+    },
+    {
+      "frame": 17,
+      "faces": 1,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 12.5675,
+        "hand": 37.2062,
+        "total": 49.773700000000005
+      }
+    },
+    {
+      "frame": 18,
+      "faces": 1,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 12.8308,
+        "hand": 58.7533,
+        "total": 71.5841
+      }
+    },
+    {
+      "frame": 19,
+      "faces": 1,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 12.8612,
+        "hand": 41.0977,
+        "total": 53.9589
+      }
+    },
+    {
+      "frame": 20,
+      "faces": 1,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 14.3842,
+        "hand": 40.1787,
+        "total": 54.5629
+      }
+    },
+    {
+      "frame": 21,
+      "faces": 1,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 13.9856,
+        "hand": 39.5808,
+        "total": 53.5664
+      }
+    },
+    {
+      "frame": 22,
+      "faces": 0,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 11.7961,
+        "hand": 43.9547,
+        "total": 55.7508
+      }
+    },
+    {
+      "frame": 23,
+      "faces": 0,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 14.0461,
+        "hand": 61.9593,
+        "total": 76.0054
+      }
+    },
+    {
+      "frame": 24,
+      "faces": 0,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 12.7196,
+        "hand": 60.6292,
+        "total": 73.3488
+      }
+    },
+    {
+      "frame": 25,
+      "faces": 0,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 14.121,
+        "hand": 42.4182,
+        "total": 56.5392
+      }
+    },
+    {
+      "frame": 26,
+      "faces": 0,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 13.7722,
+        "hand": 22.316,
+        "total": 36.0882
+      }
+    },
+    {
+      "frame": 27,
+      "faces": 0,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 13.3855,
+        "hand": 22.8596,
+        "total": 36.2451
+      }
+    },
+    {
+      "frame": 28,
+      "faces": 0,
+      "hands": 0,
+      "gestures": [],
+      "timing_ms": {
+        "face": 13.5013,
+        "hand": 23.2529,
+        "total": 36.7542
+      }
+    },
+    {
+      "frame": 29,
+      "faces": 0,
+      "hands": 1,
+      "gestures": [
+        "None"
+      ],
+      "timing_ms": {
+        "face": 3.9745,
+        "hand": 40.2394,
+        "total": 44.2139
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "model": "Qualcomm MediaPipe pretrained gesture embedder and classifier",
+  "source": "https://raw.githubusercontent.com/qualcomm/ai-hub-models/70b5aeeec774d188465cac561d07cac0d022ce29/src/qai_hub_models/models/mediapipe_hand_gesture/model.py",
+  "source_sha256": "9b9855532bf33c74224b97a44cb87086fed9fe7d1761cc88aee52472a7b29d3c",
+  "weights": {
+    "gesture_embedder.pth": "ae6a81d9d59ca58069bbf75b5258342537dcbee3c00fbfd386a190720b3521ec",
+    "gesture_classifier.pth": "a1eeea073037a34f9ca32eb49076e03ae4ff9949e21f04e18e76a40b7dadeca8"
+  },
+  "executorch": "1.5.1",
+  "torch": "2.14.1+cpu",
+  "qnn_build": "v2.37.0.250724175447_124859",
+  "platform": "win-arm64",
+  "chipset": "SC8380XP",
+  "precision": "FP16",
+  "qnn_delegates": 1,
+  "cpu_compute_nodes": 0,
+  "model_bytes": 370304,
+  "sha256": "46d19af712f26561702d6fb8f072aed62585a722efaf1558456aca4b2e6f0e97",
+  "inputs": [
+    [
+      1,
+      64
+    ],
+    [
+      1,
+      64
+    ]
+  ],
+  "outputs": [
+    [
+      1,
+      8
+    ]
+  ],
+  "reference_input": "synthetic; real-image validation is separate"
+}

@@ -1,0 +1,31 @@
+{
+  "started_at": "2026-10-17T12:18:10.498402-07:00",
+  "status": "capture_failed",
+  "stage": "enumerating depth profiles",
+  "test": "live depth-only capture",
+  "requested": {
+    "width": 640,
+    "height": 576,
+    "fps": 15,
+    "measurement_seconds": 12,
+    "warmup_seconds": 2
+  },
+  "sdk_directory": "[redacted-home]\\Documents\\Femto-Bolt-Depth-Test-2026-10-17\\sdk-v2\\bin",
+  "errors": [
+    {
+      "stage": "enumerating depth profiles",
+      "message": "ob_pipeline_get_stream_profile_list: DeviceComponentPtr is nullptr",
+      "traceback": "Traceback (most recent call last):\n  File \"[redacted-home]\\Documents\\Femto-Bolt-Depth-Test-2026-10-17\\depth_test.py\", line 154, in <module>\n    profiles = call('ob_pipeline_get_stream_profile_list', pipeline, 3)\n  File \"[redacted-home]\\Documents\\Femto-Bolt-Depth-Test-2026-10-17\\depth_test.py\", line 98, in call\n    raise RuntimeError(f'{name}: {message}')\nRuntimeError: ob_pipeline_get_stream_profile_list: DeviceComponentPtr is nullptr\n"
+    }
+  ],
+  "frames": [],
+  "device_count": 1,
+  "device": {
+    "name": "Orbbec Femto Bolt",
+    "firmware_version": "1.0.9",
+    "usb_type": "USB3.1",
+    "connection_type": "USB3.1",
+    "hardware_version": "1.2"
+  },
+  "finished_at": "2026-10-17T12:18:16.445916-07:00"
+}

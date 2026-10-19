@@ -1,0 +1,23 @@
+{
+  "device": "NPU",
+  "backend": "QnnHtp.dll",
+  "cpu_fallback_disabled": true,
+  "onnxruntime": "1.31.0",
+  "qnn_plugin": "2.7.0",
+  "models": {
+    "face_detector": {
+      "camera_inferences": 10,
+      "executed_providers": [
+        "QNNExecutionProvider"
+      ],
+      "profile": "face_detector-profile_2026-10-17_17-10-07_592.json"
+    },
+    "face_landmark_detector": {
+      "camera_inferences": 10,
+      "executed_providers": [
+        "QNNExecutionProvider"
+      ],
+      "profile": "face_landmark_detector-profile_2026-10-17_17-10-09_670.json"
+    }
+  }
+}

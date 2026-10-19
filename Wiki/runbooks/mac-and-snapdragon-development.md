@@ -203,6 +203,8 @@ If editing on the PC, commit and push there, then pull on the Mac. Use separate 
 
 Install T3 and configure the chosen coding-agent provider on the PC. Connect the Mac to that PC environment through T3 Connect or network pairing, following [T3's remote-access instructions](https://github.com/pingdotgg/t3code/blob/main/docs/user/remote-access.md). The documented automatic desktop-managed SSH setup targets Linux and Apple Silicon Mac hosts; use the Windows installation and pairing route for this PC.
 
+For a plain terminal on the PC, or to forward the PC's dashboard to a Mac browser, use [Tailscale and SSH](tailscale-and-ssh.md).
+
 A command started in the PC's T3 environment executes on the PC, using its checkout, Python environment, files, and available hardware. A command started in the Mac environment executes on the Mac. Confirm the selected environment and working directory before running commands.
 
 The local application now has Python capture frames and run inference, with React displaying that process's results. A remote application connection still needs separate configuration and device verification; opening a dashboard page on the Mac alone does not select the PC's camera. The current services bind to loopback and permit local Vite browser origins only.

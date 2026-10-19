@@ -1,0 +1,32 @@
+[
+  {
+    "category": "e5323777-f976-4f5b-9b55-b94699c46e44",
+    "flags": 0,
+    "pin_result": 87
+  },
+  {
+    "category": "e5323777-f976-4f5b-9b55-b94699c46e44",
+    "flags": 1073741824,
+    "pin_result": 87
+  },
+  {
+    "category": "65e8773d-8f56-11d0-a3b9-00a0c9223196",
+    "flags": 0,
+    "pin_result": 87
+  },
+  {
+    "category": "65e8773d-8f56-11d0-a3b9-00a0c9223196",
+    "flags": 1073741824,
+    "pin_result": 87
+  },
+  {
+    "category": "6994ad05-93ef-11d0-a3cc-00a0c9223196",
+    "flags": 0,
+    "pin_result": 87
+  },
+  {
+    "category": "6994ad05-93ef-11d0-a3cc-00a0c9223196",
+    "flags": 1073741824,
+    "pin_result": 87
+  }
+]

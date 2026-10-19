@@ -1,0 +1,22 @@
+I 00:00:00.000411 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:335] Model file rtmpose_qnn.pte is loaded.
+I 00:00:00.000485 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:345] Using method forward
+I 00:00:00.000500 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:392] Setting up planned buffer 0, size 650752.
+[INFO] [Qnn ExecuTorch]: Deserializing processed data using QnnContextCustomProtocol
+[INFO] [Qnn ExecuTorch]: Creating new backend bundle.
+[INFO] [Qnn ExecuTorch]: create QNN Logger with log_level 1
+[INFO] [Qnn ExecuTorch]: Initialize Qnn backend parameters for Qnn executorch backend type 2
+[INFO] [Qnn ExecuTorch]: Caching: Caching is in RESTORE MODE.
+[INFO] [Qnn ExecuTorch]: QnnContextCustomProtocol expected magic number: 0x5678abcd but get: 0x2000000
+[INFO] [Qnn ExecuTorch]: Running level=1 optimization.
+I 00:00:00.165824 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:416] Method loaded.
+E 00:00:00.165910 executorch:[redacted-home]\Desktop\git\executorch\runtime\executor\method.cpp:1381] Output 0 is memory planned, or is a constant. Cannot override the existing data pointer.
+I 00:00:00.165925 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:476] ignoring error from set_output_data_ptr(): 0x2
+E 00:00:00.165939 executorch:[redacted-home]\Desktop\git\executorch\runtime\executor\method.cpp:1381] Output 1 is memory planned, or is a constant. Cannot override the existing data pointer.
+I 00:00:00.165943 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:476] ignoring error from set_output_data_ptr(): 0x2
+I 00:00:00.165946 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:479] Inputs prepared.
+I 00:00:00.166037 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:485] Number of inputs: 1
+I 00:00:00.166516 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:598] Perform 1 inference for warming up
+I 00:00:00.167998 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:604] Start inference (0)
+I 00:00:00.184195 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:622] 20 inference took 16.192000 ms, avg 0.809600 ms
+I 00:00:00.188513 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:666] Total 1 inference took 16.192000 ms, avg 16.192000 ms
+I 00:00:00.189402 executorch:[redacted-home]\Desktop\git\executorch\examples\qualcomm\executor_runner\qnn_executor_runner.cpp:731] Write etdump to etdump.etdp, Size = 3544

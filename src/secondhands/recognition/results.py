@@ -9,7 +9,7 @@ def _categories(categories):
     return [{"label": c.category_name, "score": c.score} for c in categories]
 
 
-def frame_result(face, hand, *, timestamp_ms, width, height, face_ms, hand_ms):
+def frame_result(face, hand, *, timestamp_ms, width, height, face_ms, hand_ms, hand_gestures=None):
     """Convert task outputs. Timings cover synchronous task calls only."""
     return {
         "schema_version": 1,
@@ -31,7 +31,10 @@ def frame_result(face, hand, *, timestamp_ms, width, height, face_ms, hand_ms):
                 "gestures": _categories(gestures),
             }
             for points, side, gestures in zip(
-                hand.hand_landmarks, hand.handedness, hand.gestures, strict=True
+                hand.hand_landmarks,
+                hand.handedness,
+                hand.gestures if hand_gestures is None else hand_gestures,
+                strict=True,
             )
         ],
     }

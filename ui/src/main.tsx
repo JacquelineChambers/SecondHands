@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import RecognitionDashboard from './dashboard/RecognitionDashboard'
+import VisionApp from './VisionApp'
 import './style.css'
 
 createRoot(document.getElementById('app')!).render(
-  <StrictMode><RecognitionDashboard /></StrictMode>,
+  <StrictMode><VisionApp /></StrictMode>,
 )

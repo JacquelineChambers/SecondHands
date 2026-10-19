@@ -1,0 +1,23 @@
+{
+  "started_at": "2026-10-17T12:18:27.669229-07:00",
+  "status": "initialization_or_capture_timeout",
+  "stage": "opening device",
+  "test": "live depth-only capture",
+  "requested": {
+    "width": 640,
+    "height": 576,
+    "fps": 15,
+    "measurement_seconds": 12,
+    "warmup_seconds": 2
+  },
+  "sdk_directory": "[redacted-home]\\Documents\\Femto-Bolt-Depth-Test-2026-10-17\\sdk\\OrbbecSDK_v1.10.37\\Example\\bin",
+  "errors": [
+    {
+      "stage": "opening device",
+      "message": "Test exceeded 30.0 second watchdog; process stopped."
+    }
+  ],
+  "frames": [],
+  "device_count": 1,
+  "finished_at": "2026-10-17T12:18:57.673028-07:00"
+}

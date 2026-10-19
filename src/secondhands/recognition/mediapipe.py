@@ -3,6 +3,7 @@
 from contextlib import ExitStack
 from pathlib import Path
 from time import perf_counter_ns
+from zipfile import ZipFile
 
 from .results import frame_result
 
@@ -10,7 +11,7 @@ from .results import frame_result
 class MediaPipeRecognizer:
     """Use image mode for independent images and video mode for camera tracking."""
 
-    def __init__(self, model_dir: Path, *, video: bool = False):
+    def __init__(self, model_dir: Path, *, video: bool = False, classify_gestures: bool = True):
         paths = [
             Path(model_dir) / name for name in ("face_landmarker.task", "gesture_recognizer.task")
         ]
@@ -23,6 +24,7 @@ class MediaPipeRecognizer:
 
         self._mp = mp
         self._video = video
+        self._classify_gestures = classify_gestures
         self._timestamp = -1
         self._stack = ExitStack()
         mode = mp.tasks.vision.RunningMode.VIDEO if video else mp.tasks.vision.RunningMode.IMAGE
@@ -37,15 +39,29 @@ class MediaPipeRecognizer:
                     )
                 )
             )
-            self._hand = self._stack.enter_context(
-                mp.tasks.vision.GestureRecognizer.create_from_options(
-                    mp.tasks.vision.GestureRecognizerOptions(
-                        base_options=mp.tasks.BaseOptions(model_asset_path=str(paths[1])),
-                        running_mode=mode,
-                        num_hands=2,
+            if classify_gestures:
+                self._hand = self._stack.enter_context(
+                    mp.tasks.vision.GestureRecognizer.create_from_options(
+                        mp.tasks.vision.GestureRecognizerOptions(
+                            base_options=mp.tasks.BaseOptions(model_asset_path=str(paths[1])),
+                            running_mode=mode,
+                            num_hands=2,
+                        )
                     )
                 )
-            )
+            else:
+                # Reuse the pinned bundle's landmark subtask without running its CPU classifier.
+                with ZipFile(paths[1]) as bundle:
+                    hand_model = bundle.read("hand_landmarker.task")
+                self._hand = self._stack.enter_context(
+                    mp.tasks.vision.HandLandmarker.create_from_options(
+                        mp.tasks.vision.HandLandmarkerOptions(
+                            base_options=mp.tasks.BaseOptions(model_asset_buffer=hand_model),
+                            running_mode=mode,
+                            num_hands=2,
+                        )
+                    )
+                )
         except BaseException:
             self._stack.close()
             raise
@@ -68,11 +84,18 @@ class MediaPipeRecognizer:
             else self._face.detect(image)
         )
         middle = perf_counter_ns()
-        hand = (
-            self._hand.recognize_for_video(image, timestamp_ms)
-            if self._video
-            else self._hand.recognize(image)
-        )
+        if self._classify_gestures:
+            hand = (
+                self._hand.recognize_for_video(image, timestamp_ms)
+                if self._video
+                else self._hand.recognize(image)
+            )
+        else:
+            hand = (
+                self._hand.detect_for_video(image, timestamp_ms)
+                if self._video
+                else self._hand.detect(image)
+            )
         end = perf_counter_ns()
         self._timestamp = timestamp_ms
         return frame_result(
@@ -83,6 +106,7 @@ class MediaPipeRecognizer:
             height=rgb.shape[0],
             face_ms=(middle - start) / 1e6,
             hand_ms=(end - middle) / 1e6,
+            hand_gestures=None if self._classify_gestures else [[] for _ in hand.hand_landmarks],
         )
 
     def __enter__(self):

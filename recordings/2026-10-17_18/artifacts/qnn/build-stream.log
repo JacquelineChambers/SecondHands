@@ -1,0 +1,170 @@
+-- ExecuTorch version: 1.5.1
+-- ccache not found, builds will not be cached
+-- Using the multi-header code from [redacted-home]/SecondHands/artifacts/qnn/executorch/third-party/json/include/
+cmake.exe : CMake Warning (deprecated) at 
+[redacted-home]/SecondHands/artifacts/qnn/executorch/third-party/gflags/CMakeLists.txt:73 (cmake_minimum_required):
+At [redacted-home]\SecondHands\artifacts\qnn\build-stream.ps1:29 char:1
++ & cmake @configureArgs
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CMake Warning (...imum_required)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at [redacted-home]/SecondHands/artifacts/qnn/executorch/third-party/flatcc/CMakeLists.txt:2 
+(cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- dist install dir [redacted-home]/SecondHands/artifacts/qnn/executorch/third-party/flatcc
+-- lib install dir [redacted-home]/SecondHands/artifacts/qnn/executorch/third-party/flatcc/lib
+-- Setting MSVC C compiler options
+-- Configured C_FLAGS: /DWIN32 /D_WINDOWS -DFLATCC_REFLECTION=0 -W3 -D_CRT_SECURE_NO_WARNINGS -DFLATCC_PORTABLE
+CMake Warning (deprecated) at 
+[redacted-home]/SecondHands/artifacts/qnn/executorch/backends/xnnpack/third-party/FXdiv/CMakeLists.txt:1 
+(CMAKE_MINIMUM_REQUIRED):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- Generating selected operator lib:
+--   LIB_NAME: portable_ops_lib
+--   OPS_SCHEMA_YAML: [redacted-home]/SecondHands/artifacts/qnn/executorch/kernels/portable/functions.yaml
+--   ROOT_OPS: 
+--   INCLUDE_ALL_OPS: 
+--   OPS_FROM_MODEL: 
+--   DTYPE_SELECTIVE_BUILD: 
+Command - [redacted-home]\SecondHands\artifacts\qnn/python-arm64/python.exe;-m;codegen.tools.gen_oplist;--output_path=C:
+[redacted-home]/SecondHands/artifacts/qnn/build-stream/executorch-runtime/kernels/portable/portable_ops_lib/selected_opera
+tors.yaml;--ops_schema_yaml_path="[redacted-home]/SecondHands/artifacts/qnn/executorch/kernels/portable/functions.yaml"
+-- Generating kernel bindings:
+--   LIB_NAME: portable_ops_lib
+--   FUNCTIONS_YAML: [redacted-home]/SecondHands/artifacts/qnn/executorch/kernels/portable/functions.yaml
+--   CUSTOM_OPS_YAML: 
+--   ADD_EXCEPTION_BOUNDARY: FALSE
+--   DTYPE_SELECTIVE_BUILD: 
+Generated files [redacted-home]/SecondHands/artifacts/qnn/build-stream/executorch-runtime/kernels/portable/portable_ops_
+lib/RegisterCodegenUnboxedKernelsEverything.cpp;[redacted-home]/SecondHands/artifacts/qnn/build-stream/executorch-runtim
+e/kernels/portable/portable_ops_lib/Functions.h;[redacted-home]/SecondHands/artifacts/qnn/build-stream/executorch-runtim
+e/kernels/portable/portable_ops_lib/NativeFunctions.h
+-- Generating operator lib:
+--   LIB_NAME: portable_ops_lib
+--   KERNEL_LIBS: portable_kernels
+--   DEPS: executorch_core
+--   DTYPE_SELECTIVE_BUILD: 
+-- Using qnn sdk root [redacted-home]\SecondHands\artifacts\qnn\qairt\2.37.0.250724
+-- Using EXECUTORCH_SOURCE_DIR [redacted-home]/SecondHands/artifacts/qnn/executorch
+-- pybind11 v3.0.4 
+-- Found Python: [redacted-home]\SecondHands\artifacts\qnn/python-devel/tools/libs/python312.lib (found suitable version "3.12.10", minimum required is "3.8") found components: Development.Module Development.Embed
+-- --- Configured Options ---
+
+-- BUILD_TESTING                               : OFF
+-- CCACHE_PROGRAM                              : CCACHE_PROGRAM-NOTFOUND
+-- CMAKE_BUILD_TYPE                            : Release
+-- CMAKE_CXX_COMPILER_ID                       : MSVC
+-- CMAKE_CXX_STANDARD                          : 17
+-- CMAKE_SYSTEM_PROCESSOR                      : ARM64
+-- CMAKE_TOOLCHAIN_FILE                        x (unset)
+-- ET_ENABLE_VGF_INPUT_DUMP                    : OFF
+-- EXECUTORCH_BUILD_ARM_BAREMETAL              : OFF
+-- EXECUTORCH_BUILD_ARM_ETHOSU_LINUX           : OFF
+-- EXECUTORCH_BUILD_CADENCE                    : OFF
+-- EXECUTORCH_BUILD_CMSIS_NN_PYBINDS           : OFF
+-- EXECUTORCH_BUILD_COREML                     : OFF
+-- EXECUTORCH_BUILD_CORTEX_M                   : OFF
+-- EXECUTORCH_BUILD_CPUINFO                    : OFF
+-- EXECUTORCH_BUILD_CUDA                       : OFF
+-- EXECUTORCH_BUILD_DEVTOOLS                   : OFF
+-- EXECUTORCH_BUILD_EXECUTOR_RUNNER            : OFF
+-- EXECUTORCH_BUILD_EXTENSION_APPLE            : OFF
+-- EXECUTORCH_BUILD_EXTENSION_ASR_RUNNER       : OFF
+-- EXECUTORCH_BUILD_EXTENSION_DATA_LOADER      : ON
+-- EXECUTORCH_BUILD_EXTENSION_ETDUMP_APPLE     : OFF
+-- EXECUTORCH_BUILD_EXTENSION_EVALUE_UTIL      : ON
+-- EXECUTORCH_BUILD_EXTENSION_FLAT_TENSOR      : ON
+-- EXECUTORCH_BUILD_EXTENSION_IMAGE            : OFF
+-- EXECUTORCH_BUILD_EXTENSION_LLM              : OFF
+-- EXECUTORCH_BUILD_EXTENSION_LLM_APPLE        : OFF
+-- EXECUTORCH_BUILD_EXTENSION_LLM_RUNNER       : OFF
+-- EXECUTORCH_BUILD_EXTENSION_MODULE           : ON
+-- EXECUTORCH_BUILD_EXTENSION_NAMED_DATA_MAP   : ON
+-- EXECUTORCH_BUILD_EXTENSION_RUNNER_UTIL      : ON
+-- EXECUTORCH_BUILD_EXTENSION_TENSOR           : ON
+-- EXECUTORCH_BUILD_EXTENSION_TRAINING         : OFF
+-- EXECUTORCH_BUILD_KERNELS_CUSTOM_AOT         : OFF
+-- EXECUTORCH_BUILD_KERNELS_LLM                : OFF
+-- EXECUTORCH_BUILD_KERNELS_LLM_AOT            : OFF
+-- EXECUTORCH_BUILD_KERNELS_OPTIMIZED          : OFF
+-- EXECUTORCH_BUILD_KERNELS_QUANTIZED          : OFF
+-- EXECUTORCH_BUILD_KERNELS_QUANTIZED_AOT      : OFF
+-- EXECUTORCH_BUILD_METAL                      : OFF
+-- EXECUTORCH_BUILD_MLX                        : OFF
+-- EXECUTORCH_BUILD_NEURON                     : OFF
+-- EXECUTORCH_BUILD_NXP_NEUTRON                : OFF
+-- EXECUTORCH_BUILD_NXP_NEUTRON_RUNNER         : OFF
+-- EXECUTORCH_BUILD_OPENVINO                   : OFF
+-- EXECUTORCH_BUILD_PORTABLE_OPS               : ON
+-- EXECUTORCH_BUILD_PTHREADPOOL                : OFF
+-- EXECUTORCH_BUILD_PYBIND                     : OFF
+-- EXECUTORCH_BUILD_QNN                        : ON
+-- EXECUTORCH_BUILD_ROCM                       : OFF
+-- EXECUTORCH_BUILD_SHARED                     : OFF
+-- EXECUTORCH_BUILD_SIZE_TEST                  : OFF
+-- EXECUTORCH_BUILD_TESTS                      : OFF
+-- EXECUTORCH_BUILD_TOKENIZERS_WASM            : OFF
+-- EXECUTORCH_BUILD_VGF                        : OFF
+-- EXECUTORCH_BUILD_VULKAN                     : OFF
+-- EXECUTORCH_BUILD_WASM                       : OFF
+-- EXECUTORCH_BUILD_WEBGPU                     : OFF
+-- EXECUTORCH_BUILD_WHEEL_DO_NOT_USE           : FALSE
+-- EXECUTORCH_BUILD_XNNPACK                    : OFF
+-- EXECUTORCH_CADENCE_CPU_RUNNER               : OFF
+-- EXECUTORCH_COREML_BUILD_EXECUTOR_RUNNER     : OFF
+-- EXECUTORCH_ENABLE_BUNDLE_IO                 : OFF
+-- EXECUTORCH_ENABLE_DTYPE_SELECTIVE_BUILD     : FALSE
+-- EXECUTORCH_ENABLE_EVENT_TRACER              : OFF
+-- EXECUTORCH_ENABLE_LOGGING                   : ON
+-- EXECUTORCH_ENABLE_PROGRAM_VERIFICATION      : OFF
+-- EXECUTORCH_FLATBUFFERS_MAX_ALIGNMENT        : 1024
+-- EXECUTORCH_LOG_LEVEL                        : Info
+-- EXECUTORCH_METAL_COLLECT_STATS              : OFF
+-- EXECUTORCH_NNLIB_OPT                        : OFF
+-- EXECUTORCH_OPTIMIZE_SIZE                    : OFF
+-- EXECUTORCH_PAL_DEFAULT                      : posix
+-- EXECUTORCH_PAL_DEFAULT_FILE_PATH            : [redacted-home]/SecondHands/artifacts/qnn/executorch/runtime/platform/default/posix.cpp
+-- EXECUTORCH_SELECT_OPS_LIST                  : 
+-- EXECUTORCH_SELECT_OPS_MODEL                 : 
+-- EXECUTORCH_SELECT_OPS_YAML                  : 
+-- EXECUTORCH_THREADPOOL_USE_ALL_LOGICAL_CORES : OFF
+-- EXECUTORCH_THREADPOOL_USE_PERFORMANCE_CORES : OFF
+-- EXECUTORCH_USE_CPP_CODE_COVERAGE            : OFF
+-- EXECUTORCH_USE_DL                           : ON
+-- EXECUTORCH_USE_SANITIZER                    : OFF
+-- EXECUTORCH_XNNPACK_ENABLE_KLEIDI            : ON
+-- EXECUTORCH_XNNPACK_ENABLE_WEIGHT_CACHE      : OFF
+-- EXECUTORCH_XNNPACK_SHARED_WORKSPACE         : ON
+-- PYTHON_EXECUTABLE                           : [redacted-home]\SecondHands\artifacts\qnn/python-arm64/python.exe
+-- --------------------------
+-- Configuring done (0.9s)
+-- Generating done (0.2s)
+-- Build files have been written to: [redacted-home]/SecondHands/artifacts/qnn/build-stream
+[1/2] Building CXX object executorch-runtime\backends\qualcomm\CMakeFiles\PyQnnManagerAdaptor.dir\aot\python\PyQnnManagerAdaptor.cpp.obj
+[2/2] Linking CXX shared module executorch-runtime\backends\qualcomm\PyQnnManagerAdaptor.pyd

@@ -1,0 +1,211 @@
+{
+  "_id": "67f7f4815462e08b4e799b37",
+  "id": "OpenGVLab/InternVL3-1B",
+  "private": false,
+  "pipeline_tag": "image-text-to-text",
+  "library_name": "transformers",
+  "tags": [
+    "transformers",
+    "safetensors",
+    "internvl_chat",
+    "feature-extraction",
+    "internvl",
+    "custom_code",
+    "image-text-to-text",
+    "conversational",
+    "multilingual",
+    "dataset:OpenGVLab/MMPR-v1.2",
+    "arxiv:2312.14238",
+    "arxiv:2404.16821",
+    "arxiv:2412.05271",
+    "arxiv:2411.10442",
+    "arxiv:2504.10479",
+    "arxiv:2412.09616",
+    "base_model:OpenGVLab/InternVL3-1B-Instruct",
+    "base_model:finetune:OpenGVLab/InternVL3-1B-Instruct",
+    "license:apache-2.0",
+    "region:us"
+  ],
+  "downloads": 85534,
+  "likes": 85,
+  "modelId": "OpenGVLab/InternVL3-1B",
+  "author": "OpenGVLab",
+  "sha": "4415a3b810e636d11dfa86b0e9ba40bb00535aa8",
+  "lastModified": "2025-09-11T12:49:40.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {
+    "architectures": [
+      "InternVLChatModel"
+    ],
+    "auto_map": {
+      "AutoConfig": "configuration_internvl_chat.InternVLChatConfig",
+      "AutoModel": "modeling_internvl_chat.InternVLChatModel",
+      "AutoModelForCausalLM": "modeling_internvl_chat.InternVLChatModel"
+    },
+    "model_type": "internvl_chat",
+    "tokenizer_config": {
+      "bos_token": null,
+      "chat_template": "{%- if messages[0]['role'] == 'system' %}{{- '<|im_start|>system\n' + messages[0]['content'] + '<|im_end|>\n' }}{%- else %}{{- '<|im_start|>system\n\u4f60\u662f\u4e66\u751f\u00b7\u4e07\u8c61\uff0c\u82f1\u6587\u540d\u662fInternVL\uff0c\u662f\u7531\u4e0a\u6d77\u4eba\u5de5\u667a\u80fd\u5b9e\u9a8c\u5ba4\u3001\u6e05\u534e\u5927\u5b66\u53ca\u591a\u5bb6\u5408\u4f5c\u5355\u4f4d\u8054\u5408\u5f00\u53d1\u7684\u591a\u6a21\u6001\u5927\u8bed\u8a00\u6a21\u578b\u3002<|im_end|>\n' }}{%- endif %}{% for message in messages %}{%- if messages[0]['role'] != 'system' or not loop.first %}{{'<|im_start|>' + message['role'] + '\n'}}{% if message['content'] is string %}{{ message['content'] }}{% else %}{% for content in message['content'] %}{% if content['type'] == 'image' %}{{ '<image>\n' }}{% elif content['type'] == 'video' %}{{ '<video>\n' }}{% elif content['type'] == 'text' %}{{ content['text'] }}{% endif %}{% endfor %}{% endif %}{{'<|im_end|>\n'}}{%- endif %}{% endfor %}{% if add_generation_prompt %}{{'<|im_start|>assistant\n' }}{% endif %}",
+      "eos_token": "<|im_end|>",
+      "pad_token": "<|endoftext|>",
+      "unk_token": null
+    }
+  },
+  "cardData": {
+    "license": "apache-2.0",
+    "license_name": "qwen",
+    "license_link": "https://huggingface.co/Qwen/Qwen2.5-72B-Instruct/blob/main/LICENSE",
+    "pipeline_tag": "image-text-to-text",
+    "library_name": "transformers",
+    "base_model": [
+      "OpenGVLab/InternVL3-1B-Instruct"
+    ],
+    "base_model_relation": "finetune",
+    "datasets": [
+      "OpenGVLab/MMPR-v1.2"
+    ],
+    "language": [
+      "multilingual"
+    ],
+    "tags": [
+      "internvl",
+      "custom_code"
+    ]
+  },
+  "transformersInfo": {
+    "auto_model": "AutoModel",
+    "custom_class": "modeling_internvl_chat.InternVLChatModel",
+    "pipeline_tag": "feature-extraction"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "772d8e84809a01c0f4fb9509a89d2f60ca5e8496",
+      "size": 1634
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "a10d2b6b5c3459a8c5952731c318e3ffa14566eb",
+      "size": 35849
+    },
+    {
+      "rfilename": "added_tokens.json",
+      "blobId": "dd972e4080e791eab591742c1168ee7fd6279146",
+      "size": 790
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "61eb4a958839440535b68f427427cd69366c1956",
+      "size": 6326
+    },
+    {
+      "rfilename": "configuration_intern_vit.py",
+      "blobId": "7e630c456eb9cf350e55bf850c3ff72f445a7e17",
+      "size": 5548
+    },
+    {
+      "rfilename": "configuration_internvl_chat.py",
+      "blobId": "502772cc6e24e6d1fbc5bf91ce76c9b234101eaf",
+      "size": 4036
+    },
+    {
+      "rfilename": "conversation.py",
+      "blobId": "5a771766f21ce3aeeb99b286fb8d188b0038a547",
+      "size": 15309
+    },
+    {
+      "rfilename": "examples/image1.jpg",
+      "blobId": "fd9891ef7e00774157a9dcd726b2ea9fa0c5ecff",
+      "size": 78073
+    },
+    {
+      "rfilename": "examples/image2.jpg",
+      "blobId": "09af6e4e6aa5656cd6d6c545780be523d752e3ca",
+      "size": 125656,
+      "lfs": {
+        "sha256": "08487494b8dc08d44bc36491adf3ab89ff30d13a3122da86f3cd67cad89eeee8",
+        "size": 125656,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "examples/red-panda.mp4",
+      "blobId": "28ff3b1291a2cb3525220a86a2b2b17156735848",
+      "size": 1867237,
+      "lfs": {
+        "sha256": "d921c07bb97224d65a37801541d246067f0d506f08723ffa1ad85c217907ccb8",
+        "size": 1867237,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "generation_config.json",
+      "blobId": "467e2ba8edc477ad1fb650f892ab5be9210522ab",
+      "size": 69
+    },
+    {
+      "rfilename": "merges.txt",
+      "blobId": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+      "size": 1671853
+    },
+    {
+      "rfilename": "model.safetensors",
+      "blobId": "8a5d008904fa0cd4c01f46f80a5ddd4c29faddb8",
+      "size": 1876463472,
+      "lfs": {
+        "sha256": "a8b67c54568417f3631723e6b3e120720eaa638e03e62dc25666c70e3ae3e484",
+        "size": 1876463472,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "modeling_intern_vit.py",
+      "blobId": "eb4aef44ddace5782035f0316de3834563b1c8dd",
+      "size": 18099
+    },
+    {
+      "rfilename": "modeling_internvl_chat.py",
+      "blobId": "ccf2ab9cc83283f41aafb611d379c4cc50614132",
+      "size": 15971
+    },
+    {
+      "rfilename": "preprocessor_config.json",
+      "blobId": "dfd7e50d9d4e67cd679b16b337b419a0c6cfa849",
+      "size": 287
+    },
+    {
+      "rfilename": "special_tokens_map.json",
+      "blobId": "ac23c0aaa2434523c494330aeb79c58395378103",
+      "size": 613
+    },
+    {
+      "rfilename": "tokenizer.json",
+      "blobId": "1b4f039248a420730cd195d6d6a1a9cc713a7f14",
+      "size": 7033297
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "blobId": "f18c701c825405350d5f0ae158749015b3239e6e",
+      "size": 7330
+    },
+    {
+      "rfilename": "vocab.json",
+      "blobId": "6bce3a0a3866c4791a74d83d78f6824c3af64ec3",
+      "size": 3383407
+    }
+  ],
+  "spaces": [
+    "TSXu/UniCalli_Dev",
+    "zaleni/wsa1-robot-control"
+  ],
+  "createdAt": "2025-04-10T16:40:33.000Z",
+  "safetensors": {
+    "parameters": {
+      "BF16": 938193024
+    },
+    "total": 938193024
+  },
+  "usedStorage": 1878456365
+}

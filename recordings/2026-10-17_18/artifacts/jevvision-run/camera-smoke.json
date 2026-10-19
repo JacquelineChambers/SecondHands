@@ -1,0 +1,18 @@
+{
+  "choice": "No clear hand gesture is visible.",
+  "probability": 0.8,
+  "probabilities": {
+    "An open palm with fingers spread.": 0.0,
+    "A thumbs-up gesture.": 0.0,
+    "A closed fist.": 0.2,
+    "One index finger pointing up.": 0.0,
+    "A two-finger V or victory sign.": 0.0,
+    "No clear hand gesture is visible.": 0.8
+  },
+  "latency_ms": 9054.8,
+  "round_trip_seconds": 9.110000000000582,
+  "input_tokens": 190,
+  "camera": "Orbbec Femto Bolt",
+  "model": "JEVision",
+  "device": "cpu"
+}

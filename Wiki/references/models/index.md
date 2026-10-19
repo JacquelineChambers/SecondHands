@@ -2,7 +2,9 @@
 
 This index owns the SecondHands model candidates, their suggested roles, and the current recommended order. The user requested this reference on 2026-10-16, supplying the five-candidate recommendation below. Recording that recommendation does not establish a final model/runtime selection or a tested deployment. [SH-Q-001](../../project.md#sh-q-001--model-and-runtime-selection) owns that decision; the [task plan](../../plan.md) owns execution status.
 
-The first inputs are the computer's built-in camera, as recorded in [Project direction](../../project.md#established-user-direction). All five starting candidates now run on public sample images on the Mac. [The image observations](../../experiments-before-saturday.md#decision-model-image-observations) separate execution checks from accuracy evaluation and record false face classifications from Laya and SmolVLM. Camera operation, participant accuracy, and Windows execution remain open. The earlier Python CPU tensor check is not a model evaluation.
+The first inputs are the computer's built-in camera, as recorded in [Project direction](../../project.md#established-user-direction). All five starting candidates now run on public sample images on the Mac. [The image observations](../../experiments-before-saturday.md#decision-model-image-observations) separate execution checks from accuracy evaluation and record false face classifications from Laya and SmolVLM. A later [Orbbec test on the Snapdragon PC](../../setup/orbbec-mediapipe.md) establishes MediaPipe CPU face/hand landmarks and an alternate pretrained gesture classifier through ExecuTorch/QNN on the NPU. Participant accuracy, facial NPU execution, and the other candidates' Windows execution remain open. The earlier Python CPU tensor check is not a model evaluation.
+
+[Model files on the Snapdragon device](device-downloads.md) records the user-requested downloads of every listed candidate, selected checkpoints, local storage, verification, and unavailable compiled/custom artifacts.
 
 ## Recommended starting order
 
@@ -45,6 +47,8 @@ The candidates below are retained research leads, without a new ranking. Their r
 ### JEVision 0.8B
 
 **Retained experimental decision-model lead.** The archive describes [JEVision](https://huggingface.co/divyanshx11/JEVision) as a separate Qwen3.5-0.8B-based project with adapters, typed decisions, and a bundled local serving runtime. Its source-stated Linux/NVIDIA testing does not establish Windows ARM64 support. Do not merge this candidate with Vision-Jev merely because their names and backbones are similar.
+
+The user-requested [Orbbec experiment on 2026-10-17](../../setup/jevvision-orbbec.md) subsequently established local Windows ARM64 CPU image inference and an interactive camera preview using the prepared service. The observed 9–21-second requests do not establish real-time suitability, classification accuracy, or NPU execution.
 
 ### SelfJev-4B Vision
 

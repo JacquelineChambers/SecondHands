@@ -1,0 +1,124 @@
+{
+  "frames": [
+    {
+      "faces": 0,
+      "hands": 1,
+      "poses": 1,
+      "objects": [
+        "person",
+        "person",
+        "chair",
+        "bottle",
+        "cup",
+        "person",
+        "person",
+        "person",
+        "person",
+        "cup",
+        "person",
+        "person",
+        "laptop",
+        "person",
+        "chair"
+      ],
+      "processing_ms": 3845.165700000507,
+      "scene_state": "processing"
+    },
+    {
+      "faces": 0,
+      "hands": 1,
+      "poses": 1,
+      "objects": [
+        "chair",
+        "person",
+        "person",
+        "person",
+        "person",
+        "cup",
+        "person",
+        "person",
+        "chair"
+      ],
+      "processing_ms": 549.1682000010769,
+      "scene_state": "processing"
+    },
+    {
+      "faces": 0,
+      "hands": 1,
+      "poses": 1,
+      "objects": [
+        "person",
+        "bottle",
+        "person",
+        "cup",
+        "chair",
+        "person",
+        "person",
+        "chair",
+        "laptop",
+        "person",
+        "cup",
+        "person",
+        "chair",
+        "person"
+      ],
+      "processing_ms": 567.5160999999207,
+      "scene_state": "processing"
+    },
+    {
+      "faces": 0,
+      "hands": 1,
+      "poses": 1,
+      "objects": [
+        "person",
+        "bottle",
+        "person",
+        "laptop",
+        "chair",
+        "person",
+        "person",
+        "person",
+        "tv",
+        "cup",
+        "person",
+        "person",
+        "chair",
+        "chair"
+      ],
+      "processing_ms": 546.551699999327,
+      "scene_state": "processing"
+    },
+    {
+      "faces": 0,
+      "hands": 2,
+      "poses": 1,
+      "objects": [
+        "person",
+        "person",
+        "chair",
+        "person",
+        "bottle",
+        "laptop",
+        "person",
+        "person",
+        "cup",
+        "person",
+        "person",
+        "tv",
+        "person",
+        "chair",
+        "person"
+      ],
+      "processing_ms": 545.7440000009228,
+      "scene_state": "processing"
+    }
+  ],
+  "elapsed_seconds": 6.061999999999898,
+  "scene_result": {
+    "description": "A person seated near a desk or computer.",
+    "probability": 1.0,
+    "latency_ms": 6539.6,
+    "model": "JEVision 0.8B",
+    "runtime": "CPU"
+  }
+}

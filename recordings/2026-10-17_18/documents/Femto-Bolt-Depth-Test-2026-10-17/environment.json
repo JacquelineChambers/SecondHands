@@ -1,0 +1,22 @@
+{
+  "time": "2026-10-17T12:14:22.5914745-07:00",
+  "os": {
+    "Caption": "Microsoft Windows 11 Pro",
+    "Version": "10.0.26200",
+    "OSArchitecture": "ARM 64-bit Processor"
+  },
+  "devices": [
+    {
+      "Status": "OK",
+      "Class": "Camera",
+      "FriendlyName": "Orbbec Femto Bolt Depth Camera",
+      "InstanceId": "[redacted-device-identifier]"
+    },
+    {
+      "Status": "OK",
+      "Class": "Camera",
+      "FriendlyName": "Orbbec Femto Bolt RGB Camera",
+      "InstanceId": "[redacted-device-identifier]"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "running": false,
+  "model": "MediaPipe Face",
+  "camera": "Orbbec Femto Bolt",
+  "pid": 25628,
+  "frames": 15,
+  "runtime": "ONNX Runtime / QNN",
+  "onnxruntime": "1.31.0",
+  "qnn_plugin": "2.7.0",
+  "device": "NPU",
+  "cpu_fallback_disabled": true,
+  "worker_pid": 7316,
+  "face_frames": 13,
+  "landmark_frames": 13,
+  "landmarks": 0,
+  "detector_score": 0.962,
+  "landmark_score": 0.0,
+  "landmark_span": null,
+  "median_npu_ms": 1.581,
+  "preview_fps": 3.53,
+  "updated_utc": "2026-10-18T00:10:16.158836+00:00"
+}

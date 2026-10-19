@@ -1,0 +1,103 @@
+{
+  "_id": "6abd265493a98f367b940bb7",
+  "id": "Jwuthrich/selfjev-4b-vision",
+  "private": false,
+  "pipeline_tag": "text-classification",
+  "library_name": "peft",
+  "tags": [
+    "peft",
+    "safetensors",
+    "decision-model",
+    "self-hosted",
+    "lora",
+    "selfjev",
+    "multimodal",
+    "image-classification",
+    "text-classification",
+    "dataset:timm/oxford-iiit-pet",
+    "dataset:zalando-datasets/fashion_mnist",
+    "dataset:AI-Lab-Makerere/beans",
+    "dataset:nateraw/rice-image-dataset",
+    "dataset:timm/eurosat-rgb",
+    "dataset:garythung/trashnet",
+    "base_model:Qwen/Qwen3.5-4B",
+    "base_model:adapter:Qwen/Qwen3.5-4B",
+    "region:us"
+  ],
+  "downloads": 353,
+  "likes": 3,
+  "modelId": "Jwuthrich/selfjev-4b-vision",
+  "author": "Jwuthrich",
+  "sha": "96870c2253e64b7e5f2a4472ad49603643453cb2",
+  "lastModified": "2026-10-06T00:40:53.000Z",
+  "gated": false,
+  "disabled": false,
+  "widgetData": [
+    {
+      "text": "I like you. I love you"
+    }
+  ],
+  "model-index": null,
+  "config": {
+    "peft": {
+      "base_model_name_or_path": "Qwen/Qwen3.5-4B"
+    }
+  },
+  "cardData": {
+    "base_model": "Qwen/Qwen3.5-4B",
+    "base_model_relation": "adapter",
+    "library_name": "peft",
+    "pipeline_tag": "text-classification",
+    "tags": [
+      "decision-model",
+      "self-hosted",
+      "lora",
+      "selfjev",
+      "multimodal",
+      "image-classification"
+    ],
+    "datasets": [
+      "timm/oxford-iiit-pet",
+      "zalando-datasets/fashion_mnist",
+      "AI-Lab-Makerere/beans",
+      "nateraw/rice-image-dataset",
+      "timm/eurosat-rgb",
+      "garythung/trashnet"
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "f40d9124683ef74c28686d37eb10e7556d24fc3c",
+      "size": 8195
+    },
+    {
+      "rfilename": "adapter_config.json",
+      "blobId": "8ead5fb0732eba91fe91fb04fad9efc6f61662c6",
+      "size": 1298
+    },
+    {
+      "rfilename": "adapter_model.safetensors",
+      "blobId": "bb0672bfd0f250780b88cdc1a045abf08ca7b10f",
+      "size": 230073800,
+      "lfs": {
+        "sha256": "5b619930d54ef041e4424d63b9a5078eb7b0a2d0b0535efec3a335ea33750179",
+        "size": 230073800,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "model.json",
+      "blobId": "39fc36d1c18593cabf692d199676ff8792365a41",
+      "size": 1779
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2026-09-30T15:10:12.000Z",
+  "usedStorage": 230073800
+}

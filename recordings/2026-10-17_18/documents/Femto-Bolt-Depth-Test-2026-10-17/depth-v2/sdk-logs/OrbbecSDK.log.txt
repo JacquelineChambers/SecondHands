@@ -1,0 +1,31 @@
+[10/17 12:18:12.227167][info][27280][HostTimestampProvider.cpp:36] Update clock type to: realtime(0)
+[10/17 12:18:12.361136][info][27280][DeviceManager.cpp:25] Current found device(s): (1)
+[10/17 12:18:12.361197][info][27280][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8E751007C, Connection: USB3.1
+[10/17 12:18:12.361385][info][27280][DeviceManager.cpp:488] Enable net device enumeration: true
+[10/17 12:18:13.380148][info][27280][DeviceManager.cpp:25] Current device(s) list: (1)
+[10/17 12:18:13.380190][info][27280][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8E751007C, Connection: USB3.1
+[10/17 12:18:15.945473][info][27280][DeviceManager.cpp:200] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8E751007C FW: 1.0.9
+[10/17 12:18:15.946876][info][27280][Pipeline.cpp:54] [CL8E751007C] Pipeline created with device: {name: Femto Bolt, sn: [redacted-device-serial], @0x19F3494A6F0
+[10/17 12:18:15.964356][info][27280][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin
+[10/17 12:18:15.964596][warning][27280][ObException.cpp:32] A unrecoverable_exception has occurred!
+ - where: RawPhaseStreamer.cpp(493)
+ - msg: Can not find firmware data profile.
+ - type: IO
+ - status: 115
+[10/17 12:18:15.966092][warning][27280][FemtoBoltDevice.cpp:147] Execute failure! A libobsensor_exception has occurred!
+ - where: FemtoBoltDevice.cpp(147):libobsensor::FemtoBoltDevice::initSensorList::<lambda_c798782b83ec572975e6a94cac53a285>::operator ()
+ - msg: Can not find firmware data profile.
+ - type: class libobsensor::unrecoverable_exception
+ - status: 115
+[10/17 12:18:15.966178][warning][27280][FemtoBoltDevice.cpp:147] create RawPhaseStreamer failed.
+[10/17 12:18:15.966290][warning][27280][ObException.cpp:26] A recoverable_exception has occurred!
+ - where: IDeviceComponent.hpp(37)
+ - msg: DeviceComponentPtr is nullptr
+ - type: UNKNOWN
+ - status: 101
+[10/17 12:18:15.966403][warning][27280][DeviceBase.cpp:424] Execute failure! A libobsensor_exception has occurred!
+ - where: DeviceBase.cpp(424):libobsensor::DeviceBase::getComponent
+ - msg: DeviceComponentPtr is nullptr
+ - type: class libobsensor::recoverable_exception
+ - status: 101
+[10/17 12:18:15.973878][info][27280][Pipeline.cpp:65] [CL8E751007C] Pipeline destroyed! @0x19F3494A6F0

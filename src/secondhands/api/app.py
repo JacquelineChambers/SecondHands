@@ -2,28 +2,49 @@
 
 import asyncio
 import json
+import os
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import suppress
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 
+from . import scene, tailscale
 from .backend import CameraBackend
+from .scene_backend import SceneBackend
 from .session import DashboardSession
 
 ALLOWED_ORIGINS = {"http://localhost:5173", "http://127.0.0.1:5173"}
 
 
-def create_app(backend_factory=CameraBackend):
+def create_app(backend_factory=CameraBackend, scene_backend_factory=SceneBackend):
     app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
     camera_owner = asyncio.Lock()
+    allowed_origins = ALLOWED_ORIGINS | {
+        origin.strip()
+        for origin in os.environ.get("SECONDHANDS_ALLOWED_ORIGINS", "").split(",")
+        if origin.strip()
+    }
+    scene.install_scene(app, camera_owner, allowed_origins, scene_backend_factory)
 
     @app.get("/api/health")
     def health():
-        return {"status": "ok", "scope": "local exploration; simulated actions only"}
+        return {
+            "status": "ok",
+            "scene_understanding": True,
+            "scope": "local exploration; simulated actions only",
+        }
+
+    @app.get("/api/tailscale")
+    def tailscale_status():
+        return tailscale.status()
+
+    @app.post("/api/tailscale/check")
+    def tailscale_check():
+        return tailscale.check()
 
     @app.websocket("/api/session")
     async def session_socket(ws: WebSocket):
-        if ws.headers.get("origin") not in ALLOWED_ORIGINS:
+        if ws.headers.get("origin") not in allowed_origins:
             await ws.close(code=1008)
             return
         await ws.accept()

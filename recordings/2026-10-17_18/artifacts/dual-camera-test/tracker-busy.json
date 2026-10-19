@@ -1,0 +1,14 @@
+{
+  "tracker_observations": [
+    {
+      "busy": true,
+      "frames": 2954,
+      "last_captured_ms": 74004000
+    },
+    {
+      "busy": true,
+      "frames": 2954,
+      "last_captured_ms": 74004000
+    }
+  ]
+}

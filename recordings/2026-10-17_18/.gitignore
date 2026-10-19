@@ -1,0 +1,2 @@
+# Preserve the explicitly requested experiment logs in this dated archive.
+!*.log

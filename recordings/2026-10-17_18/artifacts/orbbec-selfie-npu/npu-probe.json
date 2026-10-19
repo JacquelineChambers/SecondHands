@@ -1,0 +1,25 @@
+{
+  "providers": [
+    "QNNExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "executed_providers": [
+    "QNNExecutionProvider"
+  ],
+  "cpu_fallback_disabled": true,
+  "ms": 2.4941000001490465,
+  "outputs": [
+    {
+      "shape": [
+        1,
+        1,
+        256,
+        256
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 0
+    }
+  ],
+  "profile": "npu-probe_2026-10-17_16-59-31_727.json"
+}

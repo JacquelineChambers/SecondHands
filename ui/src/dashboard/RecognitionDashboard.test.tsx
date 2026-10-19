@@ -38,7 +38,7 @@ const frame: Frame = {
     hands: [{ landmarks: [{ x: .2, y: .5, z: 0 }], gestures: [{ label: 'Open_Palm', score: .8 }], handedness: [{ label: 'Right', score: .99 }] }],
   },
 }
-beforeEach(() => { vi.useFakeTimers(); Socket.instances = []; vi.stubGlobal('WebSocket', Socket) })
+beforeEach(() => { vi.useFakeTimers(); Socket.instances = []; vi.stubGlobal('WebSocket', Socket); vi.stubGlobal('fetch', vi.fn(() => new Promise(() => {}))) })
 afterEach(() => { cleanup(); vi.unstubAllGlobals(); vi.useRealTimers() })
 function start() {
   const view = render(<StrictMode><RecognitionDashboard /></StrictMode>)

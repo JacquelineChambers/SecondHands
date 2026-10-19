@@ -1,0 +1,502 @@
+W1018 00:51:54.471000 17104 Lib\site-packages\torch\utils\_pytree.py:630] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+LOADED rtmpose_body2d.pt2
+reference simcc_x (1, 17, 384) simcc_y (1, 17, 512)
+QNN v2.37.0.250724175447_124859
+[INFO 2026-10-18 00:51:55,814 qnn_sdk_setup.py:60] [QNN] Using QNN SDK at [redacted-home]\SecondHands\artifacts\qnn\qairt\2.37.0.250724 (from QNN_SDK_ROOT)
+[WARNING 2026-10-18 00:51:55,814 qnn_sdk_setup.py:190] [QNN] py-cpuinfo is not installed, so the CPU vendor cannot be read and the AMD MKLDNN workaround is skipped. Install it with: pip install py-cpuinfo
+[WARNING 2026-10-18 00:51:56,774 pass_manager.py:82] PassManager is deprecated. Please use ExportedProgramPassManager instead.
+[INFO] [Qnn ExecuTorch]: Creating new backend bundle.
+[INFO] [Qnn ExecuTorch]: create QNN Logger with log_level 1
+[WARNING 2026-10-18 00:51:57,655 _program.py:1032] Op aten.unbind.int was requested for preservation by partitioner.  This request is ignored because it aliases output.
+[WARNING 2026-10-18 00:51:58,255 _program.py:1032] Op aten.unbind.int was requested for preservation by partitioner.  This request is ignored because it aliases output.
+[INFO 2026-10-18 00:52:00,735 qnn_partitioner.py:136] [QnnPartitioner] aten.matmul.default | True
+[INFO 2026-10-18 00:52:00,736 qnn_partitioner.py:136] [QnnPartitioner] aten.matmul.default | True
+[INFO 2026-10-18 00:52:00,738 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-18 00:52:00,738 qnn_partitioner.py:136] [QnnPartitioner] aten.matmul.default | True
+[INFO 2026-10-18 00:52:00,740 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,740 qnn_partitioner.py:136] [QnnPartitioner] aten.matmul.default | True
+[INFO 2026-10-18 00:52:00,740 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,742 qnn_partitioner.py:136] [QnnPartitioner] aten.relu.default | True
+[INFO 2026-10-18 00:52:00,743 qnn_partitioner.py:136] [QnnPartitioner] aten.div.Tensor | True
+[INFO 2026-10-18 00:52:00,743 qnn_partitioner.py:136] [QnnPartitioner] aten.matmul.default | True
+[INFO 2026-10-18 00:52:00,745 qnn_partitioner.py:136] [QnnPartitioner] aten.permute_copy.default | True
+[INFO 2026-10-18 00:52:00,745 qnn_partitioner.py:136] [QnnPartitioner] aten.squeeze_copy.dims | True
+[INFO 2026-10-18 00:52:00,745 qnn_partitioner.py:136] [QnnPartitioner] aten.squeeze_copy.dims | True
+[INFO 2026-10-18 00:52:00,745 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-18 00:52:00,745 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-18 00:52:00,746 qnn_partitioner.py:136] [QnnPartitioner] aten.split_with_sizes_copy.default | True
+[INFO 2026-10-18 00:52:00,746 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-18 00:52:00,746 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,746 qnn_partitioner.py:136] [QnnPartitioner] aten.unsqueeze_copy.default | True
+[INFO 2026-10-18 00:52:00,746 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-18 00:52:00,746 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-18 00:52:00,746 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-18 00:52:00,746 qnn_partitioner.py:136] [QnnPartitioner] aten.split_with_sizes_copy.default | True
+[INFO 2026-10-18 00:52:00,748 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,749 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,749 qnn_partitioner.py:136] [QnnPartitioner] aten.matmul.default | True
+[INFO 2026-10-18 00:52:00,749 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,749 qnn_partitioner.py:136] [QnnPartitioner] aten.div.Tensor | True
+[INFO 2026-10-18 00:52:00,749 qnn_partitioner.py:136] [QnnPartitioner] aten.clamp.default | True
+[INFO 2026-10-18 00:52:00,751 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,751 qnn_partitioner.py:136] [QnnPartitioner] aten.sqrt.default | True
+[INFO 2026-10-18 00:52:00,751 qnn_partitioner.py:136] [QnnPartitioner] aten.sum.dim_IntList | True
+[INFO 2026-10-18 00:52:00,752 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,752 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,752 qnn_partitioner.py:136] [QnnPartitioner] aten.matmul.default | True
+[INFO 2026-10-18 00:52:00,752 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,753 qnn_partitioner.py:136] [QnnPartitioner] aten.div.Tensor | True
+[INFO 2026-10-18 00:52:00,753 qnn_partitioner.py:136] [QnnPartitioner] aten.clamp.default | True
+[INFO 2026-10-18 00:52:00,753 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,754 qnn_partitioner.py:136] [QnnPartitioner] aten.sqrt.default | True
+[INFO 2026-10-18 00:52:00,754 qnn_partitioner.py:136] [QnnPartitioner] aten.sum.dim_IntList | True
+[INFO 2026-10-18 00:52:00,754 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,754 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,757 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,759 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,759 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,761 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,762 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,762 qnn_partitioner.py:136] [QnnPartitioner] aten.clamp.default | True
+[INFO 2026-10-18 00:52:00,762 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-18 00:52:00,762 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,762 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,762 qnn_partitioner.py:136] [QnnPartitioner] aten.mean.dim | True
+[INFO 2026-10-18 00:52:00,768 qnn_partitioner.py:136] [QnnPartitioner] aten.cat.default | True
+[INFO 2026-10-18 00:52:00,768 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,768 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,769 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,771 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,771 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,773 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,773 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,773 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,776 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,778 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,778 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,778 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,780 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,780 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,783 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,783 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,783 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,783 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,783 qnn_partitioner.py:136] [QnnPartitioner] aten.cat.default | True
+[INFO 2026-10-18 00:52:00,783 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-18 00:52:00,783 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-18 00:52:00,783 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-18 00:52:00,783 qnn_partitioner.py:136] [QnnPartitioner] aten.max_pool2d_with_indices.default | True
+[INFO 2026-10-18 00:52:00,783 qnn_partitioner.py:136] [QnnPartitioner] aten.constant_pad_nd.default | True
+[INFO 2026-10-18 00:52:00,783 qnn_partitioner.py:136] [QnnPartitioner] aten.max_pool2d_with_indices.default | True
+[INFO 2026-10-18 00:52:00,794 qnn_partitioner.py:136] [QnnPartitioner] aten.constant_pad_nd.default | True
+[INFO 2026-10-18 00:52:00,794 qnn_partitioner.py:136] [QnnPartitioner] aten.max_pool2d_with_indices.default | True
+[INFO 2026-10-18 00:52:00,796 qnn_partitioner.py:136] [QnnPartitioner] aten.constant_pad_nd.default | True
+[INFO 2026-10-18 00:52:00,796 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,796 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,798 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,799 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,799 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,801 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,803 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,803 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,805 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,807 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,807 qnn_partitioner.py:136] [QnnPartitioner] aten.clamp.default | True
+[INFO 2026-10-18 00:52:00,807 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-18 00:52:00,809 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,809 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,809 qnn_partitioner.py:136] [QnnPartitioner] aten.mean.dim | True
+[INFO 2026-10-18 00:52:00,811 qnn_partitioner.py:136] [QnnPartitioner] aten.cat.default | True
+[INFO 2026-10-18 00:52:00,812 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-18 00:52:00,812 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,814 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,814 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,816 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,816 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,818 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,818 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,820 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,822 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,822 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-18 00:52:00,822 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,824 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,824 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,826 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,826 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,827 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,829 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,829 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,830 qnn_partitioner.py:136] [QnnPartitioner] aten.clamp.default | True
+[INFO 2026-10-18 00:52:00,846 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-18 00:52:00,847 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,847 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,847 qnn_partitioner.py:136] [QnnPartitioner] aten.mean.dim | True
+[INFO 2026-10-18 00:52:00,847 qnn_partitioner.py:136] [QnnPartitioner] aten.cat.default | True
+[INFO 2026-10-18 00:52:00,847 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-18 00:52:00,847 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,847 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,847 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,847 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,847 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,847 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,858 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,858 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,858 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,858 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,862 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,878 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.clamp.default | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.mean.dim | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.cat.default | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,880 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,893 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,894 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,909 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.convolution.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-18 00:52:00,910 qnn_partitioner.py:223] Qnn partitioner will delegate torch mutable buffer with the same I/O address during the runtime, so if your model contains mutable buffer, then you can get the better performance with skip_mutable_buffer=False. If you encounter accuracy issue during the runtime, then please set `skip_mutable_buffer=True` and try again.
+[INFO] [Qnn ExecuTorch]: Initialize Qnn backend parameters for Qnn executorch backend type 2
+[INFO] [Qnn ExecuTorch]: Caching: Caching is in SAVE MODE.
+[INFO] [Qnn ExecuTorch]: Running level=1 optimization.
+[INFO 2026-10-18 00:52:01,066 qnn_preprocess.py:230] Processing Method(0): (1/1)
+[WARNING 2026-10-18 00:52:01,066 pass_manager.py:82] PassManager is deprecated. Please use ExportedProgramPassManager instead.
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_1, aten.permute_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_view_copy_default, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_2, aten.permute_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_view_copy_default_1, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_3, aten.permute_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_view_copy_default_2, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_4, aten.permute_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_view_copy_default_3, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_5, aten.permute_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_view_copy_default_4, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_6, aten.permute_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_view_copy_default_5, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_7, aten.permute_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_view_copy_default_6, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_8, aten.permute_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_view_copy_default_7, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_9, aten.permute_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_view_copy_default_8, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_view_copy_default_9, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,201 qnn_preprocess.py:122] Visiting: aten_view_copy_default_10, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,208 qnn_preprocess.py:122] Visiting: aten_view_copy_default_11, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,208 qnn_preprocess.py:122] Visiting: aten_view_copy_default_12, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,209 qnn_preprocess.py:122] Visiting: aten_view_copy_default_13, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,209 qnn_preprocess.py:122] Visiting: aten_view_copy_default_14, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,209 qnn_preprocess.py:122] Visiting: aten_convolution_default, aten.convolution.default
+[INFO 2026-10-18 00:52:01,209 qnn_preprocess.py:122] Visiting: aten_sigmoid_default, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,209 qnn_preprocess.py:122] Visiting: aten_mul_tensor, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,212 qnn_preprocess.py:122] Visiting: aten_convolution_default_1, aten.convolution.default
+[INFO 2026-10-18 00:52:01,212 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_1, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,212 qnn_preprocess.py:122] Visiting: aten_mul_tensor_1, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,214 qnn_preprocess.py:122] Visiting: aten_convolution_default_2, aten.convolution.default
+[INFO 2026-10-18 00:52:01,214 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_2, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,216 qnn_preprocess.py:122] Visiting: aten_mul_tensor_2, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,216 qnn_preprocess.py:122] Visiting: aten_convolution_default_3, aten.convolution.default
+[INFO 2026-10-18 00:52:01,216 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_3, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,218 qnn_preprocess.py:122] Visiting: aten_mul_tensor_3, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,218 qnn_preprocess.py:122] Visiting: aten_convolution_default_4, aten.convolution.default
+[INFO 2026-10-18 00:52:01,220 qnn_preprocess.py:122] Visiting: aten_convolution_default_5, aten.convolution.default
+[INFO 2026-10-18 00:52:01,220 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_4, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,220 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_5, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,222 qnn_preprocess.py:122] Visiting: aten_mul_tensor_4, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,222 qnn_preprocess.py:122] Visiting: aten_mul_tensor_5, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,222 qnn_preprocess.py:122] Visiting: aten_convolution_default_6, aten.convolution.default
+[INFO 2026-10-18 00:52:01,224 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_6, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,224 qnn_preprocess.py:122] Visiting: aten_mul_tensor_6, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,226 qnn_preprocess.py:122] Visiting: aten_convolution_default_7, aten.convolution.default
+[INFO 2026-10-18 00:52:01,226 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_7, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,226 qnn_preprocess.py:122] Visiting: aten_mul_tensor_7, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,228 qnn_preprocess.py:122] Visiting: aten_convolution_default_8, aten.convolution.default
+[INFO 2026-10-18 00:52:01,228 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_8, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,228 qnn_preprocess.py:122] Visiting: aten_mul_tensor_8, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,230 qnn_preprocess.py:122] Visiting: aten_add_tensor, aten.add.Tensor
+[INFO 2026-10-18 00:52:01,230 qnn_preprocess.py:122] Visiting: aten_cat_default, aten.cat.default
+[INFO 2026-10-18 00:52:01,230 qnn_preprocess.py:122] Visiting: aten_mean_dim, aten.mean.dim
+[INFO 2026-10-18 00:52:01,232 qnn_preprocess.py:122] Visiting: aten_convolution_default_9, aten.convolution.default
+[INFO 2026-10-18 00:52:01,232 qnn_preprocess.py:122] Visiting: aten_mul_tensor_9, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,232 qnn_preprocess.py:122] Visiting: aten_add_tensor_1, aten.add.Tensor
+[INFO 2026-10-18 00:52:01,234 qnn_preprocess.py:122] Visiting: aten_clamp_default, aten.clamp.default
+[INFO 2026-10-18 00:52:01,234 qnn_preprocess.py:122] Visiting: aten_mul_tensor_10, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,234 qnn_preprocess.py:122] Visiting: aten_convolution_default_10, aten.convolution.default
+[INFO 2026-10-18 00:52:01,236 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_9, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,236 qnn_preprocess.py:122] Visiting: aten_mul_tensor_11, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,236 qnn_preprocess.py:122] Visiting: aten_convolution_default_11, aten.convolution.default
+[INFO 2026-10-18 00:52:01,238 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_10, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,238 qnn_preprocess.py:122] Visiting: aten_mul_tensor_12, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,239 qnn_preprocess.py:122] Visiting: aten_convolution_default_12, aten.convolution.default
+[INFO 2026-10-18 00:52:01,239 qnn_preprocess.py:122] Visiting: aten_convolution_default_13, aten.convolution.default
+[INFO 2026-10-18 00:52:01,241 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_11, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,241 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_12, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,241 qnn_preprocess.py:122] Visiting: aten_mul_tensor_13, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,243 qnn_preprocess.py:122] Visiting: aten_mul_tensor_14, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,243 qnn_preprocess.py:122] Visiting: aten_convolution_default_14, aten.convolution.default
+[INFO 2026-10-18 00:52:01,243 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_13, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,245 qnn_preprocess.py:122] Visiting: aten_mul_tensor_15, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,245 qnn_preprocess.py:122] Visiting: aten_convolution_default_15, aten.convolution.default
+[INFO 2026-10-18 00:52:01,247 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_14, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,247 qnn_preprocess.py:122] Visiting: aten_mul_tensor_16, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,247 qnn_preprocess.py:122] Visiting: aten_convolution_default_16, aten.convolution.default
+[INFO 2026-10-18 00:52:01,249 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_15, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,249 qnn_preprocess.py:122] Visiting: aten_mul_tensor_17, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,249 qnn_preprocess.py:122] Visiting: aten_add_tensor_2, aten.add.Tensor
+[INFO 2026-10-18 00:52:01,251 qnn_preprocess.py:122] Visiting: aten_convolution_default_17, aten.convolution.default
+[INFO 2026-10-18 00:52:01,253 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_16, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,253 qnn_preprocess.py:122] Visiting: aten_mul_tensor_18, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,253 qnn_preprocess.py:122] Visiting: aten_convolution_default_18, aten.convolution.default
+[INFO 2026-10-18 00:52:01,255 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_17, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,255 qnn_preprocess.py:122] Visiting: aten_mul_tensor_19, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,255 qnn_preprocess.py:122] Visiting: aten_convolution_default_19, aten.convolution.default
+[INFO 2026-10-18 00:52:01,257 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_18, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,257 qnn_preprocess.py:122] Visiting: aten_mul_tensor_20, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,258 qnn_preprocess.py:122] Visiting: aten_add_tensor_3, aten.add.Tensor
+[INFO 2026-10-18 00:52:01,258 qnn_preprocess.py:122] Visiting: aten_cat_default_1, aten.cat.default
+[INFO 2026-10-18 00:52:01,260 qnn_preprocess.py:122] Visiting: aten_mean_dim_1, aten.mean.dim
+[INFO 2026-10-18 00:52:01,260 qnn_preprocess.py:122] Visiting: aten_convolution_default_20, aten.convolution.default
+[INFO 2026-10-18 00:52:01,260 qnn_preprocess.py:122] Visiting: aten_mul_tensor_21, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,261 qnn_preprocess.py:122] Visiting: aten_add_tensor_4, aten.add.Tensor
+[INFO 2026-10-18 00:52:01,261 qnn_preprocess.py:122] Visiting: aten_clamp_default_1, aten.clamp.default
+[INFO 2026-10-18 00:52:01,261 qnn_preprocess.py:122] Visiting: aten_mul_tensor_22, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,263 qnn_preprocess.py:122] Visiting: aten_convolution_default_21, aten.convolution.default
+[INFO 2026-10-18 00:52:01,263 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_19, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,265 qnn_preprocess.py:122] Visiting: aten_mul_tensor_23, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,265 qnn_preprocess.py:122] Visiting: aten_convolution_default_22, aten.convolution.default
+[INFO 2026-10-18 00:52:01,267 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_20, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,268 qnn_preprocess.py:122] Visiting: aten_mul_tensor_24, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,268 qnn_preprocess.py:122] Visiting: aten_convolution_default_23, aten.convolution.default
+[INFO 2026-10-18 00:52:01,270 qnn_preprocess.py:122] Visiting: aten_convolution_default_24, aten.convolution.default
+[INFO 2026-10-18 00:52:01,271 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_21, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,271 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_22, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,271 qnn_preprocess.py:122] Visiting: aten_mul_tensor_25, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,271 qnn_preprocess.py:122] Visiting: aten_mul_tensor_26, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,273 qnn_preprocess.py:122] Visiting: aten_convolution_default_25, aten.convolution.default
+[INFO 2026-10-18 00:52:01,274 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_23, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,274 qnn_preprocess.py:122] Visiting: aten_mul_tensor_27, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,274 qnn_preprocess.py:122] Visiting: aten_convolution_default_26, aten.convolution.default
+[INFO 2026-10-18 00:52:01,276 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_24, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,276 qnn_preprocess.py:122] Visiting: aten_mul_tensor_28, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,276 qnn_preprocess.py:122] Visiting: aten_convolution_default_27, aten.convolution.default
+[INFO 2026-10-18 00:52:01,278 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_25, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,278 qnn_preprocess.py:122] Visiting: aten_mul_tensor_29, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,280 qnn_preprocess.py:122] Visiting: aten_add_tensor_5, aten.add.Tensor
+[INFO 2026-10-18 00:52:01,280 qnn_preprocess.py:122] Visiting: aten_convolution_default_28, aten.convolution.default
+[INFO 2026-10-18 00:52:01,280 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_26, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,282 qnn_preprocess.py:122] Visiting: aten_mul_tensor_30, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,283 qnn_preprocess.py:122] Visiting: aten_convolution_default_29, aten.convolution.default
+[INFO 2026-10-18 00:52:01,283 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_27, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,285 qnn_preprocess.py:122] Visiting: aten_mul_tensor_31, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,285 qnn_preprocess.py:122] Visiting: aten_convolution_default_30, aten.convolution.default
+[INFO 2026-10-18 00:52:01,286 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_28, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,286 qnn_preprocess.py:122] Visiting: aten_mul_tensor_32, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,287 qnn_preprocess.py:122] Visiting: aten_add_tensor_6, aten.add.Tensor
+[INFO 2026-10-18 00:52:01,287 qnn_preprocess.py:122] Visiting: aten_cat_default_2, aten.cat.default
+[INFO 2026-10-18 00:52:01,289 qnn_preprocess.py:122] Visiting: aten_mean_dim_2, aten.mean.dim
+[INFO 2026-10-18 00:52:01,289 qnn_preprocess.py:122] Visiting: aten_convolution_default_31, aten.convolution.default
+[INFO 2026-10-18 00:52:01,289 qnn_preprocess.py:122] Visiting: aten_mul_tensor_33, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,291 qnn_preprocess.py:122] Visiting: aten_add_tensor_7, aten.add.Tensor
+[INFO 2026-10-18 00:52:01,291 qnn_preprocess.py:122] Visiting: aten_clamp_default_2, aten.clamp.default
+[INFO 2026-10-18 00:52:01,291 qnn_preprocess.py:122] Visiting: aten_mul_tensor_34, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,291 qnn_preprocess.py:122] Visiting: aten_convolution_default_32, aten.convolution.default
+[INFO 2026-10-18 00:52:01,293 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_29, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,293 qnn_preprocess.py:122] Visiting: aten_mul_tensor_35, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,295 qnn_preprocess.py:122] Visiting: aten_convolution_default_33, aten.convolution.default
+[INFO 2026-10-18 00:52:01,297 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_30, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,298 qnn_preprocess.py:122] Visiting: aten_mul_tensor_36, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,299 qnn_preprocess.py:122] Visiting: aten_convolution_default_34, aten.convolution.default
+[INFO 2026-10-18 00:52:01,299 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_31, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,301 qnn_preprocess.py:122] Visiting: aten_mul_tensor_37, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,301 qnn_preprocess.py:122] Visiting: aten_constant_pad_nd_default, aten.constant_pad_nd.default
+[INFO 2026-10-18 00:52:01,301 qnn_preprocess.py:122] Visiting: aten_max_pool2d_with_indices_default, aten.max_pool2d_with_indices.default
+[INFO 2026-10-18 00:52:01,302 qnn_preprocess.py:122] Visiting: aten_constant_pad_nd_default_1, aten.constant_pad_nd.default
+[INFO 2026-10-18 00:52:01,302 qnn_preprocess.py:122] Visiting: aten_max_pool2d_with_indices_default_1, aten.max_pool2d_with_indices.default
+[INFO 2026-10-18 00:52:01,304 qnn_preprocess.py:122] Visiting: aten_constant_pad_nd_default_2, aten.constant_pad_nd.default
+[INFO 2026-10-18 00:52:01,304 qnn_preprocess.py:122] Visiting: aten_max_pool2d_with_indices_default_2, aten.max_pool2d_with_indices.default
+[INFO 2026-10-18 00:52:01,304 qnn_preprocess.py:122] Visiting: getitem, getitem
+[INFO 2026-10-18 00:52:01,304 qnn_preprocess.py:122] Visiting: getitem_1, getitem
+[INFO 2026-10-18 00:52:01,304 qnn_preprocess.py:122] Visiting: getitem_2, getitem
+[INFO 2026-10-18 00:52:01,304 qnn_preprocess.py:122] Visiting: aten_cat_default_3, aten.cat.default
+[INFO 2026-10-18 00:52:01,305 qnn_preprocess.py:122] Visiting: aten_convolution_default_35, aten.convolution.default
+[INFO 2026-10-18 00:52:01,310 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_32, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,310 qnn_preprocess.py:122] Visiting: aten_mul_tensor_38, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,310 qnn_preprocess.py:122] Visiting: aten_convolution_default_36, aten.convolution.default
+[INFO 2026-10-18 00:52:01,312 qnn_preprocess.py:122] Visiting: aten_convolution_default_37, aten.convolution.default
+[INFO 2026-10-18 00:52:01,312 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_33, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,314 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_34, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,314 qnn_preprocess.py:122] Visiting: aten_mul_tensor_39, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,314 qnn_preprocess.py:122] Visiting: aten_mul_tensor_40, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,315 qnn_preprocess.py:122] Visiting: aten_convolution_default_38, aten.convolution.default
+[INFO 2026-10-18 00:52:01,316 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_35, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,316 qnn_preprocess.py:122] Visiting: aten_mul_tensor_41, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,319 qnn_preprocess.py:122] Visiting: aten_convolution_default_39, aten.convolution.default
+[INFO 2026-10-18 00:52:01,319 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_36, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,320 qnn_preprocess.py:122] Visiting: aten_mul_tensor_42, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,321 qnn_preprocess.py:122] Visiting: aten_convolution_default_40, aten.convolution.default
+[INFO 2026-10-18 00:52:01,321 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_37, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,321 qnn_preprocess.py:122] Visiting: aten_mul_tensor_43, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,323 qnn_preprocess.py:122] Visiting: aten_cat_default_4, aten.cat.default
+[INFO 2026-10-18 00:52:01,323 qnn_preprocess.py:122] Visiting: aten_mean_dim_3, aten.mean.dim
+[INFO 2026-10-18 00:52:01,323 qnn_preprocess.py:122] Visiting: aten_convolution_default_41, aten.convolution.default
+[INFO 2026-10-18 00:52:01,325 qnn_preprocess.py:122] Visiting: aten_mul_tensor_44, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,325 qnn_preprocess.py:122] Visiting: aten_add_tensor_8, aten.add.Tensor
+[INFO 2026-10-18 00:52:01,327 qnn_preprocess.py:122] Visiting: aten_clamp_default_3, aten.clamp.default
+[INFO 2026-10-18 00:52:01,327 qnn_preprocess.py:122] Visiting: aten_mul_tensor_45, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,327 qnn_preprocess.py:122] Visiting: aten_convolution_default_42, aten.convolution.default
+[INFO 2026-10-18 00:52:01,328 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_38, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,328 qnn_preprocess.py:122] Visiting: aten_mul_tensor_46, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,330 qnn_preprocess.py:122] Visiting: aten_convolution_default_43, aten.convolution.default
+[INFO 2026-10-18 00:52:01,330 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_10, aten.permute_copy.default
+[INFO 2026-10-18 00:52:01,332 qnn_preprocess.py:122] Visiting: aten_view_copy_default_15, aten.view_copy.default
+[INFO 2026-10-18 00:52:01,332 qnn_preprocess.py:122] Visiting: aten_mul_tensor_47, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,332 qnn_preprocess.py:122] Visiting: aten_sum_dim_int_list, aten.sum.dim_IntList
+[INFO 2026-10-18 00:52:01,332 qnn_preprocess.py:122] Visiting: aten_sqrt_default, aten.sqrt.default
+[INFO 2026-10-18 00:52:01,332 qnn_preprocess.py:122] Visiting: aten_mul_tensor_48, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,332 qnn_preprocess.py:122] Visiting: aten_clamp_default_4, aten.clamp.default
+[INFO 2026-10-18 00:52:01,332 qnn_preprocess.py:122] Visiting: aten_div_tensor, aten.div.Tensor
+[INFO 2026-10-18 00:52:01,332 qnn_preprocess.py:122] Visiting: aten_mul_tensor_49, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,332 qnn_preprocess.py:122] Visiting: aten_matmul_default, aten.matmul.default
+[INFO 2026-10-18 00:52:01,334 qnn_preprocess.py:122] Visiting: aten_mul_tensor_50, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,334 qnn_preprocess.py:122] Visiting: aten_mul_tensor_51, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,334 qnn_preprocess.py:122] Visiting: aten_sum_dim_int_list_1, aten.sum.dim_IntList
+[INFO 2026-10-18 00:52:01,334 qnn_preprocess.py:122] Visiting: aten_sqrt_default_1, aten.sqrt.default
+[INFO 2026-10-18 00:52:01,334 qnn_preprocess.py:122] Visiting: aten_mul_tensor_52, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,334 qnn_preprocess.py:122] Visiting: aten_clamp_default_5, aten.clamp.default
+[INFO 2026-10-18 00:52:01,334 qnn_preprocess.py:122] Visiting: aten_div_tensor_1, aten.div.Tensor
+[INFO 2026-10-18 00:52:01,334 qnn_preprocess.py:122] Visiting: aten_mul_tensor_53, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,334 qnn_preprocess.py:122] Visiting: aten_matmul_default_1, aten.matmul.default
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_39, aten.sigmoid.default
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: aten_mul_tensor_54, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: aten_split_with_sizes_copy_default, aten.split_with_sizes_copy.default
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: getitem_3, getitem
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: getitem_4, getitem
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: getitem_5, getitem
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: aten_unsqueeze_copy_default, aten.unsqueeze_copy.default
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: aten_mul_tensor_55, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: aten_add_tensor_9, aten.add.Tensor
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: aten_split_with_sizes_copy_default_1, aten.split_with_sizes_copy.default
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: getitem_6, getitem
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: getitem_7, getitem
+[INFO 2026-10-18 00:52:01,336 qnn_preprocess.py:122] Visiting: aten_squeeze_copy_dims, aten.squeeze_copy.dims
+[INFO 2026-10-18 00:52:01,338 qnn_preprocess.py:122] Visiting: aten_squeeze_copy_dims_1, aten.squeeze_copy.dims
+[INFO 2026-10-18 00:52:01,338 qnn_preprocess.py:122] Visiting: aten_permute_copy_default, aten.permute_copy.default
+[INFO 2026-10-18 00:52:01,338 qnn_preprocess.py:122] Visiting: aten_matmul_default_2, aten.matmul.default
+[INFO 2026-10-18 00:52:01,338 qnn_preprocess.py:122] Visiting: aten_div_tensor_2, aten.div.Tensor
+[INFO 2026-10-18 00:52:01,338 qnn_preprocess.py:122] Visiting: aten_relu_default, aten.relu.default
+[INFO 2026-10-18 00:52:01,338 qnn_preprocess.py:122] Visiting: aten_mul_tensor_56, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,338 qnn_preprocess.py:122] Visiting: aten_matmul_default_3, aten.matmul.default
+[INFO 2026-10-18 00:52:01,338 qnn_preprocess.py:122] Visiting: aten_mul_tensor_57, aten.mul.Tensor
+[INFO 2026-10-18 00:52:01,338 qnn_preprocess.py:122] Visiting: aten_matmul_default_4, aten.matmul.default
+[INFO 2026-10-18 00:52:01,340 qnn_preprocess.py:122] Visiting: aten_add_tensor_10, aten.add.Tensor
+[INFO 2026-10-18 00:52:01,340 qnn_preprocess.py:122] Visiting: aten_matmul_default_5, aten.matmul.default
+[INFO 2026-10-18 00:52:01,340 qnn_preprocess.py:122] Visiting: aten_matmul_default_6, aten.matmul.default
+Starting stage: Graph Preparation Initializing
+Completed stage: Graph Preparation Initializing (896 us)
+Starting stage: Graph Transformations and Optimizations
+Completed stage: Graph Transformations and Optimizations (898678 us)
+Starting stage: Graph Sequencing for Target
+Completed stage: Graph Sequencing for Target (28096 us)
+Starting stage: VTCM Allocation
+Completed stage: VTCM Allocation (3966 us)
+Starting stage: Parallelization Optimization
+Completed stage: Parallelization Optimization (2212 us)
+Starting stage: Finalizing Graph Sequence
+
+====== DDR bandwidth summary ======
+spill_bytes=0
+fill_bytes=0
+write_total_bytes=157696
+read_total_bytes=12650496
+
+Completed stage: Finalizing Graph Sequence (1419 us)
+Starting stage: Completion
+Completed stage: Completion (84 us)
+[INFO] [Qnn ExecuTorch]: Destroy Qnn context
+[WARNING 2026-10-18 00:52:02,336 _program.py:1032] Op aten.unbind.int was requested for preservation by partitioner.  This request is ignored because it aliases output.
+[INFO] [Qnn ExecuTorch]: Destroy Qnn device
+[INFO] [Qnn ExecuTorch]: Destroy Qnn backend
+
+
+
+def forward(self, input_1):
+    lowered_module_0 = self.lowered_module_0
+    executorch_call_delegate = torch.ops.higher_order.executorch_call_delegate(lowered_module_0, input_1);  lowered_module_0 = input_1 = None
+    getitem_8 = executorch_call_delegate[0]
+    getitem_9 = executorch_call_delegate[1];  executorch_call_delegate = None
+    return (getitem_8, getitem_9)
+    
+DELEGATE CALLS 1 CPU NODES 0 []
+EXPORTED rtmpose_qnn.pte 12158720

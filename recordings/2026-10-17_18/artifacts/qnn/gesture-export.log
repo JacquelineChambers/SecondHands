@@ -1,0 +1,306 @@
+artifacts/qnn/python-arm64/python.exe : W1017 17:14:36.992000 10704 Lib\site-packages\torch\utils\_pytree.py:630] 
+<enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. 
+Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+At line:2 char:1
++ artifacts/qnn/python-arm64/python.exe -u artifacts/qnn/export_gesture ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (W1017 17:14:36....future release.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+gesture_embedder.pth 60
+gesture_classifier.pth 4
+Preprocessing constant center_idx [0, 1, 5, 9, 13, 17]
+Preprocessing constant x_mirror [[[-1.0, 1.0, 1.0]]]
+<All keys matched successfully>
+QNN v2.37.0.250724175447_124859
+[INFO 2026-10-17 17:14:38,437 qnn_sdk_setup.py:60] [QNN] Using QNN SDK at 
+[redacted-home]\SecondHands\artifacts\qnn\qairt\2.37.0.250724 (from QNN_SDK_ROOT)
+[WARNING 2026-10-17 17:14:38,437 qnn_sdk_setup.py:190] [QNN] py-cpuinfo is not installed, so the CPU vendor cannot be 
+read and the AMD MKLDNN workaround is skipped. Install it with: pip install py-cpuinfo
+[WARNING 2026-10-17 17:14:38,990 pass_manager.py:82] PassManager is deprecated. Please use ExportedProgramPassManager 
+instead.
+[INFO] [Qnn ExecuTorch]: Creating new backend bundle.
+[INFO] [Qnn ExecuTorch]: create QNN Logger with log_level 1
+[WARNING 2026-10-17 17:14:40,358 _program.py:1032] Op aten.unbind.int was requested for preservation by partitioner.  
+This request is ignored because it aliases output.
+[WARNING 2026-10-17 17:14:40,650 _program.py:1032] Op aten.unbind.int was requested for preservation by partitioner.  
+This request is ignored because it aliases output.
+[INFO 2026-10-17 17:14:43,982 qnn_partitioner.py:136] [QnnPartitioner] aten._softmax.default | True
+[INFO 2026-10-17 17:14:43,988 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:43,988 qnn_partitioner.py:136] [QnnPartitioner] aten.relu.default | True
+[INFO 2026-10-17 17:14:43,988 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:43,988 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:43,992 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:43,992 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:43,992 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:43,992 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:43,997 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:43,997 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:43,997 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:43,997 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:43,997 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:43,997 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:43,997 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,001 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,001 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,002 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,003 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,003 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,003 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,004 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,004 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,004 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,004 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,004 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,007 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,007 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,007 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,009 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,009 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,009 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,009 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,011 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,011 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,013 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,013 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,013 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,013 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,015 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,015 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,015 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,015 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,017 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,017 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,017 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,017 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,020 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,020 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,020 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,020 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,023 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,023 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,025 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,025 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,025 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,025 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,025 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,025 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,025 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,028 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,029 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,029 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,029 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,030 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,030 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,032 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,032 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,033 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,033 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,034 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,034 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,036 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,036 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,036 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,036 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,037 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,037 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,037 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,037 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,037 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,037 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,040 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,040 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,041 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,041 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,043 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,043 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,043 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,043 qnn_partitioner.py:136] [QnnPartitioner] aten.add.Tensor | True
+[INFO 2026-10-17 17:14:44,045 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,046 qnn_partitioner.py:136] [QnnPartitioner] aten.mul.Tensor | True
+[INFO 2026-10-17 17:14:44,046 qnn_partitioner.py:136] [QnnPartitioner] aten.sigmoid.default | True
+[INFO 2026-10-17 17:14:44,046 qnn_partitioner.py:102] [QnnPartitioner] getitem | Forced Passed
+[INFO 2026-10-17 17:14:44,047 qnn_partitioner.py:136] [QnnPartitioner] 
+aten._native_batch_norm_legit_no_training.default | True
+[INFO 2026-10-17 17:14:44,048 qnn_partitioner.py:136] [QnnPartitioner] aten.linear.default | True
+[INFO 2026-10-17 17:14:44,048 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-17 17:14:44,048 qnn_partitioner.py:136] [QnnPartitioner] aten.view_copy.default | True
+[INFO 2026-10-17 17:14:44,049 qnn_partitioner.py:223] Qnn partitioner will delegate torch mutable buffer with the same 
+I/O address during the runtime, so if your model contains mutable buffer, then you can get the better performance with 
+skip_mutable_buffer=False. If you encounter accuracy issue during the runtime, then please set 
+`skip_mutable_buffer=True` and try again.
+[INFO] [Qnn ExecuTorch]: Initialize Qnn backend parameters for Qnn executorch backend type 2
+[INFO] [Qnn ExecuTorch]: Caching: Caching is in SAVE MODE.
+[INFO] [Qnn ExecuTorch]: Running level=1 optimization.
+[INFO 2026-10-17 17:14:44,134 qnn_preprocess.py:230] Processing Method(0): (1/1)
+[WARNING 2026-10-17 17:14:44,134 pass_manager.py:82] PassManager is deprecated. Please use ExportedProgramPassManager 
+instead.
+[INFO 2026-10-17 17:14:44,181 qnn_preprocess.py:122] Visiting: aten_permute_copy_default, aten.permute_copy.default
+[INFO 2026-10-17 17:14:44,181 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_1, aten.permute_copy.default
+[INFO 2026-10-17 17:14:44,181 qnn_preprocess.py:122] Visiting: aten_view_copy_default, aten.view_copy.default
+[INFO 2026-10-17 17:14:44,181 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_2, aten.permute_copy.default
+[INFO 2026-10-17 17:14:44,181 qnn_preprocess.py:122] Visiting: aten_view_copy_default_1, aten.view_copy.default
+[INFO 2026-10-17 17:14:44,187 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_3, aten.permute_copy.default
+[INFO 2026-10-17 17:14:44,187 qnn_preprocess.py:122] Visiting: aten_linear_default, aten.linear.default
+[INFO 2026-10-17 17:14:44,189 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,189 qnn_preprocess.py:122] Visiting: getitem, getitem
+[INFO 2026-10-17 17:14:44,189 qnn_preprocess.py:122] Visiting: aten_sigmoid_default, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,189 qnn_preprocess.py:122] Visiting: aten_mul_tensor, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,189 qnn_preprocess.py:122] Visiting: aten_linear_default_1, aten.linear.default
+[INFO 2026-10-17 17:14:44,195 qnn_preprocess.py:122] Visiting: aten_add_tensor, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,195 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_1, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,197 qnn_preprocess.py:122] Visiting: getitem_1, getitem
+[INFO 2026-10-17 17:14:44,197 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_1, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,197 qnn_preprocess.py:122] Visiting: aten_mul_tensor_1, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,197 qnn_preprocess.py:122] Visiting: aten_linear_default_2, aten.linear.default
+[INFO 2026-10-17 17:14:44,197 qnn_preprocess.py:122] Visiting: aten_add_tensor_1, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,198 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_2, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,198 qnn_preprocess.py:122] Visiting: getitem_2, getitem
+[INFO 2026-10-17 17:14:44,198 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_2, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,199 qnn_preprocess.py:122] Visiting: aten_mul_tensor_2, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,199 qnn_preprocess.py:122] Visiting: aten_linear_default_3, aten.linear.default
+[INFO 2026-10-17 17:14:44,199 qnn_preprocess.py:122] Visiting: aten_add_tensor_2, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,199 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_3, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,199 qnn_preprocess.py:122] Visiting: getitem_3, getitem
+[INFO 2026-10-17 17:14:44,199 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_3, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,199 qnn_preprocess.py:122] Visiting: aten_mul_tensor_3, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,199 qnn_preprocess.py:122] Visiting: aten_linear_default_4, aten.linear.default
+[INFO 2026-10-17 17:14:44,202 qnn_preprocess.py:122] Visiting: aten_add_tensor_3, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,202 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_4, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,203 qnn_preprocess.py:122] Visiting: getitem_4, getitem
+[INFO 2026-10-17 17:14:44,203 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_4, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,203 qnn_preprocess.py:122] Visiting: aten_mul_tensor_4, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,204 qnn_preprocess.py:122] Visiting: aten_linear_default_5, aten.linear.default
+[INFO 2026-10-17 17:14:44,204 qnn_preprocess.py:122] Visiting: aten_add_tensor_4, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,204 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_5, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,206 qnn_preprocess.py:122] Visiting: getitem_5, getitem
+[INFO 2026-10-17 17:14:44,206 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_5, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,206 qnn_preprocess.py:122] Visiting: aten_mul_tensor_5, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,206 qnn_preprocess.py:122] Visiting: aten_linear_default_6, aten.linear.default
+[INFO 2026-10-17 17:14:44,206 qnn_preprocess.py:122] Visiting: aten_add_tensor_5, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,206 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_6, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,206 qnn_preprocess.py:122] Visiting: getitem_6, getitem
+[INFO 2026-10-17 17:14:44,206 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_6, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,208 qnn_preprocess.py:122] Visiting: aten_mul_tensor_6, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,208 qnn_preprocess.py:122] Visiting: aten_linear_default_7, aten.linear.default
+[INFO 2026-10-17 17:14:44,209 qnn_preprocess.py:122] Visiting: aten_add_tensor_6, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,209 qnn_preprocess.py:122] Visiting: aten_linear_default_8, aten.linear.default
+[INFO 2026-10-17 17:14:44,210 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_7, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,210 qnn_preprocess.py:122] Visiting: getitem_7, getitem
+[INFO 2026-10-17 17:14:44,210 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_7, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,210 qnn_preprocess.py:122] Visiting: aten_mul_tensor_7, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,210 qnn_preprocess.py:122] Visiting: aten_linear_default_9, aten.linear.default
+[INFO 2026-10-17 17:14:44,211 qnn_preprocess.py:122] Visiting: aten_add_tensor_7, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,211 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_8, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,212 qnn_preprocess.py:122] Visiting: getitem_8, getitem
+[INFO 2026-10-17 17:14:44,212 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_8, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,212 qnn_preprocess.py:122] Visiting: aten_mul_tensor_8, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,212 qnn_preprocess.py:122] Visiting: aten_linear_default_10, aten.linear.default
+[INFO 2026-10-17 17:14:44,212 qnn_preprocess.py:122] Visiting: aten_add_tensor_8, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,213 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_9, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,213 qnn_preprocess.py:122] Visiting: getitem_9, getitem
+[INFO 2026-10-17 17:14:44,213 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_9, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,213 qnn_preprocess.py:122] Visiting: aten_mul_tensor_9, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,213 qnn_preprocess.py:122] Visiting: aten_linear_default_11, aten.linear.default
+[INFO 2026-10-17 17:14:44,213 qnn_preprocess.py:122] Visiting: aten_add_tensor_9, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,213 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_10, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,215 qnn_preprocess.py:122] Visiting: getitem_10, getitem
+[INFO 2026-10-17 17:14:44,215 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_10, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,215 qnn_preprocess.py:122] Visiting: aten_mul_tensor_10, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,215 qnn_preprocess.py:122] Visiting: aten_linear_default_12, aten.linear.default
+[INFO 2026-10-17 17:14:44,216 qnn_preprocess.py:122] Visiting: aten_add_tensor_10, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,217 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_11, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,217 qnn_preprocess.py:122] Visiting: getitem_11, getitem
+[INFO 2026-10-17 17:14:44,217 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_11, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,217 qnn_preprocess.py:122] Visiting: aten_mul_tensor_11, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,217 qnn_preprocess.py:122] Visiting: aten_linear_default_13, aten.linear.default
+[INFO 2026-10-17 17:14:44,218 qnn_preprocess.py:122] Visiting: aten_add_tensor_11, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,218 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_12, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,219 qnn_preprocess.py:122] Visiting: getitem_12, getitem
+[INFO 2026-10-17 17:14:44,219 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_12, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,219 qnn_preprocess.py:122] Visiting: aten_mul_tensor_12, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,221 qnn_preprocess.py:122] Visiting: aten_linear_default_14, aten.linear.default
+[INFO 2026-10-17 17:14:44,221 qnn_preprocess.py:122] Visiting: aten_add_tensor_12, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,221 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_13, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,221 qnn_preprocess.py:122] Visiting: getitem_13, getitem
+[INFO 2026-10-17 17:14:44,221 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_13, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,221 qnn_preprocess.py:122] Visiting: aten_mul_tensor_13, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,223 qnn_preprocess.py:122] Visiting: aten_linear_default_15, aten.linear.default
+[INFO 2026-10-17 17:14:44,223 qnn_preprocess.py:122] Visiting: aten_add_tensor_13, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,223 qnn_preprocess.py:122] Visiting: aten_add_tensor_14, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,223 qnn_preprocess.py:122] Visiting: aten__native_batch_norm_legit_no_training_default_14, 
+aten._native_batch_norm_legit_no_training.default
+[INFO 2026-10-17 17:14:44,224 qnn_preprocess.py:122] Visiting: getitem_14, getitem
+[INFO 2026-10-17 17:14:44,224 qnn_preprocess.py:122] Visiting: aten_sigmoid_default_14, aten.sigmoid.default
+[INFO 2026-10-17 17:14:44,224 qnn_preprocess.py:122] Visiting: aten_mul_tensor_14, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,224 qnn_preprocess.py:122] Visiting: aten_linear_default_16, aten.linear.default
+[INFO 2026-10-17 17:14:44,225 qnn_preprocess.py:122] Visiting: aten_mul_tensor_15, aten.mul.Tensor
+[INFO 2026-10-17 17:14:44,225 qnn_preprocess.py:122] Visiting: aten_add_tensor_15, aten.add.Tensor
+[INFO 2026-10-17 17:14:44,225 qnn_preprocess.py:122] Visiting: aten_relu_default, aten.relu.default
+[INFO 2026-10-17 17:14:44,226 qnn_preprocess.py:122] Visiting: aten_linear_default_17, aten.linear.default
+[INFO 2026-10-17 17:14:44,226 qnn_preprocess.py:122] Visiting: aten_permute_copy_default_4, aten.permute_copy.default
+[INFO 2026-10-17 17:14:44,228 qnn_preprocess.py:122] Visiting: aten__softmax_default, aten._softmax.default
+Starting stage: Graph Preparation Initializing
+Completed stage: Graph Preparation Initializing (319 us)
+Starting stage: Graph Transformations and Optimizations
+Completed stage: Graph Transformations and Optimizations (38297 us)
+Starting stage: Graph Sequencing for Target
+Completed stage: Graph Sequencing for Target (3189 us)
+Starting stage: VTCM Allocation
+Completed stage: VTCM Allocation (510 us)
+Starting stage: Parallelization Optimization
+Completed stage: Parallelization Optimization (202 us)
+Starting stage: Finalizing Graph Sequence
+
+====== DDR bandwidth summary ======
+spill_bytes=0
+fill_bytes=0
+write_total_bytes=2048
+read_total_bytes=358400
+
+Completed stage: Finalizing Graph Sequence (510 us)
+Starting stage: Completion
+Completed stage: Completion (94 us)
+[INFO] [Qnn ExecuTorch]: Destroy Qnn context
+[WARNING 2026-10-17 17:14:44,298 _program.py:1032] Op aten.unbind.int was requested for preservation by partitioner.  
+This request is ignored because it aliases output.
+[INFO] [Qnn ExecuTorch]: Destroy Qnn device
+[INFO] [Qnn ExecuTorch]: Destroy Qnn backend
+
+
+
+def forward(self, x64_a, x64_b):
+    lowered_module_0 = self.lowered_module_0
+    executorch_call_delegate = torch.ops.higher_order.executorch_call_delegate(lowered_module_0, x64_a, x64_b);  lowered_module_0 = x64_a = x64_b = None
+    getitem_15 = executorch_call_delegate[0];  executorch_call_delegate = None
+    return (getitem_15,)
+    
+EXPORTED gesture_qnn.pte 370304

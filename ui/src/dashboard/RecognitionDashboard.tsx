@@ -4,6 +4,7 @@ import SignalReadings from './SignalReadings'
 import MappingEditor from './MappingEditor'
 import ExperimentPanel from './ExperimentPanel'
 import TriggerHistory from './TriggerHistory'
+import TailscalePanel from './TailscalePanel'
 import { useDashboard } from './useDashboard'
 
 export default function RecognitionDashboard() {
@@ -27,6 +28,7 @@ export default function RecognitionDashboard() {
       <TriggerHistory status={status} frame={frame} />
       <ExperimentPanel status={status} comparison={comparison} hasFrame={!!frame}
         onCalibrate={label => command({ type: 'calibrate', label })} onCompare={() => command({ type: 'compare' })} />
+      <TailscalePanel />
     </div>
     <footer>One participant, one visible hand for command experiments. Frame observations are not proof of intent. Calibration and snapshots are cleared on session end.</footer>
   </main>

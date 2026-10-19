@@ -1,0 +1,2 @@
+Loading JEVision text and image adapters on ARM64 CPU.
+serving [redacted-home]\SecondHands\artifacts\huggingface\hub\models--divyanshx11--JEVision\snapshots\e1cfde19bfae6548a46812c64a9a6f1a67459c95\text\jevvision-text ([redacted-home]\SecondHands\artifacts\huggingface\hub\models--divyanshx11--JEVision\snapshots\e1cfde19bfae6548a46812c64a9a6f1a67459c95\text\jevvision-text) on cpu via torch (float32), context=4096 :8009

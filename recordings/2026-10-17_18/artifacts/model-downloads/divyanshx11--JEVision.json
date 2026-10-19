@@ -1,0 +1,595 @@
+{
+  "_id": "6ab4cf71b777c7d2259bc930",
+  "id": "divyanshx11/JEVision",
+  "private": false,
+  "tags": [
+    "safetensors",
+    "multimodal",
+    "vision",
+    "decision-model",
+    "long-context",
+    "qwen3.5",
+    "lora",
+    "typesafe",
+    "en",
+    "base_model:Qwen/Qwen3.5-0.8B-Base",
+    "base_model:adapter:Qwen/Qwen3.5-0.8B-Base",
+    "license:apache-2.0",
+    "model-index",
+    "region:us"
+  ],
+  "downloads": 0,
+  "likes": 1,
+  "modelId": "divyanshx11/JEVision",
+  "author": "divyanshx11",
+  "sha": "e1cfde19bfae6548a46812c64a9a6f1a67459c95",
+  "lastModified": "2026-09-26T07:21:41.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": [
+    {
+      "name": "JEVision visual sidecar",
+      "results": [
+        {
+          "task": {
+            "type": "image-classification",
+            "name": "Visual sidecar image classification"
+          },
+          "dataset": {
+            "name": "Beans validation (selected 60 images)",
+            "type": "AI-Lab-Makerere/beans",
+            "split": "validation subset"
+          },
+          "metrics": [
+            {
+              "type": "accuracy",
+              "name": "Self-reported accuracy (51/60; %)",
+              "value": 85,
+              "verified": false
+            }
+          ],
+          "source": {
+            "name": "JEVision self-reported development reports",
+            "url": "https://huggingface.co/divyanshx11/JEVision/blob/main/reports/self-reported-evaluations.json"
+          }
+        },
+        {
+          "task": {
+            "type": "visual-question-answering",
+            "name": "Visual sidecar generated tasks"
+          },
+          "dataset": {
+            "name": "JEVision generated visual tasks (150 development images)",
+            "type": "jevvision-visual-synthetic-dev",
+            "split": "development"
+          },
+          "metrics": [
+            {
+              "type": "accuracy",
+              "name": "Self-reported accuracy (147/150; %)",
+              "value": 98,
+              "verified": false
+            }
+          ],
+          "source": {
+            "name": "JEVision self-reported development reports",
+            "url": "https://huggingface.co/divyanshx11/JEVision/blob/main/reports/self-reported-evaluations.json"
+          }
+        },
+        {
+          "task": {
+            "type": "visual-question-answering",
+            "name": "Visual sidecar spatial reasoning"
+          },
+          "dataset": {
+            "name": "VSR zero-shot development (64 COCO photos)",
+            "type": "visual-spatial-reasoning-zeroshot-dev",
+            "split": "development"
+          },
+          "metrics": [
+            {
+              "type": "accuracy",
+              "name": "Self-reported accuracy (43/64; %)",
+              "value": 67.2,
+              "verified": false
+            }
+          ],
+          "source": {
+            "name": "JEVision self-reported development reports",
+            "url": "https://huggingface.co/divyanshx11/JEVision/blob/main/reports/self-reported-evaluations.json"
+          }
+        },
+        {
+          "task": {
+            "type": "visual-question-answering",
+            "name": "Visual sidecar long-context questions"
+          },
+          "dataset": {
+            "name": "JEVision generated visual tasks (30 long-context pairs)",
+            "type": "jevvision-visual-synthetic-long-dev",
+            "split": "development"
+          },
+          "metrics": [
+            {
+              "type": "accuracy",
+              "name": "Self-reported accuracy at 66.6k tokens (27/30; %)",
+              "value": 90,
+              "verified": false
+            }
+          ],
+          "source": {
+            "name": "JEVision self-reported development reports",
+            "url": "https://huggingface.co/divyanshx11/JEVision/blob/main/reports/self-reported-evaluations.json"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {},
+  "cardData": {
+    "license": "apache-2.0",
+    "base_model": [
+      "Qwen/Qwen3.5-0.8B-Base",
+      "jaredpalmer/kev-0.8b"
+    ],
+    "base_model_relation": "adapter",
+    "language": [
+      "en"
+    ],
+    "tags": [
+      "multimodal",
+      "vision",
+      "decision-model",
+      "long-context",
+      "qwen3.5",
+      "lora",
+      "typesafe"
+    ],
+    "model-index": [
+      {
+        "name": "JEVision visual sidecar",
+        "results": [
+          {
+            "task": {
+              "type": "image-classification",
+              "name": "Visual sidecar image classification"
+            },
+            "dataset": {
+              "name": "Beans validation (selected 60 images)",
+              "type": "AI-Lab-Makerere/beans",
+              "split": "validation subset"
+            },
+            "metrics": [
+              {
+                "type": "accuracy",
+                "name": "Self-reported accuracy (51/60; %)",
+                "value": 85,
+                "verified": false
+              }
+            ],
+            "source": {
+              "name": "JEVision self-reported development reports",
+              "url": "https://huggingface.co/divyanshx11/JEVision/blob/main/reports/self-reported-evaluations.json"
+            }
+          },
+          {
+            "task": {
+              "type": "visual-question-answering",
+              "name": "Visual sidecar generated tasks"
+            },
+            "dataset": {
+              "name": "JEVision generated visual tasks (150 development images)",
+              "type": "jevvision-visual-synthetic-dev",
+              "split": "development"
+            },
+            "metrics": [
+              {
+                "type": "accuracy",
+                "name": "Self-reported accuracy (147/150; %)",
+                "value": 98,
+                "verified": false
+              }
+            ],
+            "source": {
+              "name": "JEVision self-reported development reports",
+              "url": "https://huggingface.co/divyanshx11/JEVision/blob/main/reports/self-reported-evaluations.json"
+            }
+          },
+          {
+            "task": {
+              "type": "visual-question-answering",
+              "name": "Visual sidecar spatial reasoning"
+            },
+            "dataset": {
+              "name": "VSR zero-shot development (64 COCO photos)",
+              "type": "visual-spatial-reasoning-zeroshot-dev",
+              "split": "development"
+            },
+            "metrics": [
+              {
+                "type": "accuracy",
+                "name": "Self-reported accuracy (43/64; %)",
+                "value": 67.2,
+                "verified": false
+              }
+            ],
+            "source": {
+              "name": "JEVision self-reported development reports",
+              "url": "https://huggingface.co/divyanshx11/JEVision/blob/main/reports/self-reported-evaluations.json"
+            }
+          },
+          {
+            "task": {
+              "type": "visual-question-answering",
+              "name": "Visual sidecar long-context questions"
+            },
+            "dataset": {
+              "name": "JEVision generated visual tasks (30 long-context pairs)",
+              "type": "jevvision-visual-synthetic-long-dev",
+              "split": "development"
+            },
+            "metrics": [
+              {
+                "type": "accuracy",
+                "name": "Self-reported accuracy at 66.6k tokens (27/30; %)",
+                "value": 90,
+                "verified": false
+              }
+            ],
+            "source": {
+              "name": "JEVision self-reported development reports",
+              "url": "https://huggingface.co/divyanshx11/JEVision/blob/main/reports/self-reported-evaluations.json"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "2eab8499b17898fc9fe168885a7f18d10c9bd918",
+      "size": 2076
+    },
+    {
+      "rfilename": "LICENSE",
+      "blobId": "a39070c98b7f02b5bcdeaa311fd918d4f8b959f4",
+      "size": 11545
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "635c7381afcc83f2a58538e709e3270b14a21b18",
+      "size": 16773
+    },
+    {
+      "rfilename": "adapter/adapter_config.json",
+      "blobId": "cd86eaa48de73a3450efd32b1cda4affe545d5b3",
+      "size": 1386
+    },
+    {
+      "rfilename": "adapter/adapter_model.safetensors",
+      "blobId": "027408ad0ad004b41204f8ff8e861e420d0d7ba9",
+      "size": 43346432,
+      "lfs": {
+        "sha256": "ffee0467a55883e8aa212035426eefad09380d903e0be49bbc69ebb1cf6de436",
+        "size": 43346432,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "assets/JevBench-results.png",
+      "blobId": "5fa7189bd55b09d9acfacfd093b4f52671b490ee",
+      "size": 1318029,
+      "lfs": {
+        "sha256": "bff86a96510cebfd4b0cb36fe18008772ddefbae514a070e14ad13a69c864451",
+        "size": 1318029,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "assets/JevBench-results.svg",
+      "blobId": "0e1e10999bbc9201c5a899121adb0099273eb7a1",
+      "size": 5268
+    },
+    {
+      "rfilename": "assets/capability-comparison.png",
+      "blobId": "7615a85a2206f8f4658b0e82f9b52a6dd3430591",
+      "size": 2069922,
+      "lfs": {
+        "sha256": "934003072d1b7ed1f7885176f141a6ee2be05d4fef7a0688206cd27bcedc4b20",
+        "size": 2069922,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "assets/capability-comparison.svg",
+      "blobId": "69f47116c5651e571cdd72a9c7bbfd479cd9ecc9",
+      "size": 7614
+    },
+    {
+      "rfilename": "assets/jevvision-capability-comparison.png",
+      "blobId": "244d8a0ce87a8be67417181d20f0aad67f1461a0",
+      "size": 97433,
+      "lfs": {
+        "sha256": "aae08fb033b8d08c767f09b1bb5104235a54fb75017e123d8de113225083d860",
+        "size": 97433,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "assets/jevvision-capability-comparison.svg",
+      "blobId": "c385a556cef4fd229902b07c72825d3398897d6a",
+      "size": 4436
+    },
+    {
+      "rfilename": "assets/jevvision-comparison-table.png",
+      "blobId": "60ec692ac8569bd3bb46b403173ea3228bc40e3c",
+      "size": 211828,
+      "lfs": {
+        "sha256": "979782d88e599f406b6a341b7b9cd2d0a7a4a49ce47faff18bdc1f36af64161c",
+        "size": 211828,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "assets/jevvision-comparison-table.svg",
+      "blobId": "ff270530545b882cde5dec7a53d9b746ae2e318a",
+      "size": 7778
+    },
+    {
+      "rfilename": "assets/jevvision-hero.png",
+      "blobId": "331089378dc1536a9e4792332e84ede40498a543",
+      "size": 89579,
+      "lfs": {
+        "sha256": "55935b3bfcbff14dca0d953186c09a3435e4930e0665090009830a6b80a29ad5",
+        "size": 89579,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "assets/jevvision-hero.svg",
+      "blobId": "e76cd17ae4819212372d6d669cb7da63364cbb61",
+      "size": 7178
+    },
+    {
+      "rfilename": "examples/long-context/.gitignore",
+      "blobId": "0ca0c230e25bb02f81439f4af74a56a7933e5257",
+      "size": 28
+    },
+    {
+      "rfilename": "examples/long-context/input.json",
+      "blobId": "55741791e35cd09a7edb533d31c97ad26e8add21",
+      "size": 1275
+    },
+    {
+      "rfilename": "examples/long-context/m1-77k-text-input.json",
+      "blobId": "d41b13234371bfe5089db9f47a42d5cd677e638f",
+      "size": 800
+    },
+    {
+      "rfilename": "examples/long-context/m1-77k-text-response-summary.json",
+      "blobId": "5130df4e4952b2ca9898379dad00fcd1e57d8ea7",
+      "size": 1087
+    },
+    {
+      "rfilename": "examples/long-context/recorded-77k-text-response-summary.json",
+      "blobId": "c73d55bded20ced0c15f18c7f695d5b6ee1c9e1a",
+      "size": 849
+    },
+    {
+      "rfilename": "examples/long-context/run_demo.py",
+      "blobId": "7bbfaa9e1e5e95fba598ff4e5c8db64f57be9a5e",
+      "size": 4615
+    },
+    {
+      "rfilename": "examples/real-photo/coffee-and-laptop.jpg",
+      "blobId": "f7204953fc44715c03cfba50df08b72afd8ad29c",
+      "size": 86300
+    },
+    {
+      "rfilename": "examples/real-photo/input.json",
+      "blobId": "617ac43820523283c635fa137cf2100645044a2c",
+      "size": 479
+    },
+    {
+      "rfilename": "examples/real-photo/noul-input.json",
+      "blobId": "0c7dc7218fc079199e9685eabcc10b0ff3fdb1eb",
+      "size": 494
+    },
+    {
+      "rfilename": "examples/real-photo/output.json",
+      "blobId": "ef6b045fbcdc7dafd57607762a076f1ecd3ef2de",
+      "size": 394
+    },
+    {
+      "rfilename": "examples/real-photo/photo-credit.md",
+      "blobId": "afa6eb2c5acc1621d528655e9e58d5c0a1399980",
+      "size": 492
+    },
+    {
+      "rfilename": "examples/real-photo/run_demo.py",
+      "blobId": "bf699c9dac8ce709bbe04b72d26ea134ee09d18c",
+      "size": 1897
+    },
+    {
+      "rfilename": "jevvision.py",
+      "blobId": "5d61c66170ee515ccc064fcfb2233b15d4de318f",
+      "size": 352
+    },
+    {
+      "rfilename": "jevvision_manifest.json",
+      "blobId": "db005aa5ed2a567ef218b8811f4cd9ac75858264",
+      "size": 2437
+    },
+    {
+      "rfilename": "pointer_head.pt",
+      "blobId": "ce4858e11b0ec15cfed57178658d5a17d40a7562",
+      "size": 2101775,
+      "lfs": {
+        "sha256": "4c5c16989c6aec9c290c6e5382d972c7c3e9ce5ebdc6f013d599195faa5e17ed",
+        "size": 2101775,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "report.json",
+      "blobId": "7645efd9586d8fa874804554efe59a4612567884",
+      "size": 174
+    },
+    {
+      "rfilename": "reports/self-reported-evaluations.json",
+      "blobId": "e237548b4a91ff6fea94eba96156405e63d300c0",
+      "size": 2636
+    },
+    {
+      "rfilename": "requirements.txt",
+      "blobId": "786494b8edf0a3a2e765b1dfe3472171c7e678c6",
+      "size": 323
+    },
+    {
+      "rfilename": "run_jevvision.py",
+      "blobId": "20dc8698abf4b5b23eb0f6e3752cbc06a00a752b",
+      "size": 816
+    },
+    {
+      "rfilename": "runtime/kev/__init__.py",
+      "blobId": "56e2fbedf28595b0e4b54ee6aa9466da09388ea2",
+      "size": 205
+    },
+    {
+      "rfilename": "runtime/kev/api.py",
+      "blobId": "3a37fbabd1685d993e155d941f3133ad059838a6",
+      "size": 7985
+    },
+    {
+      "rfilename": "runtime/kev/checkpoint.py",
+      "blobId": "a52f9ea4bf0f2476dd3a765d756651ef60fc7f1e",
+      "size": 13019
+    },
+    {
+      "rfilename": "runtime/kev/device.py",
+      "blobId": "64ff467fa8f30d72c8f4bd83dfc74aa95919bdef",
+      "size": 860
+    },
+    {
+      "rfilename": "runtime/kev/jevvision.py",
+      "blobId": "47eec951fa8436863f040dd496dc8f3a59e1ad33",
+      "size": 4967
+    },
+    {
+      "rfilename": "runtime/kev/media.py",
+      "blobId": "0a4d3ff904a75f6a2943af315e68037713fce2f8",
+      "size": 6501
+    },
+    {
+      "rfilename": "runtime/kev/mlx_model.py",
+      "blobId": "96cea5f3a3e81362eb42fb94c51deecbdf30a14f",
+      "size": 7497
+    },
+    {
+      "rfilename": "runtime/kev/model.py",
+      "blobId": "32b583fa4877f7a194f4e9382cbb029d31dcfe67",
+      "size": 24119
+    },
+    {
+      "rfilename": "runtime/kev/serve.py",
+      "blobId": "cc96766860c375770e5bfa845fa637405eb770ec",
+      "size": 13615
+    },
+    {
+      "rfilename": "runtime/kev/visual_adapter.py",
+      "blobId": "8c5a0a77e9b46816a99f7b35cc8fb41980ce25ee",
+      "size": 5505
+    },
+    {
+      "rfilename": "runtime/kev/visual_model.py",
+      "blobId": "68eedcafbf632c9438ada0d9d7ae7eda9cfd39ce",
+      "size": 12049
+    },
+    {
+      "rfilename": "runtime/kev/visual_prompt.py",
+      "blobId": "5cb3b213c096159f8b3aac990e58d6ba29c77caa",
+      "size": 1709
+    },
+    {
+      "rfilename": "text/jevbench-m3/adapter_config.json",
+      "blobId": "5e0c656e3b901806f9f78718f4d5bd45e2b82151",
+      "size": 1273
+    },
+    {
+      "rfilename": "text/jevbench-m3/adapter_model.safetensors",
+      "blobId": "dae6bc023d13a8d3ea18519082fae85e72d0c1ed",
+      "size": 43338624,
+      "lfs": {
+        "sha256": "0f71c01d01cc9a82648417f3b036e329e0fe27dd44cd6847fa141b85518e1022",
+        "size": 43338624,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "text/jevbench-m3/head.pt",
+      "blobId": "d3b8ccbf0c96fa40a38a0dc7661a478646b0db5e",
+      "size": 2103039,
+      "lfs": {
+        "sha256": "b3ac9f2e10a903bfec76020ee4a730921c22531267de7493aff57b80c741e906",
+        "size": 2103039,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "text/jevvision-text/adapter_config.json",
+      "blobId": "5e0c656e3b901806f9f78718f4d5bd45e2b82151",
+      "size": 1273
+    },
+    {
+      "rfilename": "text/jevvision-text/adapter_model.safetensors",
+      "blobId": "dae6bc023d13a8d3ea18519082fae85e72d0c1ed",
+      "size": 43338624,
+      "lfs": {
+        "sha256": "0f71c01d01cc9a82648417f3b036e329e0fe27dd44cd6847fa141b85518e1022",
+        "size": 43338624,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "text/jevvision-text/head.pt",
+      "blobId": "d3b8ccbf0c96fa40a38a0dc7661a478646b0db5e",
+      "size": 2103039,
+      "lfs": {
+        "sha256": "b3ac9f2e10a903bfec76020ee4a730921c22531267de7493aff57b80c741e906",
+        "size": 2103039,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "text/kev-0.8b/adapter_config.json",
+      "blobId": "3ac292566c8fde0555aaab8ba38823ec40bca355",
+      "size": 1273
+    },
+    {
+      "rfilename": "text/kev-0.8b/adapter_model.safetensors",
+      "blobId": "ca104055bb99cb4e0062d05b70ae79f1009d516c",
+      "size": 43338624,
+      "lfs": {
+        "sha256": "c81d5716f0af7622d8d2b97013c333d48263ca01113f9a7cf4526e96f6ac0b26",
+        "size": 43338624,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "text/kev-0.8b/head.pt",
+      "blobId": "e65a7dbdec707f160fff92b05a3939942481d2c7",
+      "size": 2103103,
+      "lfs": {
+        "sha256": "39f4343ccccc65e583bbfff0de0e11bfedb849fcfaaf94b50ac4f2b73bc79c65",
+        "size": 2103103,
+        "pointerSize": 132
+      }
+    }
+  ],
+  "spaces": [
+    "hotchpotch/S1MB-leaderboard"
+  ],
+  "createdAt": "2026-09-24T07:21:21.000Z",
+  "usedStorage": 144406845
+}

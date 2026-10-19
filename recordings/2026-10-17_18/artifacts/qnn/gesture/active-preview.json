@@ -1,0 +1,7 @@
+{
+  "LauncherProcessId": 19624,
+  "StartedAt": "2026-10-17T18:18:48.4568553-07:00",
+  "StdoutLog": "[redacted-home]\\SecondHands\\artifacts\\qnn\\gesture\\preview-20261017-181848.stdout.log",
+  "StderrLog": "[redacted-home]\\SecondHands\\artifacts\\qnn\\gesture\\preview-20261017-181848.stderr.log",
+  "GestureBackend": "executorch-qnn"
+}
